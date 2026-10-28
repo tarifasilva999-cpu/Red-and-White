@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -249,7 +250,7 @@ tw-story[tags~="menu"] tw-sidebar {
 
 /* PROLOGUE AND STORY SCENES */
 /* Harlowe attaches the active passage tag to tw-story. */
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) {
   position: relative;
   box-sizing: border-box;
   display: block;
@@ -277,9 +278,9 @@ tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="
   text-align: left;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-sidebar { display: none; }
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-sidebar { display: none; }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-passage {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-passage {
   box-sizing: border-box;
   display: block;
   margin: 0;
@@ -307,7 +308,7 @@ tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-chapter {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-chapter {
   margin: 0 0 23px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -317,7 +318,7 @@ tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="
   color: #e7c797;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-notice {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-notice {
   display: block;
   margin: 18px 0 22px;
   font-weight: 700;
@@ -325,7 +326,7 @@ tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="
   color: #f8d79d;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-link {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-link {
   color: #f9ce86 !important;
   font-weight: bold;
   text-decoration: underline;
@@ -334,23 +335,23 @@ tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="
   cursor: pointer;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-link:hover,
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-link:focus-visible {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-link:hover,
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-link:focus-visible {
   color: #fff4d6 !important;
   text-decoration-color: #fff4d6;
 }
 
 /* Speaker treatment: quiet color shift and a small, readable identifier. */
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-passage::-webkit-scrollbar {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-passage::-webkit-scrollbar {
   display: none;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-dialogue {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-dialogue {
   font-style: normal;
   font-weight: 500;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-dialogue::before {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-dialogue::before {
   display: inline;
   margin-right: 9px;
   font: 700 10px/1 Arial, Helvetica, sans-serif;
@@ -358,34 +359,34 @@ tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="
   vertical-align: .13em;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-eli {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-eli {
   color: #fff8ec;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-eli::before {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-eli::before {
   content: "ELI";
   color: #e3d5bb;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-pa {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-pa {
   color: #e9c7a6;
   font-weight: 600;
 }
 
-tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) .rw-pa::before {
+tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) .rw-pa::before {
   content: "PA";
   color: #d59a67;
 }
 
 @media (max-width: 700px) {
-  tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) {
+  tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) {
     background-position: 56% center;
     background-attachment: scroll;
     background-image:
       linear-gradient(90deg, rgba(20, 22, 20, .87), rgba(20, 22, 20, .66)),
       url("./Images/Prologue.png");
   }
-  tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"]) tw-passage {
+  tw-story:is([tags~="prologue"], [tags~="chapter1"], [tags~="chapter2"], [tags~="chapter3"], [tags~="chapter4"], [tags~="chapter5"]) tw-passage {
     padding: 55px 22px 105px;
     width: 100%;
     height: 100dvh;
@@ -487,7 +488,7 @@ tw-story[tags~="chapter2"] {
    CINEMATIC ACT CARDS · RED & WHITE
    A dedicated intertitle with purpose between each act.
    Edit the text in the passages A1, A2, and A3.
-   Replace Audio/Act-Impact.wav with your own sound if desired.
+   Replace Audio/Act-Reveal.mp3 with your own sound if desired.
    ======================================================= */
 tw-story[tags~="actcard"] {
   position: relative;
@@ -660,6 +661,72 @@ tw-story[tags~="actcard"] tw-passage {
 /* The imported archive lacked the two menu images; provide a locally stored
    background underneath the original online animated artwork. */
 .menu-screen { background-image: url('./Images/Chapter 1.png'); background-position: center; background-size: cover; }
+
+
+/* CHAPTER 3: the familiar plains feel colder once the White Trail appears. */
+tw-story[tags~="chapter3"] {
+  background-image: linear-gradient(90deg,rgba(15,21,24,.91) 0%,rgba(15,21,24,.82) 32%,rgba(15,21,24,.56) 57%,rgba(15,21,24,.19) 100%), url("./Images/Chapter 2.png");
+  background-position: center;
+}
+tw-story[tags~="chapter3"] .rw-chapter {color:#c9d6d4;}
+tw-story[tags~="chapter3"] .rw-route {color:#edd4a6;}
+tw-story[tags~="chapter3"] .rw-silas {color:#dce5d5;}
+tw-story[tags~="chapter3"] .rw-silas::before {content:"SILAS"; color:#b6c9a8;}
+tw-story[tags~="chapter3"] .rw-warren {color:#edc5b5;}
+tw-story[tags~="chapter3"] .rw-warren::before {content:"WARREN"; color:#d5a28b;}
+tw-story[tags~="chapter3"] .rw-rider {color:#d7dbe0;}
+tw-story[tags~="chapter3"] .rw-rider::before {content:"RIDER"; color:#c2cad0;}
+tw-story[tags~="chapter4"] {
+  width:100%;max-width:none;height:100dvh;margin:0;padding:0;
+  background:linear-gradient(90deg,rgba(15,21,24,.94),rgba(15,21,24,.55)),url("./Images/Chapter 2.png") center/cover;
+  color:#fff3dd;
+}
+tw-story[tags~="chapter4"] tw-sidebar {display:none;}
+tw-story[tags~="chapter4"] tw-passage {width:min(750px,100%);max-width:none;box-sizing:border-box;min-height:100dvh;margin:0;padding:66px 28px 100px 48px;font:21px/1.32 Georgia,serif;}
+tw-story[tags~="chapter4"] .rw-chapter {font:bold 12px Arial,sans-serif;letter-spacing:2px;color:#c9d6d4;}
+tw-story[tags~="chapter4"] tw-link {color:#f9ce86 !important;}
+@media(max-width:700px){
+  tw-story[tags~="chapter3"] {background-image:linear-gradient(90deg,rgba(15,21,24,.94),rgba(15,21,24,.70)),url("./Images/Chapter 2.png");}
+  tw-story[tags~="chapter4"] tw-passage {padding:55px 22px 100px;font-size:18px;}
+}
+
+
+
+/* ACT II: Crow's Gap and three versions of Mercy Junction. */
+tw-story[tags~="chapter4"] {
+  background-image: linear-gradient(90deg, rgba(26,21,18,.93) 0%, rgba(27,21,18,.84) 33%,rgba(34,25,18,.53) 68%,rgba(31,24,20,.24) 100%), url("./Images/Chapter 2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+tw-story[tags~="chapter5"] {
+  background-image: linear-gradient(90deg, rgba(22,21,20,.94) 0%, rgba(25,23,21,.82) 37%,rgba(28,24,22,.55) 75%,rgba(26,22,20,.32) 100%), url("./Images/Chapter 1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.rw-mercy-mode { display: none; }
+tw-story[tags~="chapter5"]:has(.rw-mercy-mode.living) {
+  background-image: linear-gradient(90deg, rgba(33,24,15,.91),rgba(35,24,17,.75) 38%,rgba(40,25,17,.34)),url("./Images/Chapter 1.png");
+}
+tw-story[tags~="chapter5"]:has(.rw-mercy-mode.abandoned) {
+  background-image: linear-gradient(90deg, rgba(24,28,29,.96),rgba(26,30,31,.88) 40%,rgba(29,33,33,.60)),url("./Images/Chapter 1.png");
+}
+tw-story[tags~="chapter5"]:has(.rw-mercy-mode.survey) {
+  background-image: linear-gradient(90deg, rgba(25,26,23,.94),rgba(26,28,25,.83) 40%,rgba(26,27,24,.43)),url("./Images/Chapter 1.png");
+}
+tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-chapter {
+  color:#e0c7a0; letter-spacing: .12em; font-size:12px; font-weight:700;
+}
+tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-dialogue.rw-eli::before {content:"ELI";}
+tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-silas { color:#dbe3d8; }
+tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-silas::before {content:"SILAS";color:#b5c9ac;}
+tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-warren { color:#eac7b7; }
+tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-warren::before {content:"WARREN";color:#dcae92;}
+@media (max-width:720px) {
+ tw-story[tags~="chapter4"] {background-image:linear-gradient(90deg,rgba(24,19,18,.95),rgba(26,22,20,.72)),url("./Images/Chapter 2.png");}
+ tw-story[tags~="chapter5"] {background-image:linear-gradient(90deg,rgba(22,23,23,.96),rgba(25,26,25,.73)),url("./Images/Chapter 1.png");}
+}
 </style><script id="twine-user-script" role="script" type="text/twine-javascript">/* Red & White: Main-menu music. Created once and preserved across passages. */
 (function () {
   'use strict';
@@ -772,14 +839,14 @@ tw-story[tags~="actcard"] tw-passage {
 
 /* Act intertitle interaction and optional short impact cue.
    If a browser blocks playback, the visuals still work.
-   Replace Audio/Act-Impact.wav with your own SFX as desired. */
+   Replace Audio/Act-Reveal.mp3 with your own SFX as desired. */
 (function(){
   'use strict';
   let mostRecent = null;
   let cue = null;
   function getCue(){
     if (!cue) {
-      cue = new Audio('./Audio/Act-Impact.wav');
+      cue = new Audio('./Audio/Act-Reveal.mp3');
       cue.preload = 'auto';
       cue.volume = .40;
     }
@@ -789,7 +856,7 @@ tw-story[tags~="actcard"] tw-passage {
     const screen = document.querySelector('.rw-act-screen');
     if (screen === mostRecent) return;
     mostRecent = screen;
-    if (!screen) return;
+    if (!screen) { if (cue) { cue.pause(); cue.currentTime = 0; } return; }
     const sound = getCue();
     try { sound.pause(); sound.currentTime = 0; } catch (_) {}
     const attempt = sound.play();
@@ -812,8 +879,7 @@ tw-story[tags~="actcard"] tw-passage {
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initAct);
   else initAct();
-})();
-</script><tw-tag color="green" name="menu"></tw-tag><tw-tag color="yellow" name="prologue"></tw-tag><tw-tag color="orange" name="chapter1"></tw-tag><tw-tag color="blue" name="chapter2"></tw-tag><tw-tag color="purple" name="chapter3"></tw-tag><tw-passagedata name="Load" pid="1" position="125,75" size="115,100" tags="menu">&lt;h1&gt;Game Loaded.&lt;/h1&gt;
+})();</script><tw-tag color="green" name="menu"></tw-tag><tw-tag color="yellow" name="prologue"></tw-tag><tw-tag color="orange" name="chapter1"></tw-tag><tw-tag color="blue" name="chapter2"></tw-tag><tw-tag color="purple" name="chapter3"></tw-tag><tw-passagedata name="Load" pid="1" position="125,75" size="115,100" tags="menu">&lt;h1&gt;Game Loaded.&lt;/h1&gt;
 
 This game's writing language is adapted to fit the game's time and era, Images are made in figma and canva. Hope you enjoy.
 
@@ -2065,11 +2131,7 @@ Silas is saddling his horse outside.
 
 The next red marker points west.
 
-[[Act II: The Unmarked Road-&gt;A2 - Act II]]</tw-passagedata><tw-passagedata name="A2C1 - The First White Flag" pid="50" position="2900,260" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;CHAPTER 3 / THE FIRST WHITE FLAG&lt;/div&gt;
-
-&lt;small&gt;Act II is still being written. Chapter 3 will be made within the next few days.&lt;/small&gt;
-
-[[Back to the main menu-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="A1 - Act I" pid="51" position="125,350" size="130,100" tags="actcard">&lt;div class="rw-act-screen" data-act="1"&gt;
+[[Act II: The Unmarked Road-&gt;A2 - Act II]]</tw-passagedata><tw-passagedata name="A1 - Act I" pid="51" position="125,350" size="130,100" tags="actcard">&lt;div class="rw-act-screen" data-act="1"&gt;
   &lt;div class="rw-act-landscape" aria-hidden="true"&gt;&lt;/div&gt;
   &lt;button type="button" class="rw-act-skip"&gt;Skip animation&lt;/button&gt;
   &lt;div class="rw-act-content"&gt;
@@ -2081,7 +2143,7 @@ The next red marker points west.
     &lt;div class="rw-act-next"&gt;[[Begin Act I-&gt;Intro]]&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="rw-act-counter"&gt;RED &amp;amp; WHITE &amp;nbsp; / &amp;nbsp; 01 / 03&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata name="A2 - Act II" pid="52" position="2900,75" size="130,100" tags="actcard">&lt;div class="rw-act-screen" data-act="2"&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata name="A2 - Act II" pid="52" position="2690,75" size="130,100" tags="actcard">&lt;div class="rw-act-screen" data-act="2"&gt;
   &lt;div class="rw-act-landscape" aria-hidden="true"&gt;&lt;/div&gt;
   &lt;button type="button" class="rw-act-skip"&gt;Skip animation&lt;/button&gt;
   &lt;div class="rw-act-content"&gt;
@@ -2093,7 +2155,7 @@ The next red marker points west.
     &lt;div class="rw-act-next"&gt;[[Begin Act II-&gt;A2C1 - The First White Flag]]&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="rw-act-counter"&gt;RED &amp;amp; WHITE &amp;nbsp; / &amp;nbsp; 02 / 03&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata name="A3 - Act III" pid="53" position="3750,75" size="130,100" tags="actcard">&lt;div class="rw-act-screen" data-act="3"&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata name="A3 - Act III" pid="53" position="4670,220" size="130,100" tags="actcard">&lt;div class="rw-act-screen" data-act="3"&gt;
   &lt;div class="rw-act-landscape" aria-hidden="true"&gt;&lt;/div&gt;
   &lt;button type="button" class="rw-act-skip"&gt;Skip animation&lt;/button&gt;
   &lt;div class="rw-act-content"&gt;
@@ -2105,11 +2167,2338 @@ The next red marker points west.
     &lt;div class="rw-act-next"&gt;[[Begin Act III-&gt;A3C1 - What the Road Took]]&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="rw-act-counter"&gt;RED &amp;amp; WHITE &amp;nbsp; / &amp;nbsp; 03 / 03&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata name="A3C1 - What the Road Took" pid="54" position="3750,260" size="130,100" tags="chapter3">&lt;div class="rw-chapter"&gt;ACT III / WHAT THE ROAD TOOK&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata name="A3C1 - What the Road Took" pid="54" position="8200,400" size="130,100" tags="chapter3">&lt;div class="rw-chapter"&gt;ACT III / WHAT THE ROAD TOOK&lt;/div&gt;
 
-Act III is planned, but its story passages haven't been written yet.
+Act II is complete, and your choices from Crow's Gap and Mercy Junction have been saved. Act III is still being written, so the story ends here for now.
 
-[[Return to the menu-&gt;MainMenu]]</tw-passagedata></tw-storydata>
+[[Return to the menu-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="A2C1 - The First White Flag" pid="55" position="2690,220" size="115,100" tags="chapter3">(set: $c3Route to "none")
+(set: $c3RiverCrossing to "none")
+(set: $c3HelpedRider to false)
+(set: $c3RiderIdentity to "none")
+(set: $c3TreeProof to false)
+(set: $c3SilasConfession to false)
+(set: $c3WarrenRide to "none")
+(set: $c3WarrenRespect to false)
+(set: $c3RailMarker to false)
+(set: $c3RailInvestigated to false)
+(set: $c3StationRecords to false)
+(set: $c3ValeName to false)
+(set: $c3SurveyMeasured to false)
+(set: $c3OfficeConnection to false)
+(set: $c3FlagInvestigated to false)
+(set: $c3FlagKnots to false)
+(set: $c3FlagSketch to false)
+(set: $c3FlagMemory to false)
+(set: $c3FlagRoute to "none")
+(set: $c3CheckpointNote to false)
+(set: $c3RaceCost to 0)
+
+&lt;div class="rw-chapter"&gt;ACT II / CHAPTER 3&lt;/div&gt;
+
+Coldwater Station, just after sunrise.
+
+Eli finishes packing while June steals a mouthful of hay from a wagon. The first riders are already leaving town.
+
+Yesterday, every road seemed to lead toward the same checkpoint.
+
+Today, there are three different groups heading west.
+
+Silas is waiting by the river road. Warren Blackwell has gathered a few riders at the canyon entrance. Near the station, a young survey assistant is asking whether anyone knows how to read a map.
+
+June looks at Eli as if she'd rather stay and finish breakfast.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"I know. Me too."&lt;/span&gt;
+
+[[See who's heading where-&gt;A2C1P1 - Three Ways West]]
+</tw-passagedata><tw-passagedata name="A2C1P1 - Three Ways West" pid="56" position="2690,350" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;COLDWATER / THREE ROADS&lt;/div&gt;
+
+The next official checkpoint is Hollow Ford. All three roads should reach it, at least according to the race map.
+
+(if: $saloonApproach is "silas" or $silasTrust &gt; 0)[
+Silas raises a hand when he sees Eli.
+
+"Mercer. River road's open if you want company. No promises I'll wait for you."
+]
+(else:)[
+Silas is already turning his horse toward the river. He notices Eli looking and calls over.
+
+"You coming this way or not?"
+]
+
+(if: $helpedWarren)[
+Warren glances across the street.
+
+"That trick at Quarry Ridge was decent. If you're joining my group, keep up."
+]
+(else:)[
+Warren looks amused to find Eli studying his group.
+
+"You lost, Mercer? The canyon's open to anybody who can ride it."
+]
+
+The survey assistant lifts a rolled map.
+
+"I can pay you for a little time. Not much, mind you."
+
+Eli can't travel all three roads today.
+
+(link: "Ride with Silas along the river.")[(set: $c3Route to "silas")(go-to: "A2C1P2 - The River Road")]
+
+(link: "Join Warren through the western canyon.")[(set: $c3Route to "warren")(go-to: "A2C1P10 - Blackwell's Crew")]
+
+(link: "Help the survey assistant and travel alone.")[(set: $c3Route to "survey")(go-to: "A2C1P18 - A Man With Two Maps")]
+</tw-passagedata><tw-passagedata name="A2C1P2 - The River Road" pid="57" position="2540,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE LONG WAY AROUND / SILAS&lt;/div&gt;
+
+The river road is cool beneath the trees. June seems glad to get out of the dust.
+
+Silas rides beside Eli for a while, watching the water through the branches.
+
+"You make a habit of getting up before the sun?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Stable doesn't feed itself."&lt;/span&gt;
+
+"Fair. I'd sleep till noon if I could afford it."
+
+(if: $saloonApproach is "silas")[(if: $raceEdge &gt;= 2)[
+"You still got ahead of me yesterday," Silas says. "Don't get used to it."
+]
+(else:)[
+"You took some of that advice yesterday. Surprised me."
+]
+]
+
+They round a bend and find water spilling over the marked crossing.
+
+"Ah," Silas says. "That's new."
+
+[[Look for a way across-&gt;A2C1P3 - The Flooded Ford]]
+</tw-passagedata><tw-passagedata name="A2C1P3 - The Flooded Ford" pid="58" position="2540,625" size="115,100" tags="chapter3">The official ford is deeper than either rider expected.
+
+Downstream is a bridge. It looks sturdy, but the road to it bends far out of the way.
+
+Upstream, a narrow strip of gravel sticks out between two banks. The current looks faster there.
+
+Silas leans forward in his saddle.
+
+"Bridge is safer. Might cost us an hour."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"And the gravel?"&lt;/span&gt;
+
+"Might cost us something worse."
+
+(if: $saddleFixed)[
+Eli checks the repaired strap. At least the saddle is holding.
+]
+(if: $juneCondition &lt;= 1)[
+June shifts her weight. She worked hard yesterday, and Eli knows it.
+]
+
+(link: "Take the bridge with Silas.")[(set: $c3RiverCrossing to "bridge")(set: $c3RaceCost to $c3RaceCost + 1)(set: $silasTrust to $silasTrust + 1)(go-to: "A2C1P4 - The Bridge")]
+
+(link: "Try the narrow gravel crossing.")[(set: $c3RiverCrossing to "gravel")(go-to: "A2C1P5 - Gravel Underfoot")]
+</tw-passagedata><tw-passagedata name="A2C1P4 - The Bridge" pid="59" position="2540,750" size="115,100" tags="chapter3">The bridge creaks under June's hooves, but the planks hold.
+
+The detour takes longer than Eli wanted. Two riders pass them on the opposite bank.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"There goes our lead."&lt;/span&gt;
+
+Silas looks over.
+
+"Still got the horse, though."
+
+Eli glances at June. She's walking easily, without the nervous steps she took near the water.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Yeah. Guess that's something."&lt;/span&gt;
+
+"It's most things, Mercer."
+
+[[Follow the river north-&gt;A2C1P6 - A Rider by the Water]]
+</tw-passagedata><tw-passagedata name="A2C1P5 - Gravel Underfoot" pid="60" position="2540,875" size="115,100" tags="chapter3">Eli guides June onto the gravel bar. Halfway across, the water presses hard against her legs.
+
+Silas follows, keeping some distance.
+
+"Don't rush her!"
+
+(if: $saddleFixed and $juneCondition &gt;= 2)[
+June finds the bottom, climbs the opposite bank, and gives herself a shake. Eli lets out a breath.
+
+"All right," Silas says as he catches up. "That was better than I expected."
+
+(set: $raceEdge to $raceEdge + 1)
+]
+(else:)[
+June slips once on the loose stones. Eli gets her straight again, but she needs a long minute on the bank afterward.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Sorry, girl."&lt;/span&gt;
+
+Silas waits until she's settled.
+
+"We saved some road. Didn't save much time."
+
+(set: $juneCondition to $juneCondition - 1)
+]
+
+[[Keep riding-&gt;A2C1P6 - A Rider by the Water]]
+</tw-passagedata><tw-passagedata name="A2C1P6 - A Rider by the Water" pid="61" position="2540,1000" size="115,100" tags="chapter3">Past the ford, they find another horse tied to a low branch. Its rider is bent over a broken harness.
+
+(if: $thomasAlly)[
+"Mercer?" Thomas Bell straightens up. "You again? I'm starting to think you're following me."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Looks like you're making a habit of this."&lt;/span&gt;
+
+"I wish I wasn't."
+
+(set: $c3RiderIdentity to "thomas")
+]
+(else:)[
+The rider watches Eli approach.
+
+"If you're stopping to laugh, you can keep moving."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Was gonna ask if you needed a hand."&lt;/span&gt;
+
+"Oh. Well, yes. Actually."
+
+(set: $c3RiderIdentity to "stranger")
+]
+
+The damaged harness isn't something the rider can fix alone.
+
+Silas checks the path ahead. More racers disappear around the next bend.
+
+"Your call, Mercer."
+
+(link: "Stop and help fix the harness.")[(set: $c3HelpedRider to true)(set: $c3RaceCost to $c3RaceCost + 1)(set: $silasTrust to $silasTrust + 1)(go-to: "A2C1P7 - The Split Oak")]
+
+(link: "Keep moving. The rider has others coming behind.")[(set: $c3HelpedRider to false)(go-to: "A2C1P7 - The Split Oak")]
+</tw-passagedata><tw-passagedata name="A2C1P7 - The Split Oak" pid="62" position="2540,1125" size="115,100" tags="chapter3">(if: $c3HelpedRider)[
+They stay until the rider can tighten the final knot.
+
+(if: $c3RiderIdentity is "thomas")[
+"Third time I owe you," Thomas says.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Who's counting?"&lt;/span&gt;
+
+"I am."
+]
+(else:)[
+"Thank you," the rider says. "Really."
+]
+
+Silas doesn't complain about the lost time. That almost bothers Eli more.
+]
+(else:)[
+The rider's voice fades behind them. Eli keeps an eye on the road and says nothing.
+
+"Hope somebody else stops," Silas says.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Yeah."&lt;/span&gt;
+]
+
+An hour later, the road passes a fallen oak with a split in its trunk.
+
+Another half hour passes.
+
+There it is again.
+
+Same split. Same branches. Same bit of pale bark hanging loose.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Red?"&lt;/span&gt;
+
+"I see it."
+
+[[Stop by the tree-&gt;A2C1P8 - A Mark in the Mud]]
+</tw-passagedata><tw-passagedata name="A2C1P8 - A Mark in the Mud" pid="63" position="2540,1250" size="115,100" tags="chapter3">Silas dismounts, looking irritated.
+
+"Road must double back."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Didn't turn once."&lt;/span&gt;
+
+"Then the river did."
+
+Eli spots a crescent-shaped hoofprint in the soft ground beside the tree. June's front shoe has a small chip in the edge.
+
+He could compare it to her hoof, but that means getting down in the mud.
+
+(link: "Check the print and mark the trunk.")[(set: $c3TreeProof to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P9 - A Quiet Mile")]
+
+(link: "Leave it alone and keep riding.")[(go-to: "A2C1P9 - A Quiet Mile")]
+</tw-passagedata><tw-passagedata name="A2C1P9 - A Quiet Mile" pid="64" position="2540,1375" size="115,100" tags="chapter3">(if: $c3TreeProof)[
+The print matches June's chipped shoe. Eli cuts a shallow line in the bark, then gets back into the saddle.
+
+A few minutes later, the road brings them beside the oak again.
+
+The fresh line is still in the trunk.
+
+Silas looks at it for a long time.
+
+"Don't touch anything else," he says.
+
+(set: $c3FlagMemory to true)
+]
+(else:)[
+They leave the oak behind. Eli tells himself the hills must be playing tricks on him.
+
+Silas doesn't speak for the next mile.
+]
+
+&lt;span class="rw-dialogue rw-eli"&gt;"You all right?"&lt;/span&gt;
+
+"I'm fine."
+
+(if: $silasTrust &gt;= 2)[
+"You don't sound fine."
+
+Silas watches the road.
+
+"Seen things like that before. Nothing good came of chasing them."
+
+(set: $c3SilasConfession to true)
+]
+(else:)[
+"Let's get to Hollow Ford," Silas says. "We can argue about trees when there's supper."
+]
+
+Around the next bend, something white moves near a fence post.
+
+[[See what it is-&gt;A2C1P27 - A White Flag]]
+</tw-passagedata><tw-passagedata name="A2C1P10 - Blackwell's Crew" pid="65" position="2690,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE DEVIL YOU KNOW / WARREN&lt;/div&gt;
+
+Warren has four riders with him, all on strong horses. One of them looks at June and makes a face.
+
+"She's older than my mother's wagon horse."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Probably smarter too."&lt;/span&gt;
+
+Warren laughs once before he catches himself.
+
+(if: $helpedWarren)[
+"Mercer got me out of some loose stone yesterday," he tells the others. "Don't underestimate him."
+]
+(else:)[
+"He managed Quarry Ridge," Warren tells them. "Let's see if he manages today."
+]
+
+They ride out along the west canyon. The ground is hard and fast.
+
+Warren points to a stone arch far ahead.
+
+"Race you to that. No officials, no prizes. Just us."
+
+[[Answer his challenge-&gt;A2C1P11 - The Stone Arch]]
+</tw-passagedata><tw-passagedata name="A2C1P11 - The Stone Arch" pid="66" position="2690,625" size="115,100" tags="chapter3">The road ahead breaks into two lines. One goes straight through the gravel. The other climbs along firmer ground, though it takes a wider turn.
+
+Warren gathers his reins.
+
+"Ready?"
+
+Eli knows June isn't built for a flat sprint against Warren's horse.
+
+(if: $horseNotes)[
+He remembers how Warren keeps his weight low on turns. The man isn't just fast. He's careful about where he rides.
+]
+
+(link: "Take the high line and ride smart.")[(set: $c3WarrenRide to "high")(go-to: "A2C1P12 - The High Line")]
+
+(link: "Try to match Warren's speed.")[(set: $c3WarrenRide to "sprint")(go-to: "A2C1P13 - The Straight Run")]
+</tw-passagedata><tw-passagedata name="A2C1P12 - The High Line" pid="67" position="2690,750" size="115,100" tags="chapter3">Eli keeps June on the hard edge of the trail. Warren's horse flies past on the straight, kicking gravel into the air.
+
+But the ground turns loose near the arch.
+
+Warren has to slow down. June keeps her footing and comes around the outside.
+
+(if: $horseNotes or $saddleFixed)[
+Eli reaches the arch just ahead.
+
+"You cheated the road," Warren says, pulling up beside him.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Thought that was the idea."&lt;/span&gt;
+
+He can tell Warren is impressed, even if the man won't admit it.
+
+(set: $c3WarrenRespect to true)
+(set: $raceEdge to $raceEdge + 1)
+]
+(else:)[
+Warren reaches the arch first. Eli comes in close behind.
+
+"Not bad," Warren says. "You actually looked where you were going."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Don't sound so surprised."&lt;/span&gt;
+]
+
+[[Follow the others into the canyon-&gt;A2C1P14 - Mercy Junction]]
+</tw-passagedata><tw-passagedata name="A2C1P13 - The Straight Run" pid="68" position="2690,875" size="115,100" tags="chapter3">Eli gives June some rein. She stretches forward as far as she can, but Warren's horse pulls away.
+
+For a few seconds, Eli almost catches him.
+
+Then June's breathing changes, and he knows better than to keep pushing.
+
+He slows.
+
+Warren waits at the arch, looking pleased with himself.
+
+"Fast horse, huh?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Fast enough to get me here."&lt;/span&gt;
+
+(if: $juneCondition &gt;= 3 and $marketSupplies)[
+June recovers after a short walk. Eli gives her water before moving on.
+]
+(else:)[
+June needs a longer rest. Warren's group starts without them.
+
+(set: $juneCondition to $juneCondition - 1)
+(set: $c3RaceCost to $c3RaceCost + 1)
+]
+
+[[Ride after Warren-&gt;A2C1P14 - Mercy Junction]]
+</tw-passagedata><tw-passagedata name="A2C1P14 - Mercy Junction" pid="69" position="2690,1000" size="115,100" tags="chapter3">Beyond the arch, the canyon narrows. Abandoned rails run along the rocks, half buried under sand.
+
+One of Warren's riders points to a wooden sign.
+
+MERCY JUNCTION: 6 MILES.
+
+The paint is old, but the lettering is clear.
+
+"There's no station out here," someone says.
+
+Warren barely glances at it.
+
+"Then the sign's wrong."
+
+Eli gets out his official map. No railroad. No junction. Just a stretch of empty country.
+
+(if: $raceEvidence)[
+He's reminded of the two different distances in the race office. The numbers were wrong there too.
+]
+
+[[Ride up to the marker-&gt;A2C1P15 - Where the Tracks Go]]
+</tw-passagedata><tw-passagedata name="A2C1P15 - Where the Tracks Go" pid="70" position="2690,1125" size="115,100" tags="chapter3">One of the riders, Amos, is already climbing down from his horse.
+
+"Tracks don't end just because a man says they do," he mutters.
+
+Warren looks back at Eli.
+
+"Are we riding or going sightseeing?"
+
+The rails disappear around a bend. A few minutes spent checking could tell Eli whether the marker is even real.
+
+(link: "Follow Amos to the old tracks.")[(set: $c3RailInvestigated to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P16 - The Empty Platform")]
+
+(link: "Stay with Warren's group.")[(go-to: "A2C1P17 - Blackwell's Terms")]
+</tw-passagedata><tw-passagedata name="A2C1P16 - The Empty Platform" pid="71" position="2690,1250" size="115,100" tags="chapter3">The rails run into a shallow cutting, where a low wooden platform stands beside a fence.
+
+No buildings. No water tower. No town.
+
+A board at the end of the platform has the same name painted on it.
+
+MERCY JUNCTION.
+
+Amos stares at it.
+
+"My brother works for the railroad. Never heard him mention this place."
+
+There are fresh-looking boot marks in the dust, but no road leading away.
+
+Eli copies the name into his notebook.
+
+(set: $c3RailMarker to true)
+
+(if: $raceEvidence)[
+He writes the distance down too. The number doesn't match what his map says should be possible.
+]
+
+Amos hears horses approaching from the canyon and turns back.
+
+"Best catch up. Blackwell doesn't like waiting."
+
+[[Return to the race-&gt;A2C1P17 - Blackwell's Terms]]
+</tw-passagedata><tw-passagedata name="A2C1P17 - Blackwell's Terms" pid="72" position="2690,1375" size="115,100" tags="chapter3">Warren is waiting near the canyon exit, his expression hard to read.
+
+(if: $c3RailInvestigated)[
+"Find your station?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Found a platform."&lt;/span&gt;
+
+"Wonderful. Can it win a horse race?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Not unless it grows legs."&lt;/span&gt;
+
+One of the other riders tries not to laugh.
+]
+(else:)[
+"At least somebody here remembers we're in a race," Warren says.
+]
+
+(if: $c3WarrenRespect or $helpedWarren)[
+He pulls up beside Eli when the group starts moving again.
+
+"You've got more sense than I gave you credit for. Doesn't mean I'll let you beat me."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Wouldn't ask you to."&lt;/span&gt;
+]
+(else:)[
+"Try not to fall behind," Warren says, and rides ahead.
+]
+
+Ahead, a scrap of white cloth catches on a post beyond the rocks.
+
+[[Ride toward the flag-&gt;A2C1P27 - A White Flag]]
+</tw-passagedata><tw-passagedata name="A2C1P18 - A Man With Two Maps" pid="73" position="2840,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE SURVEY LINE / INDEPENDENT&lt;/div&gt;
+
+The survey assistant is about Eli's age, with an ink stain on one sleeve and two maps folded under his arm.
+
+"Name's Jonah Pike," he says. "I was told to check a station west of here. My supervisor's gone ahead."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Why do you need me?"&lt;/span&gt;
+
+"Because the last rider I asked thought the scale was a kind of fish."
+
+Eli looks at the maps. The roads don't quite line up.
+
+Jonah offers a few coins for the work. It's not enough to change Eli's life, but it might buy June a decent meal.
+
+"Fine," Eli says. "But we don't spend all day on it."
+
+[[Follow Jonah west-&gt;A2C1P19 - The Station]]
+</tw-passagedata><tw-passagedata name="A2C1P19 - The Station" pid="74" position="2840,625" size="115,100" tags="chapter3">The survey station sits alone in a dry basin.
+
+It has a crooked porch, a rain barrel, and a door that sticks when Jonah pushes it open.
+
+Inside are two tables, a stack of measuring poles, and a wall covered in maps.
+
+"Someone was here recently," Jonah says, pointing to a cup that hasn't collected much dust.
+
+Eli checks on June through the window. She's eating the grass beside the porch.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"What exactly are we looking for?"&lt;/span&gt;
+
+"The distance between the north and west markers. Somebody wrote down three different answers."
+
+[[Look at the maps-&gt;A2C1P20 - Three Distances]]
+</tw-passagedata><tw-passagedata name="A2C1P20 - Three Distances" pid="75" position="2840,750" size="115,100" tags="chapter3">One map puts the river three miles east of the station.
+
+Another puts it eleven miles away.
+
+The third leaves the river out entirely.
+
+All three carry the same date.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Which one's right?"&lt;/span&gt;
+
+Jonah rubs his forehead.
+
+"That's what I'm being paid to find out."
+
+(if: $raceEvidence)[
+Eli unfolds his notes from the Race Office. The numbers aren't the same, but the problem is.
+
+Two records. One road. Different distances.
+]
+(if: $earlyTrailClue)[
+He also remembers the mile marker on the old windmill road, where the numbers seemed to run backward.
+]
+
+A locked cabinet stands beneath the maps. Its label reads SURVEY LOGS.
+
+[[Check the cabinet-&gt;A2C1P21 - The Locked Cabinet]]
+</tw-passagedata><tw-passagedata name="A2C1P21 - The Locked Cabinet" pid="76" position="2840,875" size="115,100" tags="chapter3">The cabinet key is missing.
+
+Jonah tries the handle again, as if it might change its mind.
+
+"Most useful part of this job's locked up. Figures."
+
+Eli notices an old desk with a shallow drawer. There's also a numbering chart pinned to the wall.
+
+(if: $raceEvidence)[
+The chart uses the same numbering system as the race records Eli saw in Dry Creek. He might be able to identify the right survey log without opening everything.
+]
+
+(link: "Search the desk for a key.")[(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P22 - Under the Drawer")]
+
+(if: $raceEvidence)[
+(link: "Use your Race Office notes to find the right log.")[(set: $c3OfficeConnection to true)(go-to: "A2C1P23 - The Matching Number")]
+]
+
+(link: "Forget the cabinet. Check the survey markers instead.")[(go-to: "A2C1P24 - A Name on the Wall")]
+</tw-passagedata><tw-passagedata name="A2C1P22 - Under the Drawer" pid="77" position="2840,1000" size="115,100" tags="chapter3">Eli empties the drawer: old pencils, a broken ruler, and a little tin of nails.
+
+Nothing.
+
+Jonah crouches and runs a hand beneath the desk. A key is taped to the underside.
+
+"Well," Jonah says, "that's not where I would've left it."
+
+The cabinet opens with a dry scrape.
+
+Inside is a stack of reports labeled with dates and initials.
+
+One page lists a route that appears to cross the same ridge twice without turning around.
+
+(set: $c3StationRecords to true)
+
+[[Read what you can-&gt;A2C1P24 - A Name on the Wall]]
+</tw-passagedata><tw-passagedata name="A2C1P23 - The Matching Number" pid="78" position="2840,1125" size="115,100" tags="chapter3">Eli reads the code on his Race Office notes and looks along the cabinet labels.
+
+"Jonah. There's a log with the same station number as the race map."
+
+Jonah goes still.
+
+"They're not supposed to use old survey numbers for this race."
+
+"Why not?"
+
+"Because those surveys were never approved."
+
+The right folder is missing from the cabinet, but Eli finds its entry on the wall chart. The listed supervisor is Edwin Vale.
+
+(set: $c3ValeName to true)
+(set: $c3StationRecords to true)
+
+[[Look around the rest of the station-&gt;A2C1P24 - A Name on the Wall]]
+</tw-passagedata><tw-passagedata name="A2C1P24 - A Name on the Wall" pid="79" position="2840,1250" size="115,100" tags="chapter3">(if: $c3StationRecords)[
+The logs don't solve much. One page puts the west marker seven miles away, another puts it fourteen.
+
+"You sure whoever wrote these wasn't drunk?" Eli asks.
+
+"I'm beginning to hope he was," Jonah says.
+]
+(else:)[
+Jonah gives up on the cabinet. Eli finds a faded list of surveyors pinned beside the door.
+]
+
+Near the bottom is a signature.
+
+EDWIN VALE.
+
+(if: $c3ValeName)[
+It's the same name Eli found beside the missing log.
+]
+(else:)[
+Jonah taps the paper.
+
+"He ran this survey years ago. People say he still comes through here sometimes."
+
+(set: $c3ValeName to true)
+]
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Should I know him?"&lt;/span&gt;
+
+"Not unless you like bad maps."
+
+[[Test the markers outside-&gt;A2C1P25 - Count the Miles]]
+</tw-passagedata><tw-passagedata name="A2C1P25 - Count the Miles" pid="80" position="2840,1375" size="115,100" tags="chapter3">Jonah points to a white-painted rock visible through the window.
+
+"That one's a quarter mile from here. At least, it's supposed to be."
+
+The next marker is somewhere beyond it.
+
+The sun is getting higher. Every minute at the station is a minute not spent racing.
+
+(link: "Measure the distance yourself.")[(set: $c3SurveyMeasured to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P26 - The Return Line")]
+
+(link: "Leave the measurements to Jonah and get moving.")[(go-to: "A2C1P26 - The Return Line")]
+</tw-passagedata><tw-passagedata name="A2C1P26 - The Return Line" pid="81" position="2840,1500" size="115,100" tags="chapter3">(if: $c3SurveyMeasured)[
+Eli and Jonah pace the distance twice.
+
+The first time, it takes twenty minutes.
+
+The second time, walking the same way, they reach the station in less than five.
+
+Jonah checks his pocket watch.
+
+"We didn't walk that fast."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"No. We didn't."&lt;/span&gt;
+
+(set: $c3FlagMemory to true)
+]
+(else:)[
+Eli leads June toward the west road.
+
+"You can keep the coins," he tells Jonah. "I've got a race to ride."
+
+Jonah looks from one map to the other.
+
+"Fair enough. I'm not sure I want the job either."
+]
+
+A breeze comes over the basin. Something pale is tied to a fence post near the road.
+
+Eli can't remember seeing it when they arrived.
+
+[[See the white cloth-&gt;A2C1P27 - A White Flag]]
+</tw-passagedata><tw-passagedata name="A2C1P27 - A White Flag" pid="82" position="2690,1690" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;CHAPTER 3 / THE FIRST WHITE FLAG&lt;/div&gt;
+
+It's a strip of white cloth, tied around a weathered wooden post.
+
+There are three knots in the rope.
+
+(if: $c3Route is "silas")[
+The post stands beside a narrow track that leaves the river road. Silas stops several steps behind Eli.
+
+"Leave it," he says.
+]
+(else-if: $c3Route is "warren")[
+The post stands just beyond the abandoned rails. Warren's group is a little way ahead.
+
+"Shortcut?" one rider calls. "We taking it?"
+
+Warren studies the road but doesn't answer.
+]
+(else:)[
+The post stands on an empty stretch of hillside. Jonah's station is no longer visible behind Eli.
+
+The road beyond the post looks like it leads directly toward Hollow Ford.
+]
+
+Eli checks his map. There should be no road here.
+
+He can investigate, or let it go and protect what remains of his position in the race.
+
+(link: "Get off the horse and examine the flag.")[(set: $c3FlagInvestigated to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P28 - Closer Look")]
+
+(link: "Stay on the race route.")[(set: $c3FlagInvestigated to false)(set: $raceEdge to $raceEdge + 1)(go-to: "A2C1P29 - Keep the Red Markers")]
+</tw-passagedata><tw-passagedata name="A2C1P28 - Closer Look" pid="83" position="2540,1815" size="115,100" tags="chapter3">Eli dismounts. The cloth feels dry, even though the ground beneath it is damp.
+
+(if: $c3Route is "silas")[
+Silas keeps his distance.
+
+"Mercer, we can talk about it back at camp."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Why won't you come look?"&lt;/span&gt;
+
+"Because I've looked at one before."
+
+He stops there.
+]
+(else-if: $c3Route is "warren")[
+Warren rides back toward him.
+
+"You planning on racing sometime today?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"There's a road here that isn't on the map."&lt;/span&gt;
+
+"There's a lot of things not on maps."
+
+For once, he doesn't seem fully convinced by his own answer.
+]
+(else:)[
+Eli remembers Jonah's two maps and the strange distance between the survey markers.
+
+The post looks old enough to have been here for years. The rope is much newer.
+]
+
+A smaller path branches away behind the post, half hidden in grass.
+
+[[Decide what to record-&gt;A2C1P30 - Three Knots]]
+</tw-passagedata><tw-passagedata name="A2C1P29 - Keep the Red Markers" pid="84" position="2840,1815" size="115,100" tags="chapter3">Eli turns June back toward the official route.
+
+(if: $c3Route is "silas")[
+Silas lets out a breath he was trying not to show.
+
+"Good," he says. "Let's keep going."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"You going to tell me what that was about?"&lt;/span&gt;
+
+"Not today."
+]
+(else-if: $c3Route is "warren")[
+Warren lifts his reins.
+
+"There you are. I was beginning to think you'd forgotten about the prize."
+]
+(else:)[
+For a while Eli looks over his shoulder, but the white cloth disappears behind the bend.
+
+He tells himself there are plenty of old roads nobody bothered to draw.
+]
+
+The next official red marker appears near a low hill.
+
+[[Ride to Hollow Ford-&gt;A2C1P31 - Back to the Red Road]]
+</tw-passagedata><tw-passagedata name="A2C1P30 - Three Knots" pid="85" position="2540,1940" size="115,100" tags="chapter3">Eli could study the way the cloth is tied, or sketch the road and its landmarks.
+
+There's not time to do both properly. The other riders are moving on.
+
+(if: $earlyTrailClue or $raceEvidence)[
+Something about this feels familiar, though he can't quite place it.
+]
+
+(link: "Copy the three knots into your notebook.")[(set: $c3FlagKnots to true)(go-to: "A2C1P31 - Back to the Red Road")]
+
+(link: "Sketch the road and the shape of the hills.")[(set: $c3FlagSketch to true)(go-to: "A2C1P31 - Back to the Red Road")]
+</tw-passagedata><tw-passagedata name="A2C1P31 - Back to the Red Road" pid="86" position="2690,2065" size="115,100" tags="chapter3">(if: $c3FlagInvestigated)[
+(if: $c3FlagKnots)[
+Eli copies the knots carefully. It would be easy to recognize that pattern again.
+]
+(else:)[
+He sketches the road and a strange notch in the hill behind it. Then he folds the page away.
+]
+
+(if: $c3Route is "silas")[
+Silas won't look at the notebook.
+]
+(else-if: $c3Route is "warren")[
+Warren calls for the group to get moving. He doesn't complain when Eli catches up.
+]
+(else:)[
+The wind lifts the cloth once. For a moment it seems to point back toward the station, not toward the road.
+]
+]
+
+The red markers return. They look exactly how a racecourse ought to look.
+
+Eli is grateful for that.
+
+[[Continue toward Hollow Ford-&gt;A2C1P32 - Smoke in the Valley]]
+</tw-passagedata><tw-passagedata name="A2C1P32 - Smoke in the Valley" pid="87" position="2690,2190" size="115,100" tags="chapter3">By late afternoon, the land opens into a valley. A thin line of campfire smoke rises near a bridge.
+
+Hollow Ford.
+
+(if: $c3RaceCost &gt;= 2)[
+Plenty of horses have beaten them there. Eli tries not to count how many.
+]
+(else:)[
+They're ahead of a good part of the field. June could use some water, but she's still walking strong.
+]
+
+(if: $c3Route is "silas")[
+Silas rides a short distance away, quiet since the white flag.
+]
+(else-if: $c3Route is "warren")[
+Warren's crew is already talking about where they'll camp. Warren looks once toward the hills behind them.
+]
+(else:)[
+Eli has barely spoken to another racer all day. He spots Silas's red scarf near the water trough and feels unexpectedly relieved.
+]
+
+[[Get your checkpoint card stamped-&gt;A2C1P33 - Another Stamp]]
+</tw-passagedata><tw-passagedata name="A2C1P33 - Another Stamp" pid="88" position="2690,2315" size="115,100" tags="chapter3">The clerk at Hollow Ford barely looks up when Eli hands over his card.
+
+"Mercer. One-four-seven. Route?"
+
+(if: $c3Route is "silas")[
+&lt;span class="rw-dialogue rw-eli"&gt;"River road."&lt;/span&gt;
+]
+(else-if: $c3Route is "warren")[
+&lt;span class="rw-dialogue rw-eli"&gt;"West canyon. Past some old tracks."&lt;/span&gt;
+
+The clerk's pen slows a little.
+]
+(else:)[
+&lt;span class="rw-dialogue rw-eli"&gt;"Survey line by the station."&lt;/span&gt;
+
+"That station still standing?" the clerk asks.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Last I saw."&lt;/span&gt;
+]
+
+(if: $c3FlagInvestigated)[
+The clerk looks at a second notebook before stamping the card.
+
+(set: $c3CheckpointNote to true)
+]
+
+THUMP.
+
+Another checkpoint done.
+
+"Your route goes on the log," the clerk says. "Mr. Wren wants them all."
+
+(if: $officialSuspicion or $raceEvidence)[
+Eli remembers the strange papers at registration. He looks at the notebook, but the clerk shuts it.
+]
+
+[[Go find somewhere to sit-&gt;A2C1P34 - Stories at Supper]]
+</tw-passagedata><tw-passagedata name="A2C1P34 - Stories at Supper" pid="89" position="2840,2315" size="115,100" tags="chapter3">Hollow Ford is crowded by nightfall. Horses drink near the bridge, and tired riders fight over the last bowls of stew.
+
+Thomas Bell is talking by a campfire.
+
+(if: $c3RiderIdentity is "thomas" and $c3HelpedRider)[
+"There he is!" Thomas calls. "Mercer saved my harness. Again."
+
+Eli waves him down before he gets louder.
+]
+(else-if: $thomasAlly)[
+Thomas nods when Eli walks past.
+
+"Evening, Mercer."
+]
+
+A man by the fire swears he saw a white flag beside the river. Another claims it was past an abandoned railroad.
+
+Someone else says the same flag stood outside a station on the hill.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Those are three different places,"&lt;/span&gt; Eli says.
+
+"Exactly," the man replies.
+
+A fourth rider claims the clerk logged his arrival before he'd left Coldwater that morning.
+
+Nobody knows whether he's joking.
+
+[[Listen a little longer-&gt;A2C1P35 - What They Remember]]
+</tw-passagedata><tw-passagedata name="A2C1P35 - What They Remember" pid="90" position="2840,2440" size="115,100" tags="chapter3">(if: $c3FlagKnots)[
+Eli takes out his notebook.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Was the flag tied like this? Three knots?"&lt;/span&gt;
+
+Two men recognize the drawing. A third shakes his head and says he never got close enough to see.
+]
+(else-if: $c3FlagSketch)[
+Eli shows his sketch of the notch in the hills.
+
+One rider says he saw the same shape by the river. Another says the hill wasn't there when he went back.
+]
+(else-if: $c3FlagInvestigated is false)[
+Eli almost mentions the white cloth he passed, but he never got close enough to say anything useful.
+]
+
+(if: $c3ValeName)[
+"Anybody know an Edwin Vale?" Eli asks.
+
+The conversation goes quiet for a moment.
+
+"Surveyor," somebody says. "Used to work for the railroad. I heard he was looking for people to ride the old lines."
+]
+(if: $c3RailMarker)[
+Eli mentions Mercy Junction. One of the riders says there was never a station by that name.
+]
+
+Silas appears at the edge of the firelight.
+
+"Mercer. Can we talk?"
+
+[[Step away with Silas-&gt;A2C1P36 - Tomorrow Is Crow's Gap]]
+</tw-passagedata><tw-passagedata name="A2C1P36 - Tomorrow Is Crow's Gap" pid="91" position="2690,2565" size="115,100" tags="chapter3">They walk toward the stables, away from the fire.
+
+(if: $c3Route is "silas")[
+"About that tree," Eli starts.
+
+Silas stops him.
+
+"I saw it. I don't want to see it again."
+]
+(else:)[
+"Heard you saw something odd today," Silas says.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Seems everybody did."&lt;/span&gt;
+]
+
+(if: $c3FlagInvestigated and $c3SilasConfession)[
+&lt;span class="rw-dialogue rw-eli"&gt;"You said you'd seen this before."&lt;/span&gt;
+
+Silas looks toward the dark hills.
+
+"Not tonight. Tomorrow, maybe."
+]
+(else-if: $c3FlagInvestigated)[
+&lt;span class="rw-dialogue rw-eli"&gt;"I found a white flag. There was a road behind it."&lt;/span&gt;
+
+Silas's face changes.
+
+"Promise me you won't follow one of those roads alone."
+]
+(else:)[
+"There's bad country after the next checkpoint," Silas says. "Don't let some shortcut put you miles from the race."
+]
+
+&lt;span class="rw-dialogue rw-eli"&gt;"You always this cheerful?"&lt;/span&gt;
+
+"Only with you."
+
+They stop beside June's stall. She turns her head toward Eli at the sound of his voice.
+
+"Crow's Gap tomorrow," Silas says. "Get some sleep."
+
+Eli watches him leave.
+
+Across the valley, a narrow road disappears between the hills. At this distance, he can't tell whether the marker beside it is red or white.
+
+[[Chapter 4: Crow's Gap-&gt;A2C2 - Crow's Gap]]
+</tw-passagedata><tw-passagedata name="A2C2 - Crow's Gap" pid="92" position="3340,220" size="115,100" tags="chapter4">(set: $crowRoad to "none")
+(set: $crowGrayUnlocked to ($scoutedOldRoad or $routeChoice is "oldroad" or $c3StationRecords or $c3SurveyMeasured))
+(set: $crowHelpedDrivers to false)
+(set: $crowWagonRecords to false)
+(set: $crowRedWarning to false)
+(set: $crowWhiteStranger to false)
+(set: $crowHouseFound to false)
+(set: $crowHouseEvidence to false)
+(set: $crowTimeLost to false)
+(set: $crowGraySketch to false)
+(set: $crowWarrenDeal to "none")
+(set: $crowWarrenLetter to false)
+(set: $crowSilasFight to "none")
+(set: $crowSilasWithEli to false)
+(set: $crowValeReference to false)
+&lt;div class="rw-chapter"&gt;ACT II / CHAPTER 4 / CROW'S GAP&lt;/div&gt;
+
+Hollow Ford, before dawn.
+
+Somebody is hammering a new sign to the checkpoint gate. The old road west has been crossed out. Under it, in fresh paint, are the words DETOUR THROUGH CROW'S GAP.
+
+June watches the hammer rise and fall. Eli checks her saddle one more time.
+
+At the well, Silas is talking to an official. He looks up when Eli approaches and shakes his head.
+
+"This is going to be a long day," he says.
+
+[[Find out what happened-&gt;A2C2P1 - The Detour]]</tw-passagedata><tw-passagedata name="A2C2P1 - The Detour" pid="93" position="3340,350" size="115,100" tags="chapter4">The official points at the new map with a dirty pencil.
+
+"West crossing washed out. Red markers will take you along the canyon wall. It adds miles, but it's open."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"How many miles?"&lt;/span&gt;
+
+"Depends which map you're using." He regrets saying it as soon as the words leave his mouth.
+
+(if: $raceEvidence or $c3StationRecords)[
+Eli remembers the mismatched distances he saw earlier. Once could be a mistake. Twice is harder to explain.
+]
+
+Silas takes his own map off the wall. "There's an old cut through the gap. You see any markings there, leave it alone."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"What markings?"&lt;/span&gt;
+
+"You'll know them when you see them."
+
+[[Ride toward the canyon-&gt;A2C2P2 - Three Knots Again]]</tw-passagedata><tw-passagedata name="A2C2P2 - Three Knots Again" pid="94" position="3340,475" size="115,100" tags="chapter4">Crow's Gap rises out of the grassland like a split in the earth. The road divides at a dry creek.
+
+Red flags mark the bend along the cliff. A narrower path heads between two walls of stone.
+
+A white strip of cloth hangs from a post beside that path. Three tight knots hold it in place.
+
+(if: $c3FlagKnots)[
+Eli pulls out the sketch he made yesterday. Even the last knot bends the same way.
+]
+(if: $c3FlagSketch)[
+The shape of the hills is wrong. They slope in the opposite direction to his drawing, although he's certain this is the same kind of track.
+]
+
+Silas stops so suddenly his horse sidesteps.
+
+"No," he says. "Not that road."
+
+[[Ask him what's wrong-&gt;A2C2P3 - Four Years Earlier]]</tw-passagedata><tw-passagedata name="A2C2P3 - Four Years Earlier" pid="95" position="3340,600" size="115,100" tags="chapter4">"You know that flag," Eli says.
+
+Silas looks at the rope around the post. For once, he doesn't have anything clever to say.
+
+"Four years ago, I rode with somebody who followed one."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Who?"&lt;/span&gt;
+
+"A friend."
+
+"Did you find him?"
+
+Silas tightens the reins. "I found his horse."
+
+For a moment, Eli can hear nothing but the wind moving past the stones.
+
+(if: $c3Route is "silas" or $silasTrust &gt; 1)[
+"I believe you," Eli says. "But you keep asking me to trust you without telling me the whole thing."
+
+"I know."
+]
+(else:)[
+"So I'm supposed to take your word for it?"
+
+Silas stares at him. "I'm trying to keep you out of trouble, Mercer."
+]
+
+[[Tell Silas what you think-&gt;A2C2P4 - Words at the Fork]]</tw-passagedata><tw-passagedata name="A2C2P4 - Words at the Fork" pid="96" position="3340,725" size="115,100" tags="chapter4">(link: "Tell him you're listening, but you need to decide for yourself.")[(set: $crowSilasFight to "honest")(set: $silasTrust to $silasTrust + 1)(go-to: "A2C2P5 - Choose a Road")]
+
+(link: "Accuse him of wanting you to fall behind.")[(set: $crowSilasFight to "accused")(set: $silasTrust to $silasTrust - 1)(go-to: "A2C2P5 - Choose a Road")]
+
+(link: "Say nothing. You're tired of having the same argument.")[(set: $crowSilasFight to "silent")(go-to: "A2C2P5 - Choose a Road")]</tw-passagedata><tw-passagedata name="A2C2P5 - Choose a Road" pid="97" position="3340,850" size="115,100" tags="chapter4">(if: $crowSilasFight is "honest")[
+Silas rubs his forehead. "I don't have a right to tell you where to ride. Just don't act like I didn't warn you."
+]
+(else-if: $crowSilasFight is "accused")[
+Silas's face hardens. "You think I came this far just to get in your way? Do what you want."
+]
+(else:)[
+Silas waits for a reply that doesn't come. He looks at the red markers. "Well. It's your call."
+]
+
+The red flags flutter along the canyon wall. The white flag hangs almost still.
+
+(if: $crowGrayUnlocked)[
+Eli also remembers a service track above the gorge. It isn't marked for racers, but he knows how to find its entrance.
+]
+
+&lt;div class="rw-notice"&gt;The road determines which version of Mercy Junction you'll encounter.&lt;/div&gt;
+
+(link: "RED ROAD. Stay on the official detour with Silas.")[(set: $crowRoad to "red")(set: $crowSilasWithEli to true)(go-to: "A2C2P6 - Red Markers")]
+
+(link: "WHITE ROAD. Leave Silas and follow the unmarked track.")[(set: $crowRoad to "white")(set: $crowSilasWithEli to false)(go-to: "A2C2P15 - Beyond the White Flag")]
+
+(if: $crowGrayUnlocked)[
+(link: "GRAY ROAD. Follow the old service trail over the canyon.")[(set: $crowRoad to "gray")(set: $crowSilasWithEli to false)(go-to: "A2C2P24 - The High Service Track")]
+]</tw-passagedata><tw-passagedata name="A2C2P6 - Red Markers" pid="98" position="3190,1030" size="115,100" tags="chapter4">The red detour climbs the side of the canyon, steep enough to leave Eli's knees aching.
+
+Silas rides a little ahead. Every time Eli catches him, neither seems sure what to say.
+
+A wagon wheel lies in the dirt. Farther up the track, a supply wagon has slid into a ditch. Its driver is waving a red cloth over his head.
+
+"Race supplies!" the driver calls. "We can't move the axle!"
+
+Silas looks at Eli. "They'll have to send somebody else if we keep going."
+
+Eli dismounts. A second driver is sorting scattered boxes, trying to keep their labels out of the dust.
+
+[[See what the drivers need-&gt;A2C2P7 - The Supply Wagon]]</tw-passagedata><tw-passagedata name="A2C2P7 - The Supply Wagon" pid="99" position="3190,1155" size="115,100" tags="chapter4">The front wheel is buried to its hub. One man is trapped on the wrong side of the ditch, holding a broken harness.
+
+"We've been here since sunrise," the driver says. "Checkpoint crew's meant to come for us."
+
+Eli notices a tin case beneath an overturned crate. WREN TRANSPORT COMPANY is stamped into its side.
+
+Silas kneels beside the wheel. "One good shove might get them moving."
+
+There's time for one thing before more riders crowd the pass.
+
+(link: "Help Silas lift the wagon free.")[(set: $crowHelpedDrivers to true)(set: $raceEdge to $raceEdge - 1)(go-to: "A2C2P8 - Two Against a Wagon")]
+
+(link: "Check the papers spilling from the tin case.")[(set: $crowWagonRecords to true)(set: $raceEdge to $raceEdge - 1)(go-to: "A2C2P9 - The Sealed Ledger")]
+
+(link: "Leave the drivers and keep your race position.")[(set: $raceEdge to $raceEdge + 1)(go-to: "A2C2P10 - After the Wagon")]</tw-passagedata><tw-passagedata name="A2C2P8 - Two Against a Wagon" pid="100" position="3190,1280" size="115,100" tags="chapter4">"Put your shoulder here," Silas says. "Not there. Here."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"I know how to push a wagon."&lt;/span&gt;
+
+"Then stop arguing and push it."
+
+The wheel slips once, then rises onto the road. The driver catches the harness before it falls under the axle.
+
+"Thought I'd be stuck till winter," he says. He presses a little tin of saddle grease into Eli's hand. "For the mare. Least I can do."
+
+(set: $juneCondition to $juneCondition + 1)
+(set: $silasTrust to $silasTrust + 1)
+
+Silas brushes the dust off his coat. "Don't tell anybody I helped you."
+
+[[Get back on the road-&gt;A2C2P10 - After the Wagon]]</tw-passagedata><tw-passagedata name="A2C2P9 - The Sealed Ledger" pid="101" position="3190,1405" size="115,100" tags="chapter4">The papers are numbered route orders, not supply receipts.
+
+One sheet lists the same detour Eli is standing on, dated weeks before the official said the crossing washed out.
+
+At the bottom: ROUTE OBSERVATIONS TO BE COLLECTED BY ORDER OF A. WREN.
+
+(if: $raceEvidence or $c3OfficeConnection)[
+The checkpoint numbers match the ones Eli wrote down back in Dry Creek. Whoever prepared these orders knew the distances weren't adding up.
+]
+
+One of the drivers calls from the wheel. Eli slips the loose page into his coat before anyone turns around.
+
+(set: $crowValeReference to true)
+
+[[Catch up with Silas-&gt;A2C2P10 - After the Wagon]]</tw-passagedata><tw-passagedata name="A2C2P10 - After the Wagon" pid="102" position="3190,1530" size="115,100" tags="chapter4">(if: $crowHelpedDrivers)[
+The wagon creaks back onto the track behind them. The driver waves until the bend hides him.
+]
+(else-if: $crowWagonRecords)[
+Eli keeps touching the folded paper in his coat. It seems too early for Wren to have known this road would need a detour.
+]
+(else:)[
+They leave the shouting behind. The drivers are still hauling at the wheel when the wagon disappears around the corner.
+]
+
+Silas moves his horse closer.
+
+"Doesn't feel like a race anymore, does it?" he says.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Still got a finish line."&lt;/span&gt;
+
+"That's what worries me."
+
+Up ahead, a small wooden signal board leans over the road. Someone has painted over an older mark in fresh red.
+
+[[Look at the signal board-&gt;A2C2P11 - The Painted Arrow]]</tw-passagedata><tw-passagedata name="A2C2P11 - The Painted Arrow" pid="103" position="3190,1655" size="115,100" tags="chapter4">The arrow points toward a steep cut in the rock. Under the wet paint, Eli can make out a different arrow pointing back the way they came.
+
+A length of white cord hangs from the bottom of the board. It has been cut.
+
+"Bad sign?" Eli asks.
+
+"Bad work," Silas says. "Somebody can't decide which way this road goes."
+
+(link: "Tell Silas about the wagon papers and your doubts.")[(set: $crowRedWarning to true)(go-to: "A2C2P12 - An Honest Warning")]
+
+(link: "Study the old marking before it dries.")[(set: $crowRedWarning to true)(go-to: "A2C2P13 - Beneath the Paint")]</tw-passagedata><tw-passagedata name="A2C2P12 - An Honest Warning" pid="104" position="3190,1780" size="115,100" tags="chapter4">Eli tells Silas about the route orders, or about the way the officials couldn't give a straight answer.
+
+Silas listens. No jokes this time.
+
+"That's Wren's company," he says. "He doesn't run things unless there's something in it for him."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"You think the race is fixed?"&lt;/span&gt;
+
+"I think someone knows more about these roads than we do."
+
+(if: $crowSilasFight is "accused")[
+Eli almost apologizes for what he said at the fork. He can't find the words.
+]
+
+(set: $silasTrust to $silasTrust + 1)
+
+[[Keep going before the light changes-&gt;A2C2P14 - Over the Red Ridge]]</tw-passagedata><tw-passagedata name="A2C2P13 - Beneath the Paint" pid="105" position="3190,1905" size="115,100" tags="chapter4">Eli scrapes at the board with the edge of his pocketknife. The older arrow points toward a road that isn't visible from here.
+
+Below it are three narrow grooves, almost hidden beneath the red paint.
+
+The same number of marks as the knots on the white flag.
+
+Silas sees them too. "I've had enough of this."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"You're not even curious?"&lt;/span&gt;
+
+"I am. That's why I want to get out of here."
+
+(set: $earlyTrailClue to true)
+
+[[Follow the real red flags uphill-&gt;A2C2P14 - Over the Red Ridge]]</tw-passagedata><tw-passagedata name="A2C2P14 - Over the Red Ridge" pid="106" position="3190,2030" size="115,100" tags="chapter4">The road reaches a ridge just as the afternoon light turns gold.
+
+At the bottom of the next valley sits a town. Smoke rises from chimneys, and somebody has hung lanterns above the main street.
+
+"Wasn't expecting a town out here," Eli says.
+
+Silas opens his map. There's no name written beside the little cluster of buildings.
+
+"Maybe it's new," he says, though he doesn't sound convinced.
+
+A bell rings from below. Eli counts six strokes, even though the sun is still high.
+
+[[Ride down into the valley-&gt;A2C2P33 - The Valley Below]]</tw-passagedata><tw-passagedata name="A2C2P15 - Beyond the White Flag" pid="107" position="3340,1030" size="115,100" tags="chapter4">Silas doesn't follow.
+
+Eli keeps June at a walk until the shouting from the red road fades behind the rocks. Only then does he turn around.
+
+The white flag is gone from view. So is the fork.
+
+He hadn't taken a turn.
+
+"Well," he tells June, "that's a fine start."
+
+She snorts, unimpressed.
+
+There's a rider ahead, leaning against a fence that doesn't seem to lead anywhere. The man's horse drinks from a trough with no water in it.
+
+[[Approach the stranger-&gt;A2C2P16 - The Rider at the Fence]]</tw-passagedata><tw-passagedata name="A2C2P16 - The Rider at the Fence" pid="108" position="3340,1155" size="115,100" tags="chapter4">The stranger lifts his hat.
+
+"Back so soon?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Sorry?"&lt;/span&gt;
+
+"You asked me about the bridge this morning. I told you it was gone."
+
+Eli stares at him. "I've never seen you before."
+
+The stranger's smile disappears. He looks at June, then at his own horse.
+
+"Well, all right," he says. "Maybe I haven't seen you yet."
+
+The old fence makes a right angle behind him. Beyond it, Eli can see a house with one lit window.
+
+(link: "Ask the man to describe your earlier conversation.")[(set: $crowWhiteStranger to true)(go-to: "A2C2P17 - The Same Question")]
+
+(link: "Check whether his story matches the road.")[(set: $crowWhiteStranger to true)(go-to: "A2C2P18 - A Road Without a Fence")]</tw-passagedata><tw-passagedata name="A2C2P17 - The Same Question" pid="109" position="3340,1280" size="115,100" tags="chapter4">"What did I say?" Eli asks.
+
+"You asked if the road went to Mercy Junction. I said I'd never heard of it."
+
+Eli pauses. He hasn't asked anybody about that place. Not today.
+
+"Then you said the strangest thing," the rider continues. "You said you hoped I was right."
+
+The stranger studies Eli's face, searching for a joke that isn't there.
+
+"Listen, kid. I'd turn around if I were you."
+
+[[Leave him at the fence-&gt;A2C2P19 - The Fence Ends]]</tw-passagedata><tw-passagedata name="A2C2P18 - A Road Without a Fence" pid="110" position="3340,1405" size="115,100" tags="chapter4">Eli checks the ground. No wagon ruts lead to the trough. No hoofprints run beside the fence except June's and the stranger's.
+
+The fence posts have been hammered into hard stone. Every post is weathered except the nearest one.
+
+The stranger watches him measure the spaces with his boots.
+
+"Looking for something?" he asks.
+
+&lt;span class="rw-dialogue rw-eli"&gt;"The road you came down."&lt;/span&gt;
+
+"Same road as you."
+
+Eli looks back. The track has become a bare strip of grass.
+
+(set: $crowTimeLost to true)
+
+[[Turn toward the house-&gt;A2C2P19 - The Fence Ends]]</tw-passagedata><tw-passagedata name="A2C2P19 - The Fence Ends" pid="111" position="3340,1530" size="115,100" tags="chapter4">After a few hundred yards, Eli looks back at the rider.
+
+The fence ends at the trough. The man and his horse are gone.
+
+June keeps walking until they reach a little house set beneath a line of cottonwoods. Its shutters are hanging loose, and the steps are nearly buried in dirt.
+
+But a cup sits on the table inside, visible through the window. Steam rises from it.
+
+"Somebody's home," Eli says. He isn't sure whether that's good news.
+
+[[Walk up to the porch-&gt;A2C2P20 - A Cup on the Table]]</tw-passagedata><tw-passagedata name="A2C2P20 - A Cup on the Table" pid="112" position="3340,1655" size="115,100" tags="chapter4">A wooden board beside the door reads MERCY, though the rest of the lettering has worn away.
+
+Eli knocks. Nothing answers.
+
+The cup on the table is still steaming. A chair rocks slightly, as though someone has just stood up.
+
+He checks his pocket watch. The second hand has stopped between two marks.
+
+(link: "Go inside and search for a clue.")[(set: $crowHouseFound to true)(set: $raceEdge to $raceEdge - 1)(go-to: "A2C2P21 - The House on the Road")]
+
+(link: "Wait outside for whoever lives here.")[(set: $crowHouseFound to true)(set: $raceEdge to $raceEdge - 1)(go-to: "A2C2P22 - Waiting for Nobody")]
+
+(link: "Leave the house alone and get out.")[(set: $raceEdge to $raceEdge + 1)(go-to: "A2C2P23 - The Unfamiliar Hill")]</tw-passagedata><tw-passagedata name="A2C2P21 - The House on the Road" pid="113" position="3340,1780" size="115,100" tags="chapter4">Inside, the floor is covered in fine dust. There are no footprints, including Eli's, when he looks behind him.
+
+A paper calendar hangs beside the stove. The month is familiar, but the year has been scratched away.
+
+On the mantle sits a photograph of a busy railway platform. On the back someone has written MERCY JUNCTION, KEEP THIS SAFE.
+
+Eli folds the photograph and puts it in his coat.
+
+(set: $crowHouseEvidence to true)
+
+When he looks at the table again, the cup is cold.
+
+[[Leave before the light goes-&gt;A2C2P23 - The Unfamiliar Hill]]</tw-passagedata><tw-passagedata name="A2C2P22 - Waiting for Nobody" pid="114" position="3340,1905" size="115,100" tags="chapter4">Eli waits ten minutes, or what feels like ten minutes. June pulls at the grass beside the fence.
+
+There are sounds inside the house: footsteps, a cupboard opening, two quiet voices. Every time Eli moves toward the door, the sounds stop.
+
+He calls out. Nobody replies.
+
+The shadows lengthen across the porch, though the sun hasn't moved much.
+
+Eli checks the watch again. Still stopped.
+
+(set: $crowTimeLost to true)
+
+[[Take June back to the road-&gt;A2C2P23 - The Unfamiliar Hill]]</tw-passagedata><tw-passagedata name="A2C2P23 - The Unfamiliar Hill" pid="115" position="3340,2030" size="115,100" tags="chapter4">Eli climbs out of the low ground and finds a hill overlooking a valley.
+
+A town sits below. Its wooden buildings lean toward an old railway station. The tracks vanish into a stand of trees.
+
+No smoke rises from the chimneys. The street is empty.
+
+(if: $crowHouseEvidence)[
+He compares the town with the photograph from the house. The station is unmistakably the same, but in the picture it was full of people.
+]
+
+June stops at the top of the hill and refuses to move until Eli lets her drink.
+
+"All right," he says. "We're not racing anybody down there."
+
+[[Lead June toward town-&gt;A2C2P33 - The Valley Below]]</tw-passagedata><tw-passagedata name="A2C2P24 - The High Service Track" pid="116" position="3490,1030" size="115,100" tags="chapter4">The old service trail starts behind a shelf of limestone. Eli recognizes the turn from his sketch, the old road at Quarry Ridge, or the survey directions he'd kept.
+
+There are no race flags here. Only faded survey marks cut into stones.
+
+The climb is slow. June picks her way around loose rock while the red and white roads disappear beneath them.
+
+At the top, voices drift up from the other side of a narrow ridge.
+
+One of them belongs to Warren Blackwell.
+
+[[See who's on the trail-&gt;A2C2P25 - Blackwell Above the Gap]]</tw-passagedata><tw-passagedata name="A2C2P25 - Blackwell Above the Gap" pid="117" position="3490,1155" size="115,100" tags="chapter4">Warren's party has stopped around a man wearing a race official's badge.
+
+The official hands Warren a folded route sketch, then notices Eli.
+
+"Private instructions," he says, reaching for the paper.
+
+Warren folds it first. "Easy. He's a racer."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Thought the race was supposed to be fair."&lt;/span&gt;
+
+"It is," Warren says. "Some of us are just better at asking questions."
+
+The official rides away before Eli can answer. Warren waits until the hoofbeats fade.
+
+[[Confront Warren about the paper-&gt;A2C2P26 - Questions for Warren]]</tw-passagedata><tw-passagedata name="A2C2P26 - Questions for Warren" pid="118" position="3490,1280" size="115,100" tags="chapter4">"Who's paying that man to draw you maps?" Eli asks.
+
+"Who said anybody was paying him?"
+
+"Warren."
+
+"You want to see it? You can ask nicely."
+
+One of his riders laughs. Warren doesn't.
+
+(if: $c3WarrenRespect or $warrenStanding &gt; 0)[
+"You've kept up this far," Warren says. "I'll give you that. Doesn't mean we're partners."
+]
+(else:)[
+"I don't usually share with people who call me a cheat," Warren adds.
+]
+
+(link: "Offer Warren a fair trade: information for information.")[(set: $crowWarrenDeal to "trade")(go-to: "A2C2P27 - A Deal Above the Canyon")]
+
+(link: "Refuse to deal and follow from a distance.")[(set: $crowWarrenDeal to "refused")(go-to: "A2C2P28 - Behind Blackwell")]</tw-passagedata><tw-passagedata name="A2C2P27 - A Deal Above the Canyon" pid="119" position="3490,1405" size="115,100" tags="chapter4">Eli shows Warren the three-knot sketch or describes the impossible measurements from the last checkpoint.
+
+Warren's expression changes, just for a moment.
+
+"The official told me this service track ends at an old station," he says. "He left out the part where half the men sent there haven't made their reports."
+
+He lets Eli look at the route sketch. At the corner is a small stamp: WREN, PRIVATE SURVEY.
+
+"You tell anybody I showed you, I'll deny it," Warren says.
+
+(set: $warrenStanding to $warrenStanding + 1)
+
+[[Ride on with Warren's group-&gt;A2C2P28 - Behind Blackwell]]</tw-passagedata><tw-passagedata name="A2C2P28 - Behind Blackwell" pid="120" position="3490,1530" size="115,100" tags="chapter4">Warren rides hard when the terrain opens up. His crew follows as best it can.
+
+At a fork marked by two narrow survey stakes, the riders stop again. The sketch shows a short cut on the left and a longer contour line to the right.
+
+Eli can see something Warren hasn't noticed: the shorter line crosses a wash full of loose gravel.
+
+(link: "Copy the route sketch while everyone studies the wash.")[(set: $crowGraySketch to true)(set: $raceEdge to $raceEdge - 1)(go-to: "A2C2P29 - Pencil on Paper")]
+
+(link: "Warn Warren about the loose footing and take the safer line.")[(set: $warrenStanding to $warrenStanding + 1)(go-to: "A2C2P30 - The Longer Line")]</tw-passagedata><tw-passagedata name="A2C2P29 - Pencil on Paper" pid="121" position="3490,1655" size="115,100" tags="chapter4">Eli writes the route numbers on the back of an empty feed receipt.
+
+One number appears twice on the map. Beside it are three little marks, drawn almost like stitches.
+
+An official signature is printed under the map's key. It isn't the signature of the race clerk.
+
+Eli can't read the name, but the company's seal is clear enough.
+
+(set: $crowWarrenLetter to true)
+
+Warren looks up. "We going, Mercer?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Right behind you."&lt;/span&gt;
+
+[[Take the next ridge-&gt;A2C2P31 - Where the Trail Goes]]</tw-passagedata><tw-passagedata name="A2C2P30 - The Longer Line" pid="122" position="3490,1780" size="115,100" tags="chapter4">"That wash will take a horse's leg out from under him," Eli says.
+
+Warren looks over the edge, then gives a short nod.
+
+"You're right. Go on the outside."
+
+His riders take the safer track one by one. Warren brings up the rear to make sure none of them slip.
+
+It's the first time Eli's seen him do something careful without making a show of it.
+
+"Don't mention it," Warren says when he catches Eli watching.
+
+[[Follow the ridgeline-&gt;A2C2P31 - Where the Trail Goes]]</tw-passagedata><tw-passagedata name="A2C2P31 - Where the Trail Goes" pid="123" position="3490,1905" size="115,100" tags="chapter4">A survey marker stands at the next turn. Its number matches the one on Warren's paper.
+
+(if: $crowGraySketch)[
+Eli checks his copy. The same number is printed at two different bends. One of them can't be right.
+]
+(if: $crowWarrenDeal is "trade")[
+Warren rides up beside him. "The official said this trail didn't count against the race. Funny, isn't it? How everybody else is following flags and we're following his pencil."
+]
+(else:)[
+Warren doesn't say much. He keeps checking the fold in his coat where the route sketch is hidden.
+]
+
+The ridge bends south, revealing a valley below.
+
+[[Look down into the valley-&gt;A2C2P32 - The Survey Town Below]]</tw-passagedata><tw-passagedata name="A2C2P32 - The Survey Town Below" pid="124" position="3490,2030" size="115,100" tags="chapter4">At the bottom of the ridge, a railway station stands beside a cluster of wooden buildings.
+
+Several men are carrying tripods through the street. A wagon loaded with measuring chains waits outside the depot.
+
+"There's your shortcut," Warren says. "Hope it was worth it."
+
+Eli watches the men set a marker into the ground, pull it back up, and move it a few steps without measuring anything.
+
+"What are they doing?"
+
+Warren doesn't answer.
+
+[[Ride into the valley-&gt;A2C2P33 - The Valley Below]]</tw-passagedata><tw-passagedata name="A2C2P33 - The Valley Below" pid="125" position="3340,2210" size="115,100" tags="chapter4">The roads have brought Eli to the same broad valley, though he can't know what riders on the other routes have seen.
+
+(if: $crowRoad is "red")[
+The town below is lively. Silas rides with Eli, still unsettled by the white flag at the fork.
+]
+(else-if: $crowRoad is "white")[
+The buildings are silent and weathered. Eli checks for smoke and finds none. The picture in his head doesn't match the empty streets below.
+]
+(else:)[
+Surveyors are moving between the buildings. Warren's party rides ahead, and Eli realizes the men in the street seem more interested in the road than the town.
+]
+
+A crooked sign stands near the valley floor. Most of the letters have fallen away, but two words remain: MERCY JUNCTION.
+
+[[Read the sign more closely-&gt;A2C2P34 - Mercy Junction]]</tw-passagedata><tw-passagedata name="A2C2P34 - Mercy Junction" pid="126" position="3340,2335" size="115,100" tags="chapter4">The sign looks old, but the lettering still has a trace of bright paint underneath the dust.
+
+(if: $c3RailMarker)[
+Eli remembers the sign along the abandoned tracks with Warren. Mercy Junction. He thought it was only a name on a forgotten rail marker.
+]
+(if: $c3StationRecords or $c3OfficeConnection)[
+In the records from the survey station, there had been an unnamed stop along this stretch. The numbers beside it didn't agree. He wonders if this is the place.
+]
+
+June paws at the ground. Eli gives her a moment before leading her down the road.
+
+[[Enter Mercy Junction-&gt;A2C2P35 - Into Town]]</tw-passagedata><tw-passagedata name="A2C2P35 - Into Town" pid="127" position="3340,2460" size="115,100" tags="chapter4">(if: $crowRoad is "red")[
+Eli hears people talking, the clatter of a wagon, and a bell from somewhere near the station. Silas catches up beside him.
+
+"Stay close," Silas says. "I don't trust this place."
+]
+(else-if: $crowRoad is "white")[
+Wind moves through broken shutters. There isn't a soul in the street. June's hooves sound far too loud.
+
+"Just need to find water," Eli tells her. "Then we're gone."
+]
+(else:)[
+A man in a worn survey coat approaches, notebook already in hand. He looks at Eli's horse, then the road behind him, with more interest than a stranger ought to have.
+]
+
+&lt;div class="rw-chapter"&gt;END OF CHAPTER 4&lt;/div&gt;
+
+[[Chapter 5: The Town That Wasn't-&gt;A2C3 - The Town That Wasn't]]</tw-passagedata><tw-passagedata name="A2C3 - The Town That Wasn&#x27;t" pid="128" position="6720,160" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+(set: $mercyVisits to 0)
+(set: $mercySaloonVisited to false)
+(set: $mercyStoreVisited to false)
+(set: $mercyPlatformVisited to false)
+(set: $mercyOfficeVisited to false)
+(set: $mercyCampVisited to false)
+(set: $mercyDepotVisited to false)
+(set: $mercyCrossover to "none")
+(set: $mercyFutureClue to false)
+(set: $mercyRegisterFound to false)
+(set: $mercyOldLetter to false)
+(set: $mercyStationRecord to false)
+(set: $mercyWrenEvidence to false)
+(set: $mercyValeDrawings to false)
+(set: $mercyValeAsked to false)
+(set: $valeCooperated to false)
+(set: $valeRefused to false)
+(set: $mercyTimeDiscrepancy to "unknown")
+&lt;div class="rw-chapter"&gt;ACT II / CHAPTER 5 / THE TOWN THAT WASN'T&lt;/div&gt;
+
+The sign outside Mercy Junction squeaks when the wind hits it.
+
+(if: $crowRoad is "red")[
+Below it, children are chasing a hoop down the street. The general store is open. Silas rides up beside Eli.
+
+"We ought to get a meal before everybody else finds this place," he says. But he keeps looking at the sign.
+]
+(else-if: $crowRoad is "white")[
+Nobody comes to greet Eli. Sand has piled up inside the doorway of the first building. He can hear a loose shutter tapping somewhere ahead.
+
+June shifts under him. Eli dismounts rather than force her farther.
+]
+(else:)[
+A surveyor hurries across the street carrying two maps, neither rolled the same way. A third man stands outside the depot taking notes.
+
+"You're one of the racers?" he asks. His voice is polite, but he's already studying Eli's saddle.
+]
+
+[[Find your way into town-&gt;A2C3P1 - The Arrival]]</tw-passagedata><tw-passagedata name="A2C3P1 - The Arrival" pid="129" position="4010,350" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Mercy Junction feels like a place Eli should know. The street runs straight toward a railway platform, with a saloon on one side and a general store on the other.
+
+(if: $crowRoad is "red")[
+The smell of baked bread drifts from an open window. Somebody calls hello to Silas and gets a confused look in return.
+]
+(else-if: $crowRoad is "white")[
+The same street has no footprints. A sign hangs off one hinge. Eli checks the sky to make sure he's still going west.
+]
+(else:)[
+Tripods and measuring chains stand beside the buildings. A man in a brown coat gestures to a worker to start a measurement over again.
+]
+
+Eli looks at his pocket watch. The second hand hesitates, then moves.
+
+He has time to investigate two places before the road calls him onward.
+
+[[Choose where to begin-&gt;A2C3P2 - A Town of Three Faces]]</tw-passagedata><tw-passagedata name="A2C3P2 - A Town of Three Faces" pid="130" position="4010,475" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+&lt;div class="rw-chapter"&gt;MERCY JUNCTION / THE ROAD YOU TOOK&lt;/div&gt;
+
+(if: $crowRoad is "red")[
+A bartender waves a towel outside the saloon. Across the street, the shopkeeper opens his shutters. Near the tracks, a timetable flaps against a noticeboard.
+
+[[Explore the living town-&gt;A2C3P3 - Living Town Square]]
+]
+(else-if: $crowRoad is "white")[
+The saloon doors hang open. The store is dark. A register book lies on a desk inside the railway office.
+
+[[Explore the abandoned town-&gt;A2C3P16 - Empty Town Square]]
+]
+(else:)[
+A makeshift office has been set up near the station. Workers eat outside their tents while a clerk carries papers into the depot.
+
+[[Explore the survey town-&gt;A2C3P29 - Survey Town Square]]
+]</tw-passagedata><tw-passagedata name="A2C3P3 - Living Town Square" pid="131" position="3860,620" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+&lt;div class="rw-chapter"&gt;MERCY JUNCTION / A TOWN FULL OF PEOPLE&lt;/div&gt;
+
+The street is busy enough to make Eli almost forget the white flag.
+
+Silas ties his horse outside the hotel. "We've got time for two stops. After that, we move."
+
+&lt;div class="rw-notice"&gt;(print: 2 - $mercyVisits) places left to explore.&lt;/div&gt;
+
+(if: $mercyVisits &lt; 2)[
+(if: $mercySaloonVisited is false)[
+(link: "Visit the saloon. Somebody seems to recognize Silas.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercySaloonVisited to true)(go-to: "A2C3P4 - The Bartender's Memory")]
+]
+(if: $mercyStoreVisited is false)[
+(link: "Visit the general store. There's a newspaper in the window.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyStoreVisited to true)(go-to: "A2C3P6 - Tomorrow's Newspaper")]
+]
+(if: $mercyPlatformVisited is false)[
+(link: "Visit the railway platform. Find out when the train comes.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyPlatformVisited to true)(go-to: "A2C3P8 - The Train Schedule")]
+]
+]
+(else:)[
+The station bell rings. Silas unties his horse and looks for Eli.
+
+[[Meet Silas at the square-&gt;A2C3P11 - The Last Bell]]
+]</tw-passagedata><tw-passagedata name="A2C3P4 - The Bartender&#x27;s Memory" pid="132" position="6120,850" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The saloon smells of polish and coffee. There's a pianist at the far wall, playing a tune Eli almost recognizes.
+
+The bartender looks at Silas and stops wiping the counter.
+
+"You came back," he says.
+
+Silas frowns. "Don't believe we've met."
+
+"Sure we have. You and your friend. Four summers ago."
+
+Silas moves his hand off the counter. "My friend?"
+
+The bartender nods toward a photograph on the wall. It's a picture of the main street, taken before the station was finished.
+
+(if: $raceEvidence or $c3OfficeConnection)[
+The survey number printed below the photograph is familiar. Eli saw the same series in the Race Office papers.
+
+(link: "Examine the old photograph and the window beside it.")[(go-to: "A2C3P10 - The Empty Reflection")]
+]
+
+(link: "Ask the bartender about Silas's supposed visit.")[(go-to: "A2C3P5 - The Name He Forgot")]</tw-passagedata><tw-passagedata name="A2C3P5 - The Name He Forgot" pid="133" position="3860,870" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+"Who was I with?" Silas asks.
+
+The bartender looks genuinely surprised. "Tall fellow. Brown horse. Had a laugh like a crow."
+
+Silas doesn't speak for a long moment.
+
+"What happened to him?" Eli asks.
+
+"Nothing happened. You both left after supper. Said you were heading north."
+
+Silas stands. "We're going."
+
+Outside, Eli catches his sleeve. "You all right?"
+
+"No," Silas says. "I'm not."
+
+(set: $silasTrust to $silasTrust + 1)
+
+[[Return to the street-&gt;A2C3P3 - Living Town Square]]</tw-passagedata><tw-passagedata name="A2C3P6 - Tomorrow&#x27;s Newspaper" pid="134" position="6120,1170" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The general store sells flour, nails, coffee, and newspapers bundled with twine.
+
+One headline catches Eli's attention: GREAT AMERICAN RACE NEARS ITS END.
+
+He reads the date twice. The paper is dated a week from now.
+
+The shopkeeper notices him staring.
+
+"Need a copy?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Where'd you get this?"&lt;/span&gt;
+
+"Delivery wagon, like always."
+
+The story mentions a rider who hasn't finished the race yet. The printed name has been blurred by a damp stain.
+
+(link: "Keep the newspaper and compare its dates.")[(set: $mercyFutureClue to true)(go-to: "A2C3P7 - The Date on the Ink")]
+
+(link: "Ask the shopkeeper how he knows tomorrow's news.")[(go-to: "A2C3P7 - The Date on the Ink")]</tw-passagedata><tw-passagedata name="A2C3P7 - The Date on the Ink" pid="135" position="3860,1120" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+(if: $mercyFutureClue)[
+Eli folds the paper so the date is visible and slips it into his coat.
+
+The ink feels dry, but the shopkeeper insists the paper arrived this morning.
+]
+(else:)[
+"Tomorrow?" the shopkeeper repeats. "Son, you're the one who's reading it wrong."
+
+Eli points at the date. The man squints.
+
+"That's not what it said a moment ago."
+]
+
+June drinks from a trough outside. When Eli returns to her, the bells above the store door are still ringing even though nobody has gone in or out.
+
+[[Return to the square-&gt;A2C3P3 - Living Town Square]]</tw-passagedata><tw-passagedata name="A2C3P8 - The Train Schedule" pid="136" position="3860,1245" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The railway platform is crowded. A conductor is checking watches against a large brass clock.
+
+The timetable says the afternoon train will arrive at four fifteen. The clock above it reads four forty.
+
+A woman beside Eli asks if he's waiting for the eastbound train.
+
+"Think I've missed it," Eli says.
+
+"Oh, it hasn't come yet," she replies. "It won't be late."
+
+Somewhere beyond the trees, a whistle blows.
+
+(link: "Look down the tracks for the approaching train.")[(go-to: "A2C3P9 - The Passenger Who Waited")]
+
+(link: "Ask the conductor about the clock.")[(set: $mercyStationRecord to true)(go-to: "A2C3P9 - The Passenger Who Waited")]</tw-passagedata><tw-passagedata name="A2C3P9 - The Passenger Who Waited" pid="137" position="3860,1370" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+(if: $mercyStationRecord)[
+"We go by the scheduled time," the conductor says. "The clock hasn't worked right since they built the station."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Then how do you know when a train arrives?"&lt;/span&gt;
+
+"It arrives when it arrives."
+]
+(else:)[
+A woman steps to the platform edge, hat in hand. The rails are empty in both directions.
+
+"There it is," she says.
+
+Eli turns to follow her gaze. He sees nothing.
+]
+
+The crowd shifts aside as if passengers are stepping off an invisible train.
+
+Eli has seen enough.
+
+[[Head back to town-&gt;A2C3P3 - Living Town Square]]</tw-passagedata><tw-passagedata name="A2C3P10 - The Empty Reflection" pid="138" position="3860,1495" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Eli leans toward the photograph. There's a survey number in the lower corner, exactly where the Race Office had printed distances that didn't match.
+
+He moves closer to the window beside it and glances out.
+
+The street is empty. Every shop is boarded up. Dry weeds push through the planks of the walkway.
+
+He turns to Silas. "Look."
+
+Silas looks outside. A wagon is crossing the street. People are laughing near the store.
+
+Eli looks again. The town is alive.
+
+(set: $mercyCrossover to "empty-reflection")
+
+Silas studies his face. "Mercer?"
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Never mind. Let's go."&lt;/span&gt;
+
+[[Ask the bartender one more question-&gt;A2C3P5 - The Name He Forgot]]</tw-passagedata><tw-passagedata name="A2C3P11 - The Last Bell" pid="139" position="3860,1620" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The bell above the station rings again. Six slow strikes.
+
+People hurry toward the platform. A boy runs past Eli carrying two empty suitcases.
+
+Silas watches the crowd. "I know what you think we saw," he says. "I'm not sure I believe any of it."
+
+(if: $mercyCrossover is "empty-reflection")[
+Eli glances at the windows. He can't shake the picture of the boarded street.
+]
+(if: $mercyFutureClue)[
+The folded newspaper feels heavier than it should. Eli doesn't take it out again.
+]
+
+[[See what's happening by the clock-&gt;A2C3P12 - The Clock That Waited]]</tw-passagedata><tw-passagedata name="A2C3P12 - The Clock That Waited" pid="140" position="3860,1745" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+A town clock hangs over the railway entrance. Its hands stop moving just before the bell rings again.
+
+Eli checks his grandfather's watch. For a moment, both show the same time.
+
+"Let's get out," Silas says.
+
+"What about the train?"
+
+"There's nothing on those tracks. You saw that."
+
+Eli looks toward the rails. They disappear into the trees beyond town.
+
+[[Head for the outskirts-&gt;A2C3P13 - A Change in the Street]]</tw-passagedata><tw-passagedata name="A2C3P13 - A Change in the Street" pid="141" position="3860,1870" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+As they pass the general store, Eli hears someone shouting for a porter.
+
+He looks back. The platform crowd seems farther away than it did a moment ago.
+
+"You coming?" Silas asks.
+
+Eli nods. The street seems to have grown longer, as though the station is retreating a few feet with every step.
+
+June walks faster when they reach the last house.
+
+[[Look back one final time-&gt;A2C3P14 - A Town in the Distance]]</tw-passagedata><tw-passagedata name="A2C3P14 - A Town in the Distance" pid="142" position="3860,1995" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+From the low hill outside town, Eli can still see the rooftops and the little clock tower.
+
+There are fewer people in the street now. Or perhaps he can't make them out from here.
+
+Silas doesn't turn his horse around.
+
+"You ever been somewhere and felt like you weren't invited?" Eli asks.
+
+"Every fancy hotel I've ever walked into," Silas replies.
+
+It's almost a joke. Neither laughs.
+
+[[Leave Mercy Junction-&gt;A2C3P15 - Beyond the Last House]]</tw-passagedata><tw-passagedata name="A2C3P15 - Beyond the Last House" pid="143" position="3860,2120" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+They pass the last fence post and pick up a red-marked road toward the next checkpoint.
+
+Eli glances behind him once more. The town is still there, sitting quiet in the valley.
+
+He rides on. A train whistle follows them into the hills.
+
+&lt;div class="rw-chapter"&gt;THE LIVING TOWN / END OF ROUTE&lt;/div&gt;
+
+[[Follow the whistle-&gt;A2C3P43 - The Empty Platform]]</tw-passagedata><tw-passagedata name="A2C3P16 - Empty Town Square" pid="144" position="4010,620" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+&lt;div class="rw-chapter"&gt;MERCY JUNCTION / THE ABANDONED TOWN&lt;/div&gt;
+
+The buildings are dry and gray, as if they've been empty longer than Eli has been alive.
+
+A saloon door bangs in the wind. Beside it, a shop sign still reads GENERAL STORE. The railway office stands at the far end of the street.
+
+June drinks from a water barrel. Eli is relieved to see the water is real.
+
+&lt;div class="rw-notice"&gt;(print: 2 - $mercyVisits) places left to explore before sunset.&lt;/div&gt;
+
+(if: $mercyVisits &lt; 2)[
+(if: $mercySaloonVisited is false)[
+(link: "Search the abandoned saloon.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercySaloonVisited to true)(go-to: "A2C3P17 - The Saloon Letter")]
+]
+(if: $mercyStoreVisited is false)[
+(link: "Enter the general store.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyStoreVisited to true)(go-to: "A2C3P19 - Dust on the Shelves")]
+]
+(if: $mercyPlatformVisited is false)[
+(link: "Check the railway office and passenger register.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyPlatformVisited to true)(go-to: "A2C3P21 - The Passenger Book")]
+]
+]
+(else:)[
+The sun sinks toward the ridge. Eli has searched what he can without leaving June in the dark.
+
+[[Take a final look at the street-&gt;A2C3P24 - When the Sun Goes]]
+]</tw-passagedata><tw-passagedata name="A2C3P17 - The Saloon Letter" pid="145" position="4010,745" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Inside the saloon, overturned chairs lie beneath a chandelier made from wagon wheels.
+
+On the counter is a half-finished letter, the ink faded but still readable.
+
+Dear Thomas,
+
+You said you would come through Mercy Junction before the month was over. The station's empty again. I hope you find another road.
+
+Eli reads it twice.
+
+(if: $thomasHelped or $thomasAlly or $c3RiderIdentity is "thomas")[
+Thomas Bell. The same rider he met earlier. Eli checks the signature, hoping it's only a coincidence.
+]
+
+(link: "Take the letter for later.")[(set: $mercyOldLetter to true)(go-to: "A2C3P18 - A Name Without a Date")]
+
+(link: "Leave it on the counter.")[(go-to: "A2C3P18 - A Name Without a Date")]</tw-passagedata><tw-passagedata name="A2C3P18 - A Name Without a Date" pid="146" position="4010,870" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+A framed picture behind the counter shows a crowded saloon. Someone has scratched out the year.
+
+Eli holds the letter beside it. The paper is brittle, but the ink looks as though it dried yesterday.
+
+There's no way to tell which is older.
+
+Outside, June gives a sharp whinny. Eli heads back before the wind picks up again.
+
+[[Return to the empty square-&gt;A2C3P16 - Empty Town Square]]</tw-passagedata><tw-passagedata name="A2C3P19 - Dust on the Shelves" pid="147" position="4010,995" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The general store is filled with unopened crates. One holds fresh-looking coffee tins, another a stack of cloth rolls.
+
+The labels carry dates that don't agree with the condition of the building. Some appear far newer than the wood surrounding them.
+
+Eli lifts a tin. There isn't a speck of dust on it.
+
+He can hear voices faintly through the wall, although the street outside is empty.
+
+(link: "Check the store's inventory before leaving.")[(go-to: "A2C3P20 - The Fresh Stock")]</tw-passagedata><tw-passagedata name="A2C3P20 - The Fresh Stock" pid="148" position="4010,1120" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+A ledger rests open on the counter. Its final entry is a delivery of flour, coffee, and lantern oil.
+
+The date is crossed out three times, with a different year written beside each one.
+
+Eli copies the entry on an empty page of his notebook.
+
+(if: $c3FlagInvestigated and $mercyRegisterFound)[
+The voice behind the wall grows louder. It seems to come from the front window.
+
+(link: "Look through the window toward the occupied store.")[(go-to: "A2C3P23 - The Lights Were On")]
+]
+
+[[Return to the square-&gt;A2C3P16 - Empty Town Square]]</tw-passagedata><tw-passagedata name="A2C3P21 - The Passenger Book" pid="149" position="4010,1245" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The railway office has one desk, two chairs, and a locked ticket window. The waiting room door stands open.
+
+A book lies beneath a layer of dust. The cover reads PASSENGER REGISTER, MERCY JUNCTION.
+
+The last entries are names and dates, written in different hands.
+
+One name makes Eli stop.
+
+Elias Mercer.
+
+His full name. Written on a line that looks older than the rest of the page.
+
+(link: "Copy the entry and check the handwriting.")[(set: $mercyRegisterFound to true)(go-to: "A2C3P22 - The Name in the Book")]</tw-passagedata><tw-passagedata name="A2C3P22 - The Name in the Book" pid="150" position="4010,1370" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Eli holds the page to the light. The ink has soaked deep into the paper, as if it was written years ago.
+
+Under his name, a destination has been entered and scratched out. He can make out only two letters: K and S.
+
+"I wasn't here," Eli says aloud.
+
+His voice sounds too loud in the empty room.
+
+(if: $c3FlagInvestigated and $mercyStoreVisited)[
+As he steps outside, the general store window glows warmly in the distance. He remembers the voices he heard there.
+
+(link: "Go back and look at the lit window.")[(go-to: "A2C3P23 - The Lights Were On")]
+]
+
+[[Leave the railway office-&gt;A2C3P16 - Empty Town Square]]</tw-passagedata><tw-passagedata name="A2C3P23 - The Lights Were On" pid="151" position="4010,1495" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+For a moment, the general store is full of people.
+
+A clerk counts coins behind the counter. Two riders argue about the price of oats. Warm light spills across the floorboards.
+
+Eli reaches for the door handle and opens it.
+
+The room is empty. The crates are gray with dust, and the counter is covered in dried leaves.
+
+He shuts the door slowly.
+
+(set: $mercyCrossover to "lights-on")
+
+His own reflection stays in the glass for a moment after he turns away. Maybe it's the sun. He doesn't check again.
+
+[[Go back to June-&gt;A2C3P16 - Empty Town Square]]</tw-passagedata><tw-passagedata name="A2C3P24 - When the Sun Goes" pid="152" position="4010,1620" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Shadows fill the street. The rail line beyond the buildings catches the last light.
+
+Eli gives June what water he can carry and starts checking his saddle.
+
+(if: $mercyOldLetter)[
+He folds the letter carefully. He doesn't know if he'll ever meet the person it was written for.
+]
+(if: $mercyRegisterFound)[
+His name in the passenger book bothers him more than any of the empty houses.
+]
+(if: $mercyCrossover is "lights-on")[
+He keeps looking at the dark windows, expecting one to light up again.
+]
+
+[[Look for a way out of town-&gt;A2C3P25 - The Wrong Signpost]]</tw-passagedata><tw-passagedata name="A2C3P25 - The Wrong Signpost" pid="153" position="4010,1745" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+A wooden sign at the edge of town points toward HOLLOW FORD, even though Eli came from that direction.
+
+Another arrow points toward the next checkpoint. Someone has nailed it on backward.
+
+Eli pulls out his map and tries to find a turn in the road that explains it.
+
+Nothing does.
+
+"Guess we'll pick one," he tells June.
+
+She takes the direction of the setting sun without waiting for his advice.
+
+[[Follow June's lead-&gt;A2C3P26 - A Horse Knows the Way]]</tw-passagedata><tw-passagedata name="A2C3P26 - A Horse Knows the Way" pid="154" position="4010,1870" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+For the first time all day, June seems certain where she wants to go.
+
+She finds a dry track behind the last house. The path passes a broken fence and climbs through the grass.
+
+Eli looks back at the empty town.
+
+There are no tracks on the road he just traveled, not even June's.
+
+He keeps moving.
+
+[[Take the hillside track-&gt;A2C3P27 - The Town Below]]</tw-passagedata><tw-passagedata name="A2C3P27 - The Town Below" pid="155" position="4010,1995" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+From the hill, Mercy Junction looks smaller than it did from the street.
+
+One window shines in the general store.
+
+Eli stops. When he blinks, the light is gone.
+
+"Not going back," he says.
+
+June lowers her head and walks on. From the valley comes the sound of a distant train whistle.
+
+[[Ride toward the sound-&gt;A2C3P28 - The Last Empty Street]]</tw-passagedata><tw-passagedata name="A2C3P28 - The Last Empty Street" pid="156" position="4010,2120" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The track bends back toward the railway bed. A platform stands at its edge, half hidden among trees.
+
+Eli thinks he sees a person waiting beneath the shelter. By the time he reaches the turn, the shelter is empty.
+
+&lt;div class="rw-chapter"&gt;THE ABANDONED TOWN / END OF ROUTE&lt;/div&gt;
+
+[[Follow the rail line west-&gt;A2C3P43 - The Empty Platform]]</tw-passagedata><tw-passagedata name="A2C3P29 - Survey Town Square" pid="157" position="4160,620" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+&lt;div class="rw-chapter"&gt;MERCY JUNCTION / SURVEY TOWN&lt;/div&gt;
+
+Most of the people here are working rather than living. Several wagons are loaded with measuring chains and wooden stakes.
+
+A thin man in a brown coat looks up from a notebook. He nods to Eli, then returns to writing.
+
+A clerk says the riders are welcome to water their horses, but cannot wander through every building.
+
+&lt;div class="rw-notice"&gt;(print: 2 - $mercyVisits) places left to explore.&lt;/div&gt;
+
+(if: $mercyVisits &lt; 2)[
+(if: $mercyOfficeVisited is false)[
+(link: "Enter the survey office and examine its maps.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyOfficeVisited to true)(go-to: "A2C3P30 - Vale's Drawings")]
+]
+(if: $mercyCampVisited is false)[
+(link: "Talk with the workers at their camp.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyCampVisited to true)(go-to: "A2C3P32 - The Workers' Camp")]
+]
+(if: $mercyDepotVisited is false)[
+(link: "Check the railway depot and its records.")[(set: $mercyVisits to $mercyVisits + 1)(set: $mercyDepotVisited to true)(go-to: "A2C3P34 - The Depot Ledger")]
+]
+]
+(else:)[
+A man calls from the survey office doorway. "Mercer? If you've got a minute, I'd like to speak with you."
+
+[[Meet the man in the brown coat-&gt;A2C3P36 - Edwin Vale]]
+]</tw-passagedata><tw-passagedata name="A2C3P30 - Vale&#x27;s Drawings" pid="158" position="7320,850" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The survey office has maps pinned to every available wall. The ink is neat, and the measurements are less so.
+
+Two drawings show the same block of Mercy Junction. One has occupied shops and a boarding house. The other depicts empty buildings with collapsed roofs.
+
+Both carry the same survey date and the same signature: EDWIN VALE.
+
+(if: $raceEvidence and $c3StationRecords)[
+Eli recognizes a station number from Dry Creek and the survey station. It appears on both drawings, although the distances differ.
+
+(link: "Compare the drawings against your earlier records.")[(set: $mercyValeDrawings to true)(go-to: "A2C3P40 - The Other Survey")]
+]
+
+(link: "Write down the conflicting measurements.")[(set: $mercyValeDrawings to true)(go-to: "A2C3P31 - The Second Measuring Line")]</tw-passagedata><tw-passagedata name="A2C3P31 - The Second Measuring Line" pid="159" position="4160,870" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Eli notices a small note at the bottom of the map: DO NOT ASSUME THE RETURN DISTANCE WILL MATCH.
+
+It's not a normal instruction for a surveyor.
+
+He writes the warning in his notebook before replacing the drawings exactly where he found them.
+
+As he leaves, the man in the brown coat watches him from the doorway but says nothing.
+
+[[Return to the survey yard-&gt;A2C3P29 - Survey Town Square]]</tw-passagedata><tw-passagedata name="A2C3P32 - The Workers&#x27; Camp" pid="160" position="7320,1170" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Two young surveyors eat beside a cookfire. Neither seems interested in the race until Eli mentions the road over Crow's Gap.
+
+"You came that way?" one asks.
+
+"Sure did."
+
+The other puts down his cup. "Vale sent three men to measure that route last month. Every one came back with different figures."
+
+"So you stopped sending them?" Eli asks.
+
+"That's what we told him to do."
+
+The men exchange a look.
+
+[[Ask what happened after that-&gt;A2C3P33 - The Men Who Returned]]</tw-passagedata><tw-passagedata name="A2C3P33 - The Men Who Returned" pid="161" position="4160,1120" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+"He sent another party," the older worker says. "They came back, too. That's the problem. Nobody can agree on where they went."
+
+"Wouldn't that mean something's wrong with the maps?"
+
+"Maybe. But I've had the same map in my hands and walked a different distance each time."
+
+The younger worker leans closer. "He's a good man when you need food or shelter. Just don't let him talk you into testing a road alone."
+
+(set: $crowValeReference to true)
+
+[[Leave the workers to their supper-&gt;A2C3P29 - Survey Town Square]]</tw-passagedata><tw-passagedata name="A2C3P34 - The Depot Ledger" pid="162" position="4160,1245" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The railway depot has a locked ticket window and a desk crowded with papers.
+
+A shipment manifest sits under a metal paperweight. Most entries are for measuring tools, camp supplies, and horses.
+
+One line reads WREN TRANSPORT COMPANY: FIELD OBSERVATION MATERIALS.
+
+The delivery dates start months before the race was announced.
+
+Eli copies the shipment numbers. The clerk is too busy arguing with a porter to notice.
+
+(set: $mercyWrenEvidence to true)
+
+[[Read the last page of the ledger-&gt;A2C3P35 - Before the Race]]</tw-passagedata><tw-passagedata name="A2C3P35 - Before the Race" pid="163" position="4160,1370" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The last page has a signature: A. WREN.
+
+Below it, a shorter note says every competitor's route and arrival time are to be recorded, even if the rider withdraws.
+
+Eli had thought the checkpoint cards were just how officials kept score.
+
+"Why would he need times for riders who quit?" he mutters.
+
+Outside, someone sounds a whistle for the workers to gather.
+
+[[Return to the survey yard-&gt;A2C3P29 - Survey Town Square]]</tw-passagedata><tw-passagedata name="A2C3P36 - Edwin Vale" pid="164" position="4160,1495" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The man in the brown coat holds out a hand.
+
+"Edwin Vale. I oversee the work here. You're Elias Mercer, aren't you?"
+
+Eli shakes it carefully. "How'd you know?"
+
+"The race office sends us route reports. I'd like to check one of them."
+
+Vale offers him water and points toward a shaded bench where June can rest.
+
+"You came over the northern service road," he says. "How long did that take?"
+
+"Couple hours. Maybe a little more."
+
+Vale opens his notebook. "The last rider said three days."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Maybe he got lost."&lt;/span&gt;
+
+"Perhaps. Would you be willing to show me the road?"
+
+[[Answer Vale-&gt;A2C3P37 - The Offer]]</tw-passagedata><tw-passagedata name="A2C3P37 - The Offer" pid="165" position="4160,1620" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Vale waits with his pencil hovering above the page.
+
+"I'd pay for the time," he adds. "And make sure your mare is looked after."
+
+Eli looks toward June. She's drinking quietly from a trough beside the office.
+
+He could use the money. He could use the information even more.
+
+(link: "Agree to help, but insist on staying with June.")[(set: $valeCooperated to true)(set: $raceEdge to $raceEdge - 1)(go-to: "A2C3P38 - One More Measurement")]
+
+(link: "Refuse. You have a race to finish.")[(set: $valeRefused to true)(go-to: "A2C3P39 - No Deal")]
+
+(link: "Ask why Augustus Wren is paying for this work.")[(set: $mercyValeAsked to true)(go-to: "A2C3P41 - A Polite Answer")]</tw-passagedata><tw-passagedata name="A2C3P38 - One More Measurement" pid="166" position="4160,1745" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Vale leads Eli to a marker behind the station. They walk to a second post along the track and back again.
+
+Vale counts under his breath. When they return, he checks his notes and frowns.
+
+"Not the same," he says.
+
+"What isn't?"
+
+"The distance."
+
+He writes down Eli's name and the time, then closes the notebook before Eli can see the figure.
+
+"Thank you, Mr. Mercer. You've been very helpful."
+
+Eli doesn't feel helped.
+
+[[Ask what he plans to do with the results-&gt;A2C3P41 - A Polite Answer]]</tw-passagedata><tw-passagedata name="A2C3P39 - No Deal" pid="167" position="4160,1870" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Vale accepts the refusal without arguing.
+
+"Of course," he says. "You're competing. I understand."
+
+He scribbles a line in his notebook. Eli can't tell whether it's a measurement or simply his name.
+
+"If you see any other white markers, tell the officials. They'll pass the reports along."
+
+&lt;span class="rw-dialogue rw-eli"&gt;"Why?"&lt;/span&gt;
+
+"Because we're trying to keep travelers safe."
+
+Eli has heard that answer too often lately.
+
+[[Leave the survey yard-&gt;A2C3P42 - Vale Watches the Road]]</tw-passagedata><tw-passagedata name="A2C3P40 - The Other Survey" pid="168" position="4160,1995" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+The two drawings are signed by Vale on the same day.
+
+The first shows the town full of people. The second shows buildings boarded up, with weeds through the platform boards.
+
+Eli turns toward the office window. Outside, the surveyors are still working. He looks back at the drawing.
+
+In the margin, Vale has written: BOTH OBSERVED. CAUSE UNKNOWN.
+
+This isn't a plan of how the town should look. It's a record of what somebody says they saw.
+
+(set: $mercyCrossover to "other-survey")
+
+Eli copies the note beside the matching station number and leaves the drawings in place.
+
+[[Put the maps back-&gt;A2C3P31 - The Second Measuring Line]]</tw-passagedata><tw-passagedata name="A2C3P41 - A Polite Answer" pid="169" position="4160,2120" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+"Why does Wren want these numbers?" Eli asks.
+
+Vale looks down at his pencil, thinking.
+
+"Mr. Wren believes a better map could save people weeks of travel," he says. "You can understand why that matters."
+
+"Then why keep it secret?"
+
+Vale smiles, but his eyes stay tired.
+
+"Because until you understand a thing, people are inclined to turn it into a story."
+
+(if: $mercyWrenEvidence or $crowWagonRecords)[
+Eli has seen enough papers to know the race isn't just paying for a map. He doesn't tell Vale that yet.
+]
+
+Vale closes his notebook. "Safe travels, Mr. Mercer."
+
+[[Leave the survey yard-&gt;A2C3P42 - Vale Watches the Road]]</tw-passagedata><tw-passagedata name="A2C3P42 - Vale Watches the Road" pid="170" position="4160,2245" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Eli leads June toward the railway line. At the far end of the street, Vale is already speaking to another rider.
+
+The man points toward Crow's Gap. Vale writes down the direction, the time, and a few numbers.
+
+(if: $valeCooperated)[
+Eli realizes his own ride is now another line in that notebook.
+]
+(if: $valeRefused)[
+Even after Eli refused, Vale took down his name. That bothers him more than it should.
+]
+(if: $mercyCrossover is "other-survey")[
+For a moment, Eli imagines this same street without a single surveyor. The drawing he copied makes it easy to picture.
+]
+
+[[Follow the railway line-&gt;A2C3P43 - The Empty Platform]]</tw-passagedata><tw-passagedata name="A2C3P43 - The Empty Platform" pid="171" position="4010,2410" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+&lt;div class="rw-chapter"&gt;ACT II / THE EMPTY PLATFORM&lt;/div&gt;
+
+The road brings Eli toward a railway shelter on the edge of town.
+
+(if: $crowRoad is "red")[
+A train whistle cuts through the evening. Silas stops his horse and watches the tracks.
+
+"There's nobody there," he says. The benches that were crowded earlier are empty.
+]
+(else-if: $crowRoad is "white")[
+The last light catches an empty platform between the trees. Eli is almost sure he saw someone waiting beneath its roof a moment ago.
+]
+(else:)[
+The measuring equipment is gone. No wagons stand outside the station. The shelter looks as though it hasn't been used for years.
+]
+
+Eli reaches into his coat for the pocket watch his father gave him.
+
+The second hand has stopped.
+
+[[Try to make sense of the time-&gt;A2C3P44 - The Missing Hours]]</tw-passagedata><tw-passagedata name="A2C3P44 - The Missing Hours" pid="172" position="4010,2535" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+Eli taps the cracked watchglass with his thumb. The second hand doesn't move.
+
+(if: $crowRoad is "red")[
+It was afternoon when they left the crowded street. The sun is nearly down, although the road out couldn't have taken more than a few minutes.
+
+(set: $mercyTimeDiscrepancy to "late")
+]
+(else-if: $crowRoad is "white")[
+Eli remembers the stranger at the fence and the steam coming off the cup. He can't put those moments into any sensible order now.
+
+(set: $mercyTimeDiscrepancy to "unmatched")
+]
+(else:)[
+Vale's assistants had been taking measurements in full daylight. Eli remembers leaving before supper, yet the platform is already wrapped in evening shadow.
+
+(set: $mercyTimeDiscrepancy to "shifted")
+]
+
+June is restless. Eli lets her choose the next few steps. A red flag appears at the far end of the track, pointing toward an official checkpoint.
+
+[[Find the checkpoint clerk-&gt;A2C3P45 - The Official Record]]</tw-passagedata><tw-passagedata name="A2C3P45 - The Official Record" pid="173" position="4010,2660" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+At the checkpoint, a clerk takes Eli's card and looks through his arrival ledger.
+
+"Route?" he asks.
+
+"Mercy Junction," Eli says.
+
+The clerk looks up. "Through where?"
+
+"The town east of the ridge. Railway station, big main street."
+
+"No town by that name. Just an old rail bed."
+
+He runs his finger down the ledger, stops, and checks the card again.
+
+(if: $crowRoad is "red")[
+"Says here you were recorded on this stretch before the detour was officially opened." The clerk looks embarrassed. "Must be somebody's mistake."
+]
+(else-if: $crowRoad is "white")[
+"Your last checkpoint says you left hours later than you're saying." He shows Eli the mark. "Either this stamp is wrong or your watch is."
+]
+(else:)[
+"The service route doesn't connect to this checkpoint on my map." He turns the ledger toward Eli. "But your name's on the list of riders who came through it."
+]
+
+Eli looks at the clerk's clean handwriting. He remembers every mile he rode. He doesn't know which record to believe.
+
+[[Ask about the records-&gt;A2C3P46 - The Road Ahead]]</tw-passagedata><tw-passagedata name="A2C3P46 - The Road Ahead" pid="174" position="4010,2785" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+(if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
+(if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
+"Who gets these records?" Eli asks.
+
+"Race office," the clerk says. "Mr. Wren's people, I expect."
+
+Eli glances at the paper in his coat.
+
+(if: $crowWagonRecords or $crowWarrenLetter or $mercyWrenEvidence)[
+The pages he's collected aren't enough to explain the roads, but they tell him someone has been keeping track of them for a long time.
+]
+(if: $mercyCrossover is not "none")[
+He thinks of the other Mercy Junction he glimpsed. If he told the clerk, he doubts the man would believe him.
+]
+
+"You look like you could use a rest," the clerk says.
+
+"Yeah," Eli replies. "Could use a lot of things."
+
+June pulls gently at the reins, ready to go.
+
+Ahead, the official course winds into the mountains. Somewhere beyond them are the last stages of the race and the man who organized it.
+
+&lt;div class="rw-chapter"&gt;END OF ACT II / THE UNMARKED ROAD&lt;/div&gt;
+
+[[Continue to Act III-&gt;A3 - Act III]]</tw-passagedata></tw-storydata>
 <script data-main="harlowe" title="Twine engine code">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
