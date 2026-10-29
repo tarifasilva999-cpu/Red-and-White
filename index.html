@@ -10,7 +10,8 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Red and White.</tw-noscript></noscript></tw-story>
-<tw-storydata creator="Twine" creator-version="2.12.1" format="Harlowe" format-version="3.3.9" hidden="" ifid="79FBEAFD-8D38-41BE-A3BC-F1C7FB4C11A1" name="Red and White" options="" startnode="1" tags="" zoom="0.6"><style id="twine-user-stylesheet" role="stylesheet" type="text/twine-css">html, body {
+<tw-storydata creator="Twine" creator-version="2.12.1" format="Harlowe" format-version="3.3.9" hidden="" ifid="79FBEAFD-8D38-41BE-A3BC-F1C7FB4C11A1" name="Red and White" options="" startnode="1" tags="" zoom="0.6"><style id="twine-user-stylesheet" role="stylesheet" type="text/twine-css">
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -727,6 +728,38 @@ tw-story:is([tags~="chapter4"],[tags~="chapter5"]) .rw-warren::before {content:"
  tw-story[tags~="chapter4"] {background-image:linear-gradient(90deg,rgba(24,19,18,.95),rgba(26,22,20,.72)),url("./Images/Chapter 2.png");}
  tw-story[tags~="chapter5"] {background-image:linear-gradient(90deg,rgba(22,23,23,.96),rgba(25,26,25,.73)),url("./Images/Chapter 1.png");}
 }
+
+/* ACT III — All new passages keep the same left-aligned text and soft fades. */
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) {
+  display:block;position:relative; box-sizing:border-box; max-width:none;
+  width:100%;height:100dvh;min-height:0;margin:0;padding:0;overflow:hidden;
+  color:#fff3dd;background-color:#221c1b;
+  font-family:Georgia,"Times New Roman",serif;text-align:left;
+  background-size:cover;background-position:center;background-attachment:fixed;
+}
+tw-story[tags~="chapter6"] {background-image:linear-gradient(90deg,rgba(24,21,21,.96),rgba(25,22,24,.83) 40%,rgba(35,25,25,.45) 75%,rgba(32,26,27,.3)),url('./Images/Chapter 2.png');}
+tw-story[tags~="chapter7"] {background-image:linear-gradient(90deg,rgba(23,25,28,.96),rgba(27,26,30,.83) 40%,rgba(36,30,32,.43)),url('./Images/Chapter 2.png');}
+tw-story[tags~="chapter8"] {background-image:linear-gradient(90deg,rgba(31,23,19,.94),rgba(34,25,19,.78) 42%,rgba(39,29,24,.37)),url('./Images/Chapter 1.png');}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-sidebar{display:none;}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage{
+  box-sizing:border-box;display:block;margin:0;padding:62px 30px 114px 48px;
+  width:min(750px,100%);max-width:none;height:100dvh;min-height:0;
+  overflow-y:auto;overflow-x:hidden;scrollbar-width:none;
+  font:21px/1.33 Georgia,"Times New Roman",serif;letter-spacing:0;
+  text-align:left;color:#fff2df;text-shadow:0 1px 3px rgba(0,0,0,.5);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,black 26px,black calc(100% - 95px),transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,black 26px,black calc(100% - 95px),transparent 100%);
+}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage::-webkit-scrollbar{display:none;}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-link{color:#f8cb88!important;text-decoration:underline;text-underline-offset:5px;cursor:pointer;font-weight:bold;}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) .rw-chapter{display:block;font:700 12px/1.5 Arial,sans-serif;letter-spacing:2px;color:#e4c4a3;margin:0 0 21px;}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) .rw-route{display:block;font:700 11px/1.5 Arial,sans-serif;letter-spacing:2px;color:#c9d2cf;margin:0 0 15px;}
+tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage > :is(div,span){max-width:100%;}
+@media(max-width:700px){
+ tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage{width:100%;font-size:19px;padding:55px 21px 100px 22px;}
+ tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) {background-position:60% center;}
+}
+
 </style><script id="twine-user-script" role="script" type="text/twine-javascript">/* Red & White: Main-menu music. Created once and preserved across passages. */
 (function () {
   'use strict';
@@ -2167,11 +2200,7 @@ The next red marker points west.
     &lt;div class="rw-act-next"&gt;[[Begin Act III-&gt;A3C1 - What the Road Took]]&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="rw-act-counter"&gt;RED &amp;amp; WHITE &amp;nbsp; / &amp;nbsp; 03 / 03&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata name="A3C1 - What the Road Took" pid="54" position="8200,400" size="130,100" tags="chapter3">&lt;div class="rw-chapter"&gt;ACT III / WHAT THE ROAD TOOK&lt;/div&gt;
-
-Act II is complete, and your choices from Crow's Gap and Mercy Junction have been saved. Act III is still being written, so the story ends here for now.
-
-[[Return to the menu-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="A2C1 - The First White Flag" pid="55" position="2690,220" size="115,100" tags="chapter3">(set: $c3Route to "none")
+&lt;/div&gt;</tw-passagedata><tw-passagedata name="A2C1 - The First White Flag" pid="55" position="2690,220" size="115,100" tags="chapter3">(set: $c3Route to "none")
 (set: $c3RiverCrossing to "none")
 (set: $c3HelpedRider to false)
 (set: $c3RiderIdentity to "none")
@@ -3638,7 +3667,7 @@ A man in a worn survey coat approaches, notebook already in hand. He looks at El
 
 &lt;div class="rw-chapter"&gt;END OF CHAPTER 4&lt;/div&gt;
 
-[[Chapter 5: The Town That Wasn't-&gt;A2C3 - The Town That Wasn't]]</tw-passagedata><tw-passagedata name="A2C3 - The Town That Wasn&#x27;t" pid="128" position="6720,160" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+[[Chapter 5: The Town That Wasn't-&gt;A2C3 - The Town That Wasn't]]</tw-passagedata><tw-passagedata name="A2C3 - The Town That Wasn't" pid="128" position="6720,160" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
 (if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
 (if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
 (set: $mercyVisits to 0)
@@ -3743,7 +3772,7 @@ Silas ties his horse outside the hotel. "We've got time for two stops. After tha
 The station bell rings. Silas unties his horse and looks for Eli.
 
 [[Meet Silas at the square-&gt;A2C3P11 - The Last Bell]]
-]</tw-passagedata><tw-passagedata name="A2C3P4 - The Bartender&#x27;s Memory" pid="132" position="6120,850" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+]</tw-passagedata><tw-passagedata name="A2C3P4 - The Bartender's Memory" pid="132" position="6120,850" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
 (if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
 (if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
 The saloon smells of polish and coffee. There's a pianist at the far wall, playing a tune Eli almost recognizes.
@@ -3787,7 +3816,7 @@ Outside, Eli catches his sleeve. "You all right?"
 
 (set: $silasTrust to $silasTrust + 1)
 
-[[Return to the street-&gt;A2C3P3 - Living Town Square]]</tw-passagedata><tw-passagedata name="A2C3P6 - Tomorrow&#x27;s Newspaper" pid="134" position="6120,1170" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+[[Return to the street-&gt;A2C3P3 - Living Town Square]]</tw-passagedata><tw-passagedata name="A2C3P6 - Tomorrow's Newspaper" pid="134" position="6120,1170" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
 (if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
 (if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
 The general store sells flour, nails, coffee, and newspapers bundled with twine.
@@ -4184,7 +4213,7 @@ A clerk says the riders are welcome to water their horses, but cannot wander thr
 A man calls from the survey office doorway. "Mercer? If you've got a minute, I'd like to speak with you."
 
 [[Meet the man in the brown coat-&gt;A2C3P36 - Edwin Vale]]
-]</tw-passagedata><tw-passagedata name="A2C3P30 - Vale&#x27;s Drawings" pid="158" position="7320,850" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+]</tw-passagedata><tw-passagedata name="A2C3P30 - Vale's Drawings" pid="158" position="7320,850" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
 (if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
 (if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
 The survey office has maps pinned to every available wall. The ink is neat, and the measurements are less so.
@@ -4210,7 +4239,7 @@ He writes the warning in his notebook before replacing the drawings exactly wher
 
 As he leaves, the man in the brown coat watches him from the doorway but says nothing.
 
-[[Return to the survey yard-&gt;A2C3P29 - Survey Town Square]]</tw-passagedata><tw-passagedata name="A2C3P32 - The Workers&#x27; Camp" pid="160" position="7320,1170" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
+[[Return to the survey yard-&gt;A2C3P29 - Survey Town Square]]</tw-passagedata><tw-passagedata name="A2C3P32 - The Workers' Camp" pid="160" position="7320,1170" size="115,100" tags="chapter5">(if: $crowRoad is "red")[&lt;div class="rw-mercy-mode living"&gt;&lt;/div&gt;]
 (if: $crowRoad is "white")[&lt;div class="rw-mercy-mode abandoned"&gt;&lt;/div&gt;]
 (if: $crowRoad is "gray")[&lt;div class="rw-mercy-mode survey"&gt;&lt;/div&gt;]
 Two young surveyors eat beside a cookfire. Neither seems interested in the race until Eli mentions the road over Crow's Gap.
@@ -4498,7 +4527,1678 @@ Ahead, the official course winds into the mountains. Somewhere beyond them are t
 
 &lt;div class="rw-chapter"&gt;END OF ACT II / THE UNMARKED ROAD&lt;/div&gt;
 
-[[Continue to Act III-&gt;A3 - Act III]]</tw-passagedata></tw-storydata>
+[[Continue to Act III-&gt;A3 - Act III]]</tw-passagedata><tw-passagedata name="A3C1 - What the Road Took" pid="175" position="4690,400" size="115,100" tags="chapter6">(set: $a3RevealRoute to "none")
+(set: $a3Proof to 0)
+(set: $a3WarrenAllied to false)
+(set: $a3Witnesses to 0)
+(set: $a3SilasOpened to false)
+(set: $a3WarningSent to false)
+(set: $a3ValeLead to false)
+(set: $a3Risk to 0)
+(set: $a3CrewHelp to 0)
+(set: $a3Method to "none")
+(set: $a3FinalScore to 0)
+(set: $a3RaceLine to "none")
+(set: $a3RescueSupport to 0)
+(set: $a3RescueApproach to "none")
+(set: $a3Ending to "none")
+&lt;div class="rw-chapter"&gt;ACT III / CHAPTER 6 / WHAT THE ROAD TOOK&lt;/div&gt;
+The next checkpoint is packed. Horses stand three deep beside the trough. Half the riders look ready to sleep standing up.
+
+Eli hands over his card. The clerk doesn't stamp it. He asks for the exact road Eli took, what time the sun set, and whether he saw anything out of place.
+
+Eli looks at the long line behind him. Nobody else seems to think those questions are strange.
+
+(if: $mercyCrossover is not "none")[He thinks about the other Mercy Junction he saw for a moment. He almost tells the clerk. Almost.]
+
+"Just stamp the card," Eli says.
+
+The clerk finally does.
+
+[[Find out why they want these details-&gt;A3C1P1 - The Questions]]</tw-passagedata><tw-passagedata name="A3C1P1 - The Questions" pid="176" position="4690,525" size="115,100" tags="chapter6">Outside the office, June lowers her head into the water. Eli watches a man in a black coat collect the completed cards.
+
+The man takes them past the finish-time table and into a locked building marked PRIVATE RAILWAY RECORDS.
+
+(if: $raceEvidence or $mercyWrenEvidence)[Eli recognizes the filing marks on the envelopes. He saw them long before this checkpoint.]
+
+Across the yard, Warren argues with an official. Beside the hitching rail, Silas checks his horse's legs and says nothing to anybody.
+
+Three ways to find out what's going on. None of them look easy.
+
+[[Keep watching the records office-&gt;A3C1P2 - The Last Ordinary Night]]</tw-passagedata><tw-passagedata name="A3C1P2 - The Last Ordinary Night" pid="177" position="4690,650" size="115,100" tags="chapter6">A notice goes up outside the station: the next leg will begin early. The route has changed because of weather.
+
+It's a peculiar warning. The sky is clear.
+
+June paws at the dirt. Eli remembers his father's pocket watch stopping at Mercy Junction. It hasn't kept proper time since.
+
+Someone has been moving the markers. Someone has been checking the results. And somebody has been paying for it all.
+
+If he wants answers before the race starts again, he needs to pick who to approach.
+
+[[Look for a way inside the restricted records office-&gt;A3C1P3 - Three Roads to the Truth]]</tw-passagedata><tw-passagedata name="A3C1P3 - Three Roads to the Truth" pid="178" position="4690,775" size="115,100" tags="chapter6">&lt;div class="rw-chapter"&gt;CHOOSE YOUR INVESTIGATION&lt;/div&gt;
+The records office has a rear loading door. Warren is still arguing with an official. Silas sits alone beyond the stables.
+
+Eli can't follow every lead before morning.
+
+(if: $crowWagonRecords or $mercyWrenEvidence or $raceEvidence)[He has enough scraps of evidence to know where the office keeps its important files.]
+(if: $warrenStanding &gt; 0 or $crowWarrenDeal)[Warren has reasons to remember Eli, though that doesn't mean he likes him.]
+(if: $silasTrust &gt; 0)[Silas looks up as Eli passes. He seems like he's expecting a conversation.]
+
+Where does Eli go?
+
+(link: "THE INVESTIGATOR. Follow the documents.")[(set: $a3RevealRoute to "investigator")(go-to: "A3C1P6 - The Locked Records Room")]
+
+(link: "THE INFORMANT. Talk to Warren.")[(set: $a3RevealRoute to "informant")(go-to: "A3C1P18 - The Devil Has Papers")]
+
+(link: "THE WITNESS. Find Silas and the other riders.")[(set: $a3RevealRoute to "witness")(go-to: "A3C1P30 - The Man Who Stayed")]</tw-passagedata><tw-passagedata name="A3C1P4 - The Rain That Was Promised" pid="179" position="4690,900" size="115,100" tags="chapter6">The wind changes after dark, but the promised rain never comes.
+
+An official nails fresh red cloth to the fence. Another crosses out a name on a list of roads.
+
+Eli doesn't like how carefully they're preparing for a storm that isn't there.
+
+June gives a low snort. He rubs her neck.
+
+"I know. Me neither."
+
+[[Keep moving-&gt;A3C1P5 - Before the Midnight Bell]]</tw-passagedata><tw-passagedata name="A3C1P5 - Before the Midnight Bell" pid="180" position="4690,1025" size="115,100" tags="chapter6">Beyond the camp, the mountains are one black shape against the stars.
+
+Somewhere out there, the White Trail still exists. No map has made it ordinary.
+
+Eli pulls his coat close and starts back toward the main yard. There's a meeting before the riders leave, and he intends to be there.
+
+[[Ride with the departing field-&gt;A3C1P45 - The Midnight Departure]]</tw-passagedata><tw-passagedata name="A3C1P6 - The Locked Records Room" pid="181" position="4530,1300" size="115,100" tags="chapter6">&lt;div class="rw-route"&gt;INVESTIGATOR / THE PAPER TRAIL&lt;/div&gt;
+The back of the railway office smells of damp wood and lamp oil. A porter carries out a box, then wedges the door open with his boot.
+
+Eli has maybe a minute.
+
+Through the gap he can see two desks, a locked cabinet, and a wall covered with little red pins.
+
+No one would mistake this for an ordinary race office.
+
+[[Slip inside while the porter is distracted-&gt;A3C1P7 - The Red Pins]]</tw-passagedata><tw-passagedata name="A3C1P7 - The Red Pins" pid="182" position="4530,1425" size="115,100" tags="chapter6">The pins mark checkpoints. Thin black strings connect them, except some strings bend toward roads that aren't on the official course.
+
+A stack of cards lies beside a separate ledger marked OBSERVATIONS.
+
+Each rider has a number. Each route has an expected arrival. And somebody has written ACTUAL DISTANCE UNKNOWN beside half the entries.
+
+(if: $raceEvidence)[Eli finds a matching number from the Dry Creek Race Office. This wasn't a last-minute change.]
+
+Footsteps creak in the hall.
+
+(link: "Copy the ledger numbers")[(set: $a3Proof to $a3Proof + 1)(go-to: "A3C1P8 - Ink on the Cuff")]
+
+(link: "Search the locked cabinet")[(set: $a3Risk to $a3Risk + 1)(go-to: "A3C1P9 - The Cabinet Latch")]</tw-passagedata><tw-passagedata name="A3C1P8 - Ink on the Cuff" pid="183" position="4530,1550" size="115,100" tags="chapter6">Eli copies the numbers with a borrowed pencil. He writes quickly, smearing the side of his hand with black ink.
+
+Several entries have two arrival times. The same rider, the same checkpoint, and different dates. Nobody has crossed either number out.
+
+The porter returns. Eli ducks behind a shelf and waits for the heavy boots to pass.
+
+[[Look for the order that authorized these records-&gt;A3C1P10 - The Original Survey]]</tw-passagedata><tw-passagedata name="A3C1P9 - The Cabinet Latch" pid="184" position="4530,1675" size="115,100" tags="chapter6">The cabinet is too solid to force quietly. Eli checks beneath the desk instead and finds a brass key hanging on a bent nail.
+
+Inside are sealed letters and folded route diagrams.
+
+One drawing marks the same canyon in three different locations. A note reads: SEND RIDERS THROUGH ALL THREE.
+
+Someone is coming back down the corridor.
+
+(link: "Take the diagram and close the cabinet")[(set: $a3Proof to $a3Proof + 2)(go-to: "A3C1P10 - The Original Survey")]</tw-passagedata><tw-passagedata name="A3C1P10 - The Original Survey" pid="185" position="4530,1800" size="115,100" tags="chapter6">A folder dated before the race begins with a familiar name: EDWIN VALE.
+
+(if: $c3StationRecords or $crowValeReference)[Eli has seen Vale's handwriting. The numbers and careful little corrections match the survey sheets he found earlier.]
+
+The first report describes routes that refuse to stay the same length. The second proposes using multiple travelers to compare their experiences.
+
+The third document is signed by Augustus Wren.
+
+The race was not created to discover whether the roads existed. Wren already knew.
+
+[[Read the next page-&gt;A3C1P11 - The Prize and the Price]]</tw-passagedata><tw-passagedata name="A3C1P11 - The Prize and the Price" pid="186" position="4530,1925" size="115,100" tags="chapter6">There's an estimate for horses, supplies, officials, and a winner's purse.
+
+Below it, another line: FIELD PARTICIPANTS. EXPECTED SAMPLE: 300.
+
+Eli reads it again.
+
+"Participants?"
+
+He turns a page and finds a list of ordinary riders. Thomas Bell is there. So is Warren. So is Elias Mercer, Kansas.
+
+Beside some names someone has written FOLLOW-UP REQUIRED.
+
+(link: "Take what proof you can carry")[(set: $a3Proof to $a3Proof + 1)(go-to: "A3C1P12 - Someone at the Door")]</tw-passagedata><tw-passagedata name="A3C1P12 - Someone at the Door" pid="187" position="4530,2050" size="115,100" tags="chapter6">A clerk steps into the room. His eyes go straight to the papers in Eli's hand.
+
+"You can't be in here."
+
+"Then maybe you shouldn't keep my name in a locked cabinet."
+
+The clerk doesn't answer. He reaches toward the corridor bell.
+
+Eli can talk or run. Neither will make the clerk forget his face.
+
+(link: "Tell him the records involve riders in danger")[(set: $a3Witnesses to $a3Witnesses + 1)(go-to: "A3C1P13 - The Clerk Blinks")]
+
+(link: "Leave through the loading door with the papers")[(set: $a3Risk to $a3Risk + 1)(go-to: "A3C1P14 - Between Two Wagons")]</tw-passagedata><tw-passagedata name="A3C1P13 - The Clerk Blinks" pid="188" position="4530,2175" size="115,100" tags="chapter6">"They weren't told," Eli says. "Those riders. They don't know you're sending them down those roads."
+
+The clerk glances at the list.
+
+"I'm paid to record times. That's all."
+
+"Then you know what's wrong with them."
+
+He looks away. But he doesn't ring the bell. He points to the rear door.
+
+"Go. And don't tell him I let you."
+
+[[Leave before he changes his mind-&gt;A3C1P15 - A Name on Every Page]]</tw-passagedata><tw-passagedata name="A3C1P14 - Between Two Wagons" pid="189" position="4530,2300" size="115,100" tags="chapter6">Eli slips between cargo wagons as the alarm rings behind him.
+
+A porter shouts. Eli keeps moving, trying not to crush the papers inside his coat.
+
+June is where he left her. He reaches her before anyone finds the right stall.
+
+He doesn't know how long he can stay hidden in a camp full of officials.
+
+[[Find somewhere to read the papers-&gt;A3C1P15 - A Name on Every Page]]</tw-passagedata><tw-passagedata name="A3C1P15 - A Name on Every Page" pid="190" position="4530,2425" size="115,100" tags="chapter6">Under the stable lantern, the papers look worse than they did in the office.
+
+Several route changes are marked APPROVED by Wren. One leads straight toward the last surviving White Trail reports.
+
+(if: $crowWagonRecords)[The old wagon ledger matches the new orders. Wren's people were changing routes at Crow's Gap too.]
+(if: $mercyCrossover is not "none")[The documents never mention two versions of Mercy Junction. Eli almost wishes they did.]
+
+The riders were never asked if they wanted to be part of this.
+
+[[Look for someone who will listen-&gt;A3C1P16 - Not Enough Paper]]</tw-passagedata><tw-passagedata name="A3C1P16 - Not Enough Paper" pid="191" position="4530,2550" size="115,100" tags="chapter6">Eli can prove the officials altered the course, but papers alone won't stop a man who owns the whole race.
+
+He needs other riders. Maybe a witness. Maybe somebody with influence.
+
+He folds the documents away and steps into the night.
+
+"All right, Wren," he mutters. "Let's see who believes you now."
+
+[[Meet the other riders-&gt;A3C1P17 - The Investigator Returns]]</tw-passagedata><tw-passagedata name="A3C1P17 - The Investigator Returns" pid="192" position="4530,2675" size="115,100" tags="chapter6">The riders gather near the main platform before the midnight departure.
+
+Eli has real evidence. Whether anyone will look at it is another question.
+
+He sees a familiar red scarf through the crowd and heads that way.
+
+[[Take your findings to the meeting-&gt;A3C1P42 - The Organizer Speaks]]</tw-passagedata><tw-passagedata name="A3C1P18 - The Devil Has Papers" pid="193" position="4690,1300" size="115,100" tags="chapter6">&lt;div class="rw-route"&gt;INFORMANT / THE RIVAL'S SIDE&lt;/div&gt;
+Warren is standing by a carriage, waving a folded route diagram in an official's face.
+
+"You gave me this yesterday. You've changed it twice since."
+
+The official keeps saying it's an administrative matter.
+
+Warren notices Eli approaching and lowers the paper.
+
+"Come to enjoy the show, Mercer?"
+
+[[Ask what the official changed-&gt;A3C1P19 - A Fair Race]]</tw-passagedata><tw-passagedata name="A3C1P19 - A Fair Race" pid="194" position="4690,1425" size="115,100" tags="chapter6">"They're moving the western markers," Warren says. "Again."
+
+"You had different maps?" Eli asks.
+
+Warren rolls his eyes. "I paid for the best information I could get. Same as any serious racer would."
+
+"Not everyone can do that."
+
+"Then beat me anyway."
+
+It's the sort of answer Eli expects from him, except Warren seems genuinely angry about the new route.
+
+(link: "Appeal to his pride as a racer")[(set: $warrenStanding to $warrenStanding + 1)(go-to: "A3C1P20 - Not Your Trophy")]
+
+(link: "Tell him he helped the organizers cheat")[(set: $a3Risk to $a3Risk + 1)(go-to: "A3C1P21 - Bad Blood")]</tw-passagedata><tw-passagedata name="A3C1P20 - Not Your Trophy" pid="195" position="4690,1550" size="115,100" tags="chapter6">"Would you still want to win if Wren picked the route to make sure you did?" Eli asks.
+
+Warren looks insulted.
+
+"I don't need a man in a nice coat choosing my finish line."
+
+"Then help me figure out why he keeps moving it."
+
+Warren folds the map with slow, careful hands.
+
+"You get one look at what I have. Then we're even."
+
+(link: "Examine his correspondence")[(set: $a3WarrenAllied to true)(go-to: "A3C1P22 - Blackwell's Letters")]</tw-passagedata><tw-passagedata name="A3C1P21 - Bad Blood" pid="196" position="4690,1675" size="115,100" tags="chapter6">Warren steps close enough that Eli can see dust on the stitching of his fine vest.
+
+"You think I was in on it?"
+
+"You've been taking their favors all race."
+
+"Favors aren't the same as orders."
+
+For a moment, it looks like he'll walk away. Then he thrusts the map into Eli's hand.
+
+"Read it. And tell me what I'm supposed to have known."
+
+[[Read the papers-&gt;A3C1P22 - Blackwell's Letters]]</tw-passagedata><tw-passagedata name="A3C1P22 - Blackwell's Letters" pid="197" position="4690,1800" size="115,100" tags="chapter6">Warren's letters promise priority route notices, horse feed, and special access to the official survey charts.
+
+The last letter contains a list of competitor groups. Each group has a different route assigned.
+
+Some groups were sent farther from the finish than others.
+
+"He was measuring us," Eli says.
+
+"Like cattle," Warren replies.
+
+(if: $crowWarrenLetter or $crowWarrenDeal)[Eli recognizes the officer's signature from Crow's Gap. This isn't the first time Warren was handed a private instruction.]
+
+[[Ask why Warren agreed to the arrangement-&gt;A3C1P23 - Warren's Answer]]</tw-passagedata><tw-passagedata name="A3C1P23 - Warren's Answer" pid="198" position="4690,1925" size="115,100" tags="chapter6">"Because I wanted to win," Warren says. "Is that so hard to understand?"
+
+"No."
+
+Warren seems surprised.
+
+"I wanted to prove I was better than the rest of you," he says. "Hard to do that when somebody else is fixing the course."
+
+Eli can see what hurts him most. It's not the lost advantage. It's being made a fool of.
+
+[[Ask him to help expose the route changes-&gt;A3C1P24 - No Favor Between Us]]
+
+[[Offer to keep his involvement private if he tells the truth-&gt;A3C1P25 - A Deal With Blackwell]]</tw-passagedata><tw-passagedata name="A3C1P24 - No Favor Between Us" pid="199" position="4690,2050" size="115,100" tags="chapter6">"Come with me," Eli says. "Tell the other riders what you found."
+
+"And tell them I bought my information?"
+
+"Better than letting Wren tell the story for you."
+
+Warren studies him for a long moment.
+
+(if: $warrenStanding &gt; 0 or $c3WarrenRespect or $helpedWarren)["You're annoying, Mercer. But you're not wrong."]
+(else:)["Don't start thinking we're friends just because I'm listening."]
+
+He takes the letters back.
+
+(link: "Let him decide for himself")[(set: $a3WarrenAllied to true)(go-to: "A3C1P26 - The Private Groups")]</tw-passagedata><tw-passagedata name="A3C1P25 - A Deal With Blackwell" pid="200" position="4690,2175" size="115,100" tags="chapter6">Eli offers a simple deal: the other riders need the truth, but Warren can explain his part himself.
+
+Warren's pride makes him hesitate longer than it should.
+
+"You owe me nothing after this," Eli says.
+
+"I already owe you nothing."
+
+"Good. We're getting somewhere."
+
+Warren actually laughs, once.
+
+(link: "Take his account to the meeting")[(set: $a3WarrenAllied to true)(go-to: "A3C1P26 - The Private Groups")]</tw-passagedata><tw-passagedata name="A3C1P26 - The Private Groups" pid="201" position="4690,2300" size="115,100" tags="chapter6">Warren shows Eli a second document. It lists riders under headings like CONTROL, WESTERN DETOUR, and WHITE ROUTE.
+
+The name beside the White Route is Edwin Vale.
+
+"Vale's a surveyor," Eli says.
+
+"He's a surveyor with a very large budget," Warren replies.
+
+Wren is using real competitors to compare routes that refuse to make sense on a map.
+
+[[Follow the officials carrying the last route order-&gt;A3C1P27 - The Last Red Marker]]</tw-passagedata><tw-passagedata name="A3C1P27 - The Last Red Marker" pid="202" position="4690,2425" size="115,100" tags="chapter6">Behind the station, two men are loading fresh red flags onto a wagon. One says the new course must be marked before the first bell.
+
+Warren checks the direction they're headed.
+
+"That's not the finish route," he says quietly.
+
+"Where's it going?"
+
+"Toward that canyon no one wants to talk about."
+
+Even Warren doesn't sound eager to ride there.
+
+[[Warn Warren that riders could get trapped-&gt;A3C1P28 - Two Men Who Want First]]</tw-passagedata><tw-passagedata name="A3C1P28 - Two Men Who Want First" pid="203" position="4690,2550" size="115,100" tags="chapter6">"I am still going to beat you," Warren says.
+
+"Wouldn't dream of stopping you."
+
+"You might have to."
+
+He folds his letters into his coat, then looks at the men carrying the flags.
+
+"First we make sure this race is still ours to win."
+
+It's the nearest thing to an alliance Eli's ever had with him.
+
+[[Head back to the meeting together-&gt;A3C1P29 - The Informant Returns]]</tw-passagedata><tw-passagedata name="A3C1P29 - The Informant Returns" pid="204" position="4690,2675" size="115,100" tags="chapter6">The main platform is filling with riders.
+
+(if: $a3WarrenAllied)[Warren walks alongside Eli. The other racers stare at the pair as if they've lost their minds.]
+(else:)[Warren follows several paces behind, acting like he arrived by coincidence.]
+
+Eli knows why the course changed. Now he needs someone to believe him.
+
+(link: "Bring the information into the open")[(set: $a3Proof to $a3Proof + 1)(go-to: "A3C1P42 - The Organizer Speaks")]</tw-passagedata><tw-passagedata name="A3C1P30 - The Man Who Stayed" pid="205" position="4850,1300" size="115,100" tags="chapter6">&lt;div class="rw-route"&gt;WITNESS / THE STORIES PEOPLE CARRY&lt;/div&gt;
+Silas is sitting on an overturned bucket beside his horse. He looks up as Eli approaches.
+
+"Thought you might've found another road to disappear down."
+
+"Not tonight."
+
+(if: $crowRoad is "white")[Silas doesn't quite meet his eyes. The argument at Crow's Gap still hangs between them.]
+(if: $crowRoad is "red")[They haven't forgotten the argument, but they at least traveled the last miles together.]
+
+Eli sits beside him without asking permission.
+
+[[Ask what Silas meant by the rider he lost-&gt;A3C1P31 - Four Years]]</tw-passagedata><tw-passagedata name="A3C1P31 - Four Years" pid="206" position="4850,1425" size="115,100" tags="chapter6">Silas rubs dirt off his knuckles with a rag that stopped being clean days ago.
+
+"His name was Daniel Rook," he says. "We were moving horses west. Good rider. Better company than I deserved."
+
+They came to a white flag after a storm. Daniel thought the road would save two days.
+
+Silas stayed with the wagons. Daniel went ahead.
+
+"I told him he was an idiot. Last thing I said to him."
+
+[[Let Silas finish the story-&gt;A3C1P32 - The Road Where Daniel Went]]</tw-passagedata><tw-passagedata name="A3C1P32 - The Road Where Daniel Went" pid="207" position="4850,1550" size="115,100" tags="chapter6">"I went after him that evening," Silas says. "I found his campfire. Fresh coals, saddle marks. But no tracks leaving it."
+
+He tried another road and reached a town Daniel had described in a letter. Nobody there remembered him. Nobody remembered the road either.
+
+"I kept looking for a week. Then two."
+
+Eli doesn't interrupt.
+
+"Never found out if he got through."
+
+(link: "Tell Silas he did what he could")[(set: $silasTrust to $silasTrust + 1)(go-to: "A3C1P33 - No Good Answer")]
+
+[[Ask why he never told you the whole story before-&gt;A3C1P34 - The Truth Costs Something]]</tw-passagedata><tw-passagedata name="A3C1P33 - No Good Answer" pid="208" position="4850,1675" size="115,100" tags="chapter6">"You tried," Eli says.
+
+Silas turns the rag over.
+
+"Doesn't feel like trying was enough."
+
+"Maybe nothing would've been."
+
+Silas looks at him, unsure whether to agree.
+
+Eli has spent the whole race wanting someone to tell him the right road. Silas seems just as tired of looking for one.
+
+(link: "Tell him about the checkpoint questions")[(set: $a3SilasOpened to true)(go-to: "A3C1P35 - Other Riders")]</tw-passagedata><tw-passagedata name="A3C1P34 - The Truth Costs Something" pid="209" position="4850,1800" size="115,100" tags="chapter6">"Why didn't you tell me at Crow's Gap?" Eli asks.
+
+"Because I thought you'd go anyway."
+
+"I might've listened."
+
+"And if you'd gone after I told you, I'd have been the fool who watched it happen twice."
+
+Eli has no good answer to that.
+
+Silas draws a slow breath and looks toward the camp.
+
+(link: "Tell him about the checkpoint questions")[(set: $a3SilasOpened to true)(go-to: "A3C1P35 - Other Riders")]</tw-passagedata><tw-passagedata name="A3C1P35 - Other Riders" pid="210" position="4850,1925" size="115,100" tags="chapter6">A young rider named Thomas Bell comes through the stable yard.
+
+(if: $thomasAlly or $thomasHelped)[He greets Eli immediately. "Mercer, you hear what they're asking at registration?"]
+(else:)["You heard what's going on at the office?" he asks, looking between them.]
+
+Three men were called back to describe roads that were never part of the race instructions. Another had to draw his route from memory.
+
+The officials kept the sketches.
+
+[[Find the riders who were questioned-&gt;A3C1P36 - The Same Question Twice]]</tw-passagedata><tw-passagedata name="A3C1P36 - The Same Question Twice" pid="211" position="4850,2050" size="115,100" tags="chapter6">In a makeshift tent, a woman named Mara explains that officials measured the distance on her map, then asked her to ride the same section again.
+
+"They didn't pay me extra," she says. "Just told me the second ride would count."
+
+She arrived at a different checkpoint on the return trip.
+
+"Wouldn't believe me until another rider said it happened to him too."
+
+Eli takes down her name.
+
+[[Ask whether she will speak publicly-&gt;A3C1P37 - The Courage to Say It]]</tw-passagedata><tw-passagedata name="A3C1P37 - The Courage to Say It" pid="212" position="4850,2175" size="115,100" tags="chapter6">Mara looks toward the officials' table.
+
+"I signed up to race. Not be somebody's experiment."
+
+She agrees to speak if Eli can get other riders beside her.
+
+Silas volunteers without hesitation. Thomas looks worried but stays.
+
+It isn't paperwork. It isn't a map. It's people remembering what happened.
+
+(link: "Gather one more account")[(set: $a3Witnesses to $a3Witnesses + 2)(go-to: "A3C1P38 - Vale's Men")]</tw-passagedata><tw-passagedata name="A3C1P38 - Vale's Men" pid="213" position="4850,2300" size="115,100" tags="chapter6">A survey assistant recognizes Eli from the station.
+
+(if: $valeCooperated)["You were the rider who helped Mr. Vale," he says. "He still has your measurements."]
+(else-if: $valeRefused)["Mr. Vale's been asking after you. He wasn't pleased you left."]
+(else:)["Mr. Vale told us to look for riders with unusual cards."]
+
+The assistant admits Wren's people have been asking Vale to send riders through old routes for months.
+
+"We thought it was a survey," he says. "Just a survey."
+
+[[Ask him to come forward with the others-&gt;A3C1P39 - A Surveyor Without a Map]]</tw-passagedata><tw-passagedata name="A3C1P39 - A Surveyor Without a Map" pid="214" position="4850,2425" size="115,100" tags="chapter6">The assistant agrees to help if his name stays off the first announcement.
+
+Eli doesn't blame him. People have been following Wren's orders without ever seeing the full plan.
+
+Silas folds his arms.
+
+"We need to tell everyone before that next stage starts."
+
+For once, Eli doesn't argue.
+
+(link: "Return with the witnesses")[(set: $a3Witnesses to $a3Witnesses + 1)(set: $a3ValeLead to true)(go-to: "A3C1P40 - The Witnesses Return")]</tw-passagedata><tw-passagedata name="A3C1P40 - The Witnesses Return" pid="215" position="4850,2550" size="115,100" tags="chapter6">The fire outside the meeting tent is almost out. Riders are pushing toward the platform.
+
+Silas stops Eli beside the hitching rail.
+
+"If it comes down to you and me at the finish, I'm still riding to win."
+
+"Good," Eli says. "I am too."
+
+Silas grins a little. It's the first time he's done that all night.
+
+[[Make sure the other riders are ready-&gt;A3C1P41 - A Name on the List]]</tw-passagedata><tw-passagedata name="A3C1P41 - A Name on the List" pid="216" position="4850,2675" size="115,100" tags="chapter6">Thomas and Mara stand with the survey assistant at the edge of the crowd.
+
+(if: $a3SilasOpened)[Silas gives Eli a small nod. He has trusted him with something he carried for years.]
+
+The crowd quiets as the official clears his throat.
+
+Eli has a story the people here need to hear, even if there's no neat way to prove every mile of it.
+
+[[Bring the witnesses to the meeting-&gt;A3C1P42 - The Organizer Speaks]]</tw-passagedata><tw-passagedata name="A3C1P42 - The Organizer Speaks" pid="217" position="4690,2920" size="115,100" tags="chapter6">&lt;div class="rw-chapter"&gt;THE MIDNIGHT MEETING&lt;/div&gt;
+A representative of Augustus Wren stands beneath the station clock.
+
+"The final stages will leave before sunrise. A revised route has been prepared for your safety."
+
+The riders groan. Someone asks why the last route was changed too.
+
+(if: $a3RevealRoute is "investigator")[Eli has papers with Wren's signature folded inside his coat.]
+(else-if: $a3RevealRoute is "informant")[Warren stands beside Eli with his private letters. He's unusually quiet.]
+(else:)[Several riders stand ready to back up what Eli and Silas know.]
+
+The official begins to read the new list of checkpoints.
+
+(link: "Challenge the new route in front of everyone")[(set: $a3WarningSent to true)(go-to: "A3C1P43 - The Warning")]
+
+(link: "Wait, then warn riders away from the officials")[(set: $a3WarningSent to false)(go-to: "A3C1P44 - The Quiet Warning")]</tw-passagedata><tw-passagedata name="A3C1P43 - The Warning" pid="218" position="4690,3045" size="115,100" tags="chapter6">"That's not a safer road," Eli calls. "It's where you wanted us to go all along."
+
+The official glares at him. A dozen riders turn.
+
+(if: $a3Proof &gt;= 2)[Eli holds up the documents and reads Wren's authorization aloud.]
+(else-if: $a3WarrenAllied)[Warren steps forward. "I've got the letters. Your people sent them."]
+(else:)[Mara and the other riders start telling the crowd what they experienced.]
+
+The official insists the course is legitimate. But he no longer has everyone's attention.
+
+[[Get ready for the midnight departure-&gt;A3C1P4 - The Rain That Was Promised]]</tw-passagedata><tw-passagedata name="A3C1P44 - The Quiet Warning" pid="219" position="4690,3170" size="115,100" tags="chapter6">Eli waits until the crowd breaks up. Then he tells the riders closest to him what he found.
+
+Some believe him. Some ask why he didn't say it in front of Wren's men. Others are too focused on the prize to change their plans.
+
+He gets names, directions, and promises where he can. Not enough, but something.
+
+The course is still set to leave before dawn.
+
+[[Get ready for the midnight departure-&gt;A3C1P4 - The Rain That Was Promised]]</tw-passagedata><tw-passagedata name="A3C1P45 - The Midnight Departure" pid="220" position="4690,3295" size="115,100" tags="chapter6">Riders assemble in the dark. Fresh red flags lead away from the station and up toward the mountains.
+
+June shifts beneath Eli, ready but restless.
+
+(if: $silasTrust &gt; 1)[Silas rides up alongside him. "Whatever road you're on," he says, "don't forget you're still racing me."]
+(else:)[Silas passes at a distance, gives him a brief nod, and keeps moving.]
+
+Beyond the ridge, a single distant light glows where no official checkpoint should be.
+
+The starting bell rings.
+
+&lt;div class="rw-chapter"&gt;END OF CHAPTER 6&lt;/div&gt;
+
+[[Chapter 7: The Final Crossing-&gt;A3C2 - The Final Crossing]]</tw-passagedata><tw-passagedata name="A3C2 - The Final Crossing" pid="221" position="5300,400" size="115,100" tags="chapter7">&lt;div class="rw-chapter"&gt;ACT III / CHAPTER 7 / THE FINAL CROSSING&lt;/div&gt;
+The sun hasn't risen, and the race is already moving.
+
+A hundred hooves drum against the packed ground. Lanterns swing from saddles. Riders shout to one another as the course bends toward the mountains.
+
+Eli passes a row of new red flags. The cloth is still clean. Someone planted them only hours ago.
+
+June finds her pace. He can feel every mile they've ridden in her breathing, but she keeps moving.
+
+Ahead, the canyon opens like a cut through the earth.
+
+[[Ride into the final crossing-&gt;A3C2P1 - First Light]]</tw-passagedata><tw-passagedata name="A3C2P1 - First Light" pid="222" position="5300,525" size="115,100" tags="chapter7">A thin orange line appears behind the hills.
+
+Warren overtakes Eli on the left, standing in his stirrups. A group follows him toward the narrow canyon entrance.
+
+Beyond the ridge, Silas is already looking for the best line.
+
+The trail splits around a field of broken rock. The red flags point toward a bridge that doesn't appear on Eli's map.
+
+He has seen enough of those mistakes to know this one could be deliberate.
+
+[[Reach the marshal at the bridge-&gt;A3C2P2 - The Marshal at the Bridge]]</tw-passagedata><tw-passagedata name="A3C2P2 - The Marshal at the Bridge" pid="223" position="5300,650" size="115,100" tags="chapter7">The marshal holds up one gloved hand.
+
+"All riders through the north channel. Do not deviate."
+
+"What's wrong with the other road?" Eli asks.
+
+"Closed."
+
+He will not say why.
+
+A wagon loaded with measuring tripods rumbles across the bridge before the racers. Wren's men have been sent ahead of the very riders they're supposed to protect.
+
+[[Watch the measuring crew-&gt;A3C2P3 - Three Ways to Stop a Man]]</tw-passagedata><tw-passagedata name="A3C2P3 - Three Ways to Stop a Man" pid="224" position="5300,775" size="115,100" tags="chapter7">At a bend in the road, Eli sees the operation taking shape.
+
+Officials have gathered around a temporary signal tower. Surveyors are laying out rods along the canyon floor. A messenger gallops between the tower and the racers.
+
+Eli has to choose what he can do best.
+
+(if: $a3Proof &gt;= 2)[He has evidence that might turn the officials against the orders.]
+(if: $a3WarrenAllied or $a3Witnesses &gt; 0 or $thomasAlly)[He knows people who might help him cut the operation apart.]
+(if: $scoutedOldRoad or $crowGraySketch or $c3StationRecords)[And he knows there may be other ways through the canyon.]
+
+Whatever he tries, Wren will be watching the checkpoint.
+
+(link: "EXPOSE WREN. Force the officials to hear the truth.")[(set: $a3Method to "expose")(go-to: "A3C2P7 - The Notice Board")]
+
+(link: "TURN THE CREW. Find people willing to disobey.")[(set: $a3Method to "allies")(go-to: "A3C2P18 - Favors Come Due")]
+
+(link: "OUTRIDE THE PLAN. Reach the riders first.")[(set: $a3Method to "outride")(go-to: "A3C2P29 - Into the Canyon")]</tw-passagedata><tw-passagedata name="A3C2P4 - A Road of Flags" pid="225" position="5300,900" size="115,100" tags="chapter7">The flags form a red line that seems to point straight into a wall of pale morning mist.
+
+One rider calls it fog. Another says the ground behind it rises too steeply for a trail.
+
+The marshal looks at his notes and tells them to keep moving anyway.
+
+Eli decides there are worse things than losing first place.
+
+[[Push on-&gt;A3C2P5 - The Sound of Horses]]</tw-passagedata><tw-passagedata name="A3C2P5 - The Sound of Horses" pid="226" position="5300,1025" size="115,100" tags="chapter7">Somewhere to the north, horses run over hard ground. The sound moves in the wrong direction.
+
+Eli looks toward it. The sound moves with him.
+
+June twists an ear and then settles again. At least she seems to know which way she's facing.
+
+Eli trusts her more than the map.
+
+[[Follow June-&gt;A3C2P6 - The Broken Line]]</tw-passagedata><tw-passagedata name="A3C2P6 - The Broken Line" pid="227" position="5300,1150" size="115,100" tags="chapter7">Behind him, a flag comes loose and skitters across the dirt.
+
+A younger rider reaches for it. Eli tells him to leave it.
+
+The wind blows the flag uphill. For one moment, it doesn't seem strange.
+
+Then Eli remembers there's no wind.
+
+[[Get to the tower-&gt;A3C2P40 - The Man With the Map]]</tw-passagedata><tw-passagedata name="A3C2P7 - The Notice Board" pid="228" position="5140,1400" size="115,100" tags="chapter7">&lt;div class="rw-route"&gt;METHOD ONE / EXPOSE THE EXPERIMENT&lt;/div&gt;
+A board beside the main tower displays the new route. The ink on it is fresh.
+
+Eli pushes through the crowd of racers and points to the western crossing.
+
+"That road wasn't there yesterday."
+
+The clerk says maps are updated all the time.
+
+"Funny," Eli says. "Seems yours only change after people get lost."
+
+[[Demand to speak to the head marshal-&gt;A3C2P8 - The Head Marshal]]</tw-passagedata><tw-passagedata name="A3C2P8 - The Head Marshal" pid="229" position="5140,1525" size="115,100" tags="chapter7">The head marshal is a woman with tired eyes and a stack of messages she can barely keep up with.
+
+"I take orders from Mr. Wren," she says.
+
+"Then listen to what he's ordering."
+
+Eli can show her papers, bring forward other riders, or use the discrepancies on his checkpoint card.
+
+Her expression changes when she sees the two times stamped at Mercy Junction.
+
+(link: "Present the documents you collected")[(set: $a3Proof to $a3Proof + 1)(go-to: "A3C2P9 - A Signature in Blue Ink")]
+
+(link: "Ask the riders to describe their journeys")[(set: $a3Witnesses to $a3Witnesses + 1)(go-to: "A3C2P10 - Not Just One Rider")]</tw-passagedata><tw-passagedata name="A3C2P9 - A Signature in Blue Ink" pid="230" position="5140,1650" size="115,100" tags="chapter7">(if: $a3Proof &gt;= 2)[Eli spreads out the route orders. Wren's signature is on the most dangerous crossing. The marshal reads it twice.]
+(else:)[Eli has only a few copied notes. The marshal wants originals, but the times on his race card make her hesitate.]
+
+"This says the riders are being compared," she says.
+
+"Not raced," Eli answers. "Measured."
+
+The marshal calls over another officer. For the first time, Eli feels the people in charge starting to listen.
+
+[[Ask her to close the crossing-&gt;A3C2P11 - The Order to Halt]]</tw-passagedata><tw-passagedata name="A3C2P10 - Not Just One Rider" pid="231" position="5140,1775" size="115,100" tags="chapter7">Mara speaks first. Then Thomas. Then two men who have never met each other describe the same checkpoint appearing on different roads.
+
+"We're not saying we know why," Mara says. "We're saying it happened."
+
+The marshal studies the group.
+
+"You'd all sign statements?"
+
+"If it keeps the next riders out of there," Eli replies.
+
+[[Ask her to close the crossing-&gt;A3C2P11 - The Order to Halt]]</tw-passagedata><tw-passagedata name="A3C2P11 - The Order to Halt" pid="232" position="5140,1900" size="115,100" tags="chapter7">The marshal writes an order to pause the race. An assistant hurries it toward the tower.
+
+Before it gets there, a rider from Wren's private detail intercepts him.
+
+"Mr. Wren has authorized the course," the man says.
+
+"And I'm authorizing a pause," the marshal answers.
+
+He doesn't move.
+
+The crowd behind Eli starts murmuring.
+
+[[Stand beside the marshal and refuse to move-&gt;A3C2P12 - A Wall of Riders]]
+
+[[Take the halt order directly to the signal team-&gt;A3C2P13 - The Signal Team]]</tw-passagedata><tw-passagedata name="A3C2P12 - A Wall of Riders" pid="233" position="5140,2025" size="115,100" tags="chapter7">Eli turns June across the road. Silas comes alongside him without asking why.
+
+(if: $a3WarrenAllied)[Warren rides up on the other side. "Fine," he says. "But nobody call this an alliance after today."]
+
+The racers behind them stop. One by one, horses fall quiet.
+
+The private officer has a choice: argue with a marshal and an entire field, or let the order through.
+
+(link: "Let the marshal take control")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P14 - The Wrong Signal")]</tw-passagedata><tw-passagedata name="A3C2P13 - The Signal Team" pid="234" position="5140,2150" size="115,100" tags="chapter7">Eli rides hard along the service path, holding the marshal's note above his head.
+
+The signalman hesitates when he reads it.
+
+"Wren told us nobody could cancel the crossing."
+
+"Well, he was wrong."
+
+The man reaches for the signal rope, then looks toward the distant private carriage.
+
+(link: "Help the signalman give the warning")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P14 - The Wrong Signal")]</tw-passagedata><tw-passagedata name="A3C2P14 - The Wrong Signal" pid="235" position="5140,2275" size="115,100" tags="chapter7">The tower raises a yellow warning flag. Riders near the bridge slow down.
+
+But the next signal tower doesn't answer.
+
+Eli sees smoke from the far side of the canyon, where more riders have already gone through.
+
+"They didn't get it," the marshal says.
+
+The message has to go another way.
+
+[[Find the second signal tower-&gt;A3C2P15 - Two Checkpoints]]</tw-passagedata><tw-passagedata name="A3C2P15 - Two Checkpoints" pid="236" position="5140,2400" size="115,100" tags="chapter7">The service road forks toward two towers, both marked as the eastern checkpoint.
+
+One is staffed. The other looks abandoned.
+
+(if: $mercyCrossover is not "none")[For a moment Eli remembers two versions of the same town. He doesn't assume either tower is the correct one.]
+
+He watches the flags. The staffed tower is pointing riders toward the empty one.
+
+Something is terribly wrong with the instructions.
+
+[[Follow the riders instead of the signs-&gt;A3C2P16 - The Riders Hear]]</tw-passagedata><tw-passagedata name="A3C2P16 - The Riders Hear" pid="237" position="5140,2525" size="115,100" tags="chapter7">Eli reaches a group moving toward the old tower.
+
+"Turn around!" he calls. "The crossing's been suspended!"
+
+A few riders argue. Then the head marshal's bell sounds from behind him.
+
+At last, they begin to turn.
+
+It's not everyone. But it's enough to stop the first group from entering the fog.
+
+[[Return to Wren’s command post-&gt;A3C2P17 - The Signal Is Cut]]</tw-passagedata><tw-passagedata name="A3C2P17 - The Signal Is Cut" pid="238" position="5140,2650" size="115,100" tags="chapter7">The private detail tears down the warning flag. Eli watches the yellow cloth fall into the dirt.
+
+The marshal is furious. The riders are even angrier.
+
+The operation has stopped being a secret.
+
+But across the canyon, a line of horses is still moving toward the pale fog.
+
+(link: "Follow the flags toward the command post")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P4 - A Road of Flags")]</tw-passagedata><tw-passagedata name="A3C2P18 - Favors Come Due" pid="239" position="5300,1400" size="115,100" tags="chapter7">&lt;div class="rw-route"&gt;METHOD TWO / TURN THE CREW&lt;/div&gt;
+Eli moves through the camp asking who is ready to stop taking orders.
+
+Some riders turn away. Some ask what he can offer them.
+
+(if: $thomasAlly)[Thomas is the first to volunteer. "You helped me when you didn't have to," he says. "I remember."]
+(if: $a3WarrenAllied)[Warren arrives with a private route letter and a look of deep irritation.]
+(if: $a3ValeLead or $valeCooperated)[A survey worker slips Eli a note with the names of the signal operators.]
+
+There's more than one way to break a machine.
+
+[[Find out which people control the crossing-&gt;A3C2P19 - The Workers Know]]</tw-passagedata><tw-passagedata name="A3C2P19 - The Workers Know" pid="240" position="5300,1525" size="115,100" tags="chapter7">A foreman named Ellis is standing beside a wagon full of survey rods.
+
+"We don't choose the routes," he says. "We measure them."
+
+"Then who's telling the riders where to go?"
+
+"Wren. Vale. Whoever has the latest chart."
+
+Ellis doesn't sound comfortable saying the names.
+
+Eli asks who can signal the racers to stop.
+
+[[Ask Ellis to help-&gt;A3C2P20 - What It Costs to Say No]]</tw-passagedata><tw-passagedata name="A3C2P20 - What It Costs to Say No" pid="241" position="5300,1650" size="115,100" tags="chapter7">Ellis points toward the signal tower.
+
+"I can pull the warning bell. They'll take my job for it."
+
+"They might lose more than that if you don't."
+
+Ellis looks toward his crew.
+
+"You can't promise they're safe."
+
+"No," Eli says. "I can't. But I can tell you what I saw."
+
+Ellis asks for a minute to decide.
+
+[[Show him evidence from the journey-&gt;A3C2P21 - The Copy He Keeps]]
+
+[[Ask the other workers to speak for themselves-&gt;A3C2P22 - The Crew Votes]]</tw-passagedata><tw-passagedata name="A3C2P21 - The Copy He Keeps" pid="242" position="5300,1775" size="115,100" tags="chapter7">Eli unfolds his notes. The reports are imperfect, but the repeated instructions are clear enough.
+
+(if: $a3Proof &gt;= 1 or $mercyWrenEvidence or $crowWagonRecords)[Ellis recognizes the authorization marks immediately. "Those aren't for race marshals," he says. "They're for field trials."]
+(else:)[Ellis compares the numbers with his own records. "Some of these distances don't match," he admits.]
+
+He folds the paper and puts it in his pocket.
+
+"I'll take the bell."
+
+(link: "Bring Ellis to the signal wagon")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P23 - Warren at the Rope")]</tw-passagedata><tw-passagedata name="A3C2P22 - The Crew Votes" pid="243" position="5300,1900" size="115,100" tags="chapter7">Eli asks the workers to gather around the wagon.
+
+"You all rode out here thinking you'd be helping a race," he says. "Was this part of what you were told?"
+
+Nobody answers at first.
+
+Then one of them says the maps have been changed without any explanation.
+
+Another says the distances were wrong before they left camp.
+
+Ellis sets down his measuring rod.
+
+"All right. We'll ring the bell."
+
+(link: "Head to the signal wagon")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P23 - Warren at the Rope")]</tw-passagedata><tw-passagedata name="A3C2P23 - Warren at the Rope" pid="244" position="5300,2025" size="115,100" tags="chapter7">Warren is already standing by the signal rope, arguing with the guards.
+
+(if: $a3WarrenAllied or $warrenStanding &gt; 1)["Thought you might need a hand, Mercer," he calls.]
+(else:)["I'm here for my race," he snaps. "And your idiot organizer is ruining it."]
+
+The two guards look between the riders and the workers gathering behind them.
+
+For once, nobody seems eager to take Wren's side.
+
+[[Ring the warning bell-&gt;A3C2P24 - The Bell That Should Have Rung]]</tw-passagedata><tw-passagedata name="A3C2P24 - The Bell That Should Have Rung" pid="245" position="5300,2150" size="115,100" tags="chapter7">Ellis pulls the rope. The first heavy bell note rolls across the canyon.
+
+Riders slow. The second bell rolls out, and more horses stop.
+
+Then the rope goes slack. Someone has cut the connection to the far tower.
+
+"They're still going," Warren says.
+
+Eli looks east. He's right.
+
+[[Send someone along the ridge-&gt;A3C2P25 - Who Rides East]]</tw-passagedata><tw-passagedata name="A3C2P25 - Who Rides East" pid="246" position="5300,2275" size="115,100" tags="chapter7">The ridge trail is narrow but fast. Someone has to follow it and warn the farther riders.
+
+(if: $thomasAlly or $c3HelpedRider)[Thomas volunteers to carry the warning. He doesn't ask for anything in return.]
+(else:)[A stable hand volunteers to carry the warning if Eli can show him the safer route.]
+
+Eli traces the safest line he remembers onto the back of a feed receipt.
+
+(link: "Send the rider while you stay with the crew")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P26 - Vale Has Arrived")]</tw-passagedata><tw-passagedata name="A3C2P26 - Vale Has Arrived" pid="247" position="5300,2400" size="115,100" tags="chapter7">Edwin Vale stands at the edge of the workers' crowd, holding his worn notebook.
+
+"You're interfering with a measurement," he says, as if Eli has moved a ruler on a desk.
+
+"Those are people out there."
+
+Vale looks toward the broken signal line.
+
+"I know. I never said it was without risk."
+
+His calm makes Eli angrier than shouting would have.
+
+[[Ask Vale to admit how much he knew-&gt;A3C2P27 - Vale’s Admission]]
+
+[[Demand he give you the safest remaining route-&gt;A3C2P28 - The Safest Road]]</tw-passagedata><tw-passagedata name="A3C2P27 - Vale’s Admission" pid="248" position="5300,2525" size="115,100" tags="chapter7">"I knew the crossings were inconsistent," Vale says. "We studied them because we thought they could be understood."
+
+"And when your study put people in danger?"
+
+Vale closes the notebook.
+
+"We believed a warning could be issued before it came to that."
+
+Eli points toward the fog.
+
+"It came to that."
+
+Vale finally looks away.
+
+(link: "Follow the flags toward the command post")[(set: $a3ValeLead to true)(go-to: "A3C2P4 - A Road of Flags")]</tw-passagedata><tw-passagedata name="A3C2P28 - The Safest Road" pid="249" position="5300,2650" size="115,100" tags="chapter7">Vale draws two lines in the dirt.
+
+"The south ridge is the only route we have measured more than twice."
+
+"Does it stay where it is?"
+
+"I can't promise that."
+
+"Then stop acting like you can."
+
+Vale hesitates, then gives Eli a copy of the survey line.
+
+It may help the remaining riders, even if it can't explain the valley.
+
+(link: "Follow the flags toward the command post")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P4 - A Road of Flags")]</tw-passagedata><tw-passagedata name="A3C2P29 - Into the Canyon" pid="250" position="5460,1400" size="115,100" tags="chapter7">&lt;div class="rw-route"&gt;METHOD THREE / OUTRIDE THE EXPERIMENT&lt;/div&gt;
+Eli leaves the officials behind and takes the high path above the racers.
+
+June knows the difference between a sprint and a long climb. Eli gives her room to choose her footing.
+
+The canyon opens beneath them. Below, the new red flags form a line toward a bridge that looks narrower than it did on the map.
+
+Eli can get ahead of the riders if he picks the right crossing.
+
+[[Check the high trail-&gt;A3C2P30 - One Horse, Two Roads]]</tw-passagedata><tw-passagedata name="A3C2P30 - One Horse, Two Roads" pid="251" position="5460,1525" size="115,100" tags="chapter7">The trail splits around a dry wash. The short route is steep. The longer path curves behind the ridge.
+
+(if: $scoutedOldRoad or $crowGraySketch)[Eli remembers the old trail sketches and recognizes the ridge's shape.]
+(if: $juneCondition &lt; 2)[June's breathing is rough. She needs a sensible pace, not another gamble.]
+
+A rider below shouts that the bridge is moving. It can't be. Not the way he means.
+
+(link: "Use the ridge and save June’s strength")[(set: $juneCondition to $juneCondition + 1)(go-to: "A3C2P31 - The Ridge Is Still There")]
+
+(link: "Cut across the dry wash to gain time")[(set: $raceEdge to $raceEdge + 1)(set: $juneCondition to $juneCondition - 1)(go-to: "A3C2P32 - The Wash Gives Way")]</tw-passagedata><tw-passagedata name="A3C2P31 - The Ridge Is Still There" pid="252" position="5460,1650" size="115,100" tags="chapter7">June picks her way along the higher trail. It takes longer, but the footing is honest.
+
+From here, Eli can see two lines of riders approaching what should be the same bridge from opposite directions.
+
+The bridge itself seems to lead into the same patch of fog either way.
+
+He realizes they need a warning before they get any closer.
+
+[[Ride parallel to the first group-&gt;A3C2P33 - The First Warning]]</tw-passagedata><tw-passagedata name="A3C2P32 - The Wash Gives Way" pid="253" position="5460,1775" size="115,100" tags="chapter7">Loose stones scatter under June's hooves. Eli shifts his weight, guiding her away from the steepest section.
+
+They reach the far bank, but he feels how much the dash cost her.
+
+He slows until her breathing settles.
+
+Ahead, the first riders are almost at the bridge. There's no time to waste shouting from a mile away.
+
+[[Ride alongside the first group-&gt;A3C2P33 - The First Warning]]</tw-passagedata><tw-passagedata name="A3C2P33 - The First Warning" pid="254" position="5460,1900" size="115,100" tags="chapter7">Eli catches the lead riders just as they begin crossing the shallow river.
+
+"The bridge ahead isn't right!" he shouts.
+
+"What does that mean?" one rider calls back.
+
+"I don't know. But the officials changed the route to send you there."
+
+He points toward a narrow path that climbs back to the ridge.
+
+Some turn. A few keep racing.
+
+[[Follow those who ignored you-&gt;A3C2P34 - The Canyon Sprint]]</tw-passagedata><tw-passagedata name="A3C2P34 - The Canyon Sprint" pid="255" position="5460,2025" size="115,100" tags="chapter7">Warren's horse comes tearing down the canyon. He catches Eli at the bend.
+
+"You chasing me or warning me?" he calls.
+
+"Both if you're stupid enough to keep going!"
+
+They race alongside each other as the ground narrows. Warren sees the shifting flags ahead and pulls back.
+
+His horse is fast, but even he knows a race needs a road.
+
+(link: "Ask Warren to warn the riders on the far side")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P35 - A Rival’s Promise")]
+
+[[Take the warning yourself-&gt;A3C2P36 - The Narrow Crossing]]</tw-passagedata><tw-passagedata name="A3C2P35 - A Rival’s Promise" pid="256" position="5460,2150" size="115,100" tags="chapter7">"I'll find them," Warren says.
+
+"Don't make me regret asking."
+
+"Mercer, I'm offended you'd even consider it."
+
+He turns his horse toward the far ridge and rides off.
+
+Eli doesn't know whether Warren will reach them first, but he's glad someone is trying.
+
+[[Find the broken checkpoint-&gt;A3C2P37 - The Broken Checkpoint]]</tw-passagedata><tw-passagedata name="A3C2P36 - The Narrow Crossing" pid="257" position="5460,2275" size="115,100" tags="chapter7">Eli turns June toward a smaller crossing between two stone outcrops.
+
+She hesitates at the water, then steps through carefully.
+
+He reaches the riders on the far bank and tells them not to follow the new flags.
+
+A woman with a gray horse asks where they should go.
+
+"High ground," Eli says. "And stay together."
+
+(link: "Find the broken checkpoint")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P37 - The Broken Checkpoint")]</tw-passagedata><tw-passagedata name="A3C2P37 - The Broken Checkpoint" pid="258" position="5460,2400" size="115,100" tags="chapter7">A checkpoint shelter stands at the head of a valley. Another shelter with the same number appears on a ridge behind it.
+
+Eli checks the official list. There's supposed to be only one.
+
+(if: $mercyCrossover is not "none")[He recognizes the feeling from Mercy Junction. Two places, each claiming to be the same one.]
+
+The clerk at the lower shelter tells him the road is safe. The clerk at the higher one is ringing a warning bell.
+
+Eli decides to trust the bell.
+
+[[Ride toward the warning bell-&gt;A3C2P38 - The Flag That Wasn’t There]]</tw-passagedata><tw-passagedata name="A3C2P38 - The Flag That Wasn’t There" pid="259" position="5460,2525" size="115,100" tags="chapter7">A white cloth flag hangs beside the ridge shelter. Three tight knots hold it in place.
+
+Eli keeps June away from the unmarked road.
+
+A moment later, he looks back. The flag is gone. The post remains.
+
+The two shelters have not moved. He has no way to explain why they seemed to.
+
+For now, staying together matters more.
+
+[[Head toward Wren’s command post-&gt;A3C2P39 - The Outrider Returns]]</tw-passagedata><tw-passagedata name="A3C2P39 - The Outrider Returns" pid="260" position="5460,2650" size="115,100" tags="chapter7">Eli reaches the command post covered in dust.
+
+Riders are turning back behind him. Others are still out there, but the warning is spreading.
+
+Wren's people stare as Eli approaches. He knows the road well enough now to understand how little their charts can tell them.
+
+"Where's Wren?" he demands.
+
+(link: "Follow the flags toward the command post")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P4 - A Road of Flags")]</tw-passagedata><tw-passagedata name="A3C2P40 - The Man With the Map" pid="261" position="5300,2960" size="115,100" tags="chapter7">&lt;div class="rw-chapter"&gt;THE COMMAND POST&lt;/div&gt;
+Augustus Wren stands beside a table crowded with charts. A brass compass trembles beneath a glass weight.
+
+A clerk reads aloud the latest arrival times. Another crosses them out as new riders appear on the wrong ridge.
+
+"You planned this," Eli says.
+
+Wren doesn't look surprised to see him.
+
+"I planned a controlled survey. The course is merely the means."
+
+"The means are people."
+
+Wren looks back at the map. "And people have reached places we couldn't otherwise study."
+
+[[Make him look at what is happening outside-&gt;A3C2P41 - The Calculations]]</tw-passagedata><tw-passagedata name="A3C2P41 - The Calculations" pid="262" position="5300,3085" size="115,100" tags="chapter7">"The same mile isn't the same length twice," Wren says. "Can you imagine what it would mean to understand that?"
+
+Eli looks at the cluster of desperate riders visible through the window.
+
+"Can you imagine telling them that before they signed up?"
+
+Wren folds his hands.
+
+"They entered a difficult race. The frontier has always demanded risk."
+
+"Not the kind you hid from them."
+
+Wren's gaze finally leaves the map.
+
+[[Ask him to call the riders back-&gt;A3C2P42 - No More Riders]]</tw-passagedata><tw-passagedata name="A3C2P42 - No More Riders" pid="263" position="5300,3210" size="115,100" tags="chapter7">"Order a recall," Eli says. "Right now."
+
+"We are minutes from a repeatable result."
+
+"You don't have a result. You have people lost in a canyon."
+
+A tremor runs through the room. It isn't an earthquake. A train whistle sounds outside, though there are no tracks near the command post.
+
+One of the clerks drops his pencil.
+
+[[Present evidence and demand the recall-&gt;A3C2P43 - The Proof]]
+
+[[Point to the riders and appeal to the crew-&gt;A3C2P44 - Who Is Listening]]</tw-passagedata><tw-passagedata name="A3C2P43 - The Proof" pid="264" position="5300,3335" size="115,100" tags="chapter7">(if: $a3Proof &gt;= 1 or $a3WarrenAllied)[Eli spreads out what he has: letters, notes, copied orders, and the private route diagrams.]
+(else:)[Eli holds up the cards from the checkpoints, each stamped with a time he knows cannot be right.]
+
+"You changed the route on purpose," he says. "Then you kept changing the records to pretend the riders were the problem."
+
+Wren studies the papers but doesn't deny it.
+
+"We were correcting flawed observations," he says.
+
+"You were hiding them."
+
+[[Bring the argument outside-&gt;A3C2P45 - The Refusal]]</tw-passagedata><tw-passagedata name="A3C2P44 - Who Is Listening" pid="265" position="5300,3460" size="115,100" tags="chapter7">Eli pulls back the tent flap and calls to the surveyors and marshals outside.
+
+"Ask him where the missing riders are. Ask him which checkpoint is real."
+
+(if: $a3CrewHelp &gt; 1)[Several workers start shouting for the routes to be closed.]
+(else:)[A few workers hesitate. Then one sets down his measuring rod and walks toward the bell.]
+
+Wren steps outside, furious that people are no longer waiting for his orders.
+
+[[Face Wren in front of his workers-&gt;A3C2P45 - The Refusal]]</tw-passagedata><tw-passagedata name="A3C2P45 - The Refusal" pid="266" position="5300,3585" size="115,100" tags="chapter7">Wren climbs onto the command platform.
+
+"The operation will continue," he announces. "The data is incomplete, but we're close."
+
+Nobody cheers. A horse whinnies from the far road.
+
+"You keep saying close," Eli calls. "Close to what?"
+
+Wren points toward the white fog over the canyon.
+
+"The answer."
+
+Silas rides into view, followed by several riders who should have been on the opposite side of the mountain.
+
+[[Listen to Silas-&gt;A3C2P46 - The Wrong Side of the Mountain]]</tw-passagedata><tw-passagedata name="A3C2P46 - The Wrong Side of the Mountain" pid="267" position="5300,3710" size="115,100" tags="chapter7">"We went east," Silas says. "Straight east. Somehow we came out north of you."
+
+"Where are the others?" Eli asks.
+
+"Some turned back. Some kept going. Nobody knows where the eastern checkpoint is."
+
+Wren beckons a clerk to write down the details.
+
+Silas watches him.
+
+"You writing down how many people came out? Or just how far they rode?"
+
+The clerk puts down his pen.
+
+[[Tell everyone to stop following the markers-&gt;A3C2P47 - The Last Red Flag]]</tw-passagedata><tw-passagedata name="A3C2P47 - The Last Red Flag" pid="268" position="5300,3835" size="115,100" tags="chapter7">The head marshal orders all race flags lowered. A few officials hesitate, then obey.
+
+The long red line across the canyon vanishes one marker at a time.
+
+But the White Trail doesn't vanish with it.
+
+Beyond the fog, riders can still be heard calling out. The sound seems close, then far away.
+
+Wren stares at the empty road, as if he expects the ground itself to explain.
+
+[[Help the riders gather at the command post-&gt;A3C2P48 - A Race Worth Winning]]</tw-passagedata><tw-passagedata name="A3C2P48 - A Race Worth Winning" pid="269" position="5300,3960" size="115,100" tags="chapter7">Warren arrives in a cloud of dust.
+
+"I've got five riders heading for the northern ridge," he says. "The rest are scattered."
+
+(if: $a3WarrenAllied or $warrenStanding &gt; 0)[He gives Eli a quick nod, then turns to help the marshal.]
+(else:)[He looks away as he passes Eli. They still aren't friends, but he's doing the right thing.]
+
+A clerk asks whether the race is canceled. Nobody answers.
+
+Eli looks toward the finish line marked on the official chart. It still exists, at least on paper.
+
+[[Check on June and the others-&gt;A3C2P49 - June Knows Better]]</tw-passagedata><tw-passagedata name="A3C2P49 - June Knows Better" pid="270" position="5300,4085" size="115,100" tags="chapter7">June is breathing hard. Eli loosens the saddle and gives her water.
+
+(if: $juneCondition &gt;= 3)[She settles quickly, leaning toward his hand. The careful miles are paying off.]
+(else:)[She's tired, but alert. Eli gives her the rest she needs before moving again.]
+
+Silas approaches quietly.
+
+"Still think you can win?" he asks.
+
+"You?"
+
+"I asked first."
+
+They both look at the horses. Neither wants to quit.
+
+[[Find out what happens to the race-&gt;A3C2P50 - The Provisional Finish]]</tw-passagedata><tw-passagedata name="A3C2P50 - The Provisional Finish" pid="271" position="5300,4210" size="115,100" tags="chapter7">The head marshal gathers the surviving officials.
+
+"The original finish remains open," she announces. "The experimental crossing is closed. Anyone who continues will use the verified southern road."
+
+A rider asks whether the grand prize still stands.
+
+"Until the organizers settle their affairs, I'm treating the prize as promised. The winner's card will be recorded."
+
+It's not a guarantee the money will arrive quickly, but it's the first honest instruction the racers have had all day.
+
+[[Study the southern road-&gt;A3C2P51 - A Safer Route, Not an Easy One]]</tw-passagedata><tw-passagedata name="A3C2P51 - A Safer Route, Not an Easy One" pid="272" position="5300,4335" size="115,100" tags="chapter7">The southern road winds around the canyon. It is longer and steep in places, but the officials can confirm its checkpoints.
+
+(if: $scoutedOldRoad or $crowGraySketch or $c3StationRecords)[Eli recognizes one of the older crossings and spots a faster approach to the verified trail.]
+
+Wren argues with the marshal behind them. She refuses to reopen the experimental course.
+
+Eli has never seen Wren look so small.
+
+[[Head for the verified crossing-&gt;A3C2P52 - What Wren Lost]]</tw-passagedata><tw-passagedata name="A3C2P52 - What Wren Lost" pid="273" position="5300,4460" size="115,100" tags="chapter7">Vale stands beside Wren's wagon, collecting scattered maps.
+
+"Was it worth it?" Eli asks him.
+
+Vale takes a moment to answer.
+
+"I thought if we learned enough, fewer people would get lost."
+
+"You stopped asking whether they wanted to help."
+
+Vale sets the maps down.
+
+Wren continues shouting orders, but nobody moves to carry them out.
+
+[[Leave the command post behind-&gt;A3C2P53 - The Road Out]]</tw-passagedata><tw-passagedata name="A3C2P53 - The Road Out" pid="274" position="5300,4585" size="115,100" tags="chapter7">The riders begin to leave in smaller groups. Some are done racing. Others want to reach the finish, even if only to prove the whole journey was real.
+
+Eli and Silas choose the verified route. Warren rides ahead, still stubbornly competitive.
+
+There's something almost comforting about the familiar sound of hooves on ordinary ground.
+
+Almost.
+
+[[Follow the final riders-&gt;A3C2P54 - One Last Sound]]</tw-passagedata><tw-passagedata name="A3C2P54 - One Last Sound" pid="275" position="5300,4710" size="115,100" tags="chapter7">As the command post disappears behind the ridge, the sound of a train whistle rises from the valley.
+
+Silas hears it too.
+
+"No tracks out there," he says.
+
+"I know."
+
+Neither turns around.
+
+Whatever the White Trail is, it hasn't been solved. The race is still theirs to finish.
+
+[[Ride toward the last stage-&gt;A3C2P55 - The Crossing Ends]]</tw-passagedata><tw-passagedata name="A3C2P55 - The Crossing Ends" pid="276" position="5300,4835" size="115,100" tags="chapter7">&lt;div class="rw-chapter"&gt;END OF CHAPTER 7&lt;/div&gt;
+The southern road opens into grassland.
+
+There are riders ahead, a finish still waiting somewhere beyond the hills, and people behind them who haven't all made it out of the canyon.
+
+Eli looks at Silas. Silas looks back.
+
+Nothing about the final miles will be simple.
+
+June breaks into a steady trot, and the last chapter begins.
+
+[[Chapter 8: Red &amp; White-&gt;A3C3 - Red &amp; White]]</tw-passagedata><tw-passagedata name="A3C3 - Red &amp; White" pid="277" position="5930,400" size="115,100" tags="chapter8">&lt;div class="rw-chapter"&gt;ACT III / CHAPTER 8 / RED &amp; WHITE&lt;/div&gt;
+Morning gives way to afternoon. The verified road follows a line of low hills, then spills into fields of pale gold grass.
+
+For the first time in days, the sky is clear. There's a real road beneath June's hooves, a real finish line ahead, and no white flags in sight.
+
+The riders have thinned out. Some stopped after the canyon. Others fell behind helping the marshal gather everyone.
+
+Silas rides close enough to talk without shouting.
+
+"You've got a face like you swallowed a nail," he says.
+
+"Been a long week."
+
+"That's one way to put it."
+
+[[Ride beside Silas for a while-&gt;A3C3P1 - Two Different Homes]]</tw-passagedata><tw-passagedata name="A3C3P1 - Two Different Homes" pid="278" position="5930,525" size="115,100" tags="chapter8">The road levels out. For several minutes they ride without speaking.
+
+"If you win," Silas says, "you really going home?"
+
+"Money's got to get there."
+
+"Didn't ask where the money's going."
+
+Eli looks over at him. Silas has a way of noticing the things Eli wants to hide.
+
+"I don't know," Eli admits. "I thought I'd have an answer by now."
+
+"Maybe you don't need one yet."
+
+[[Ask Silas about his ranch-&gt;A3C3P2 - A Place to Stop]]</tw-passagedata><tw-passagedata name="A3C3P2 - A Place to Stop" pid="279" position="5930,650" size="115,100" tags="chapter8">"What about your ranch?" Eli asks.
+
+"Found some land worth looking at west of here. Good water. Not much else."
+
+"Sounds like a lot of work."
+
+"That's the point. Work that stays done for more than a day."
+
+Eli laughs.
+
+"You'd get bored in a week."
+
+"You'd be surprised what a man can get used to."
+
+June nudges his leg as if she wants a vote.
+
+[[Keep riding together-&gt;A3C3P3 - Warren’s Last Pass]]</tw-passagedata><tw-passagedata name="A3C3P3 - Warren’s Last Pass" pid="280" position="5930,775" size="115,100" tags="chapter8">Warren comes up on Eli's right, grinning through a mask of dust.
+
+"Don't start getting sentimental. There's still a finish line."
+
+"You worried we'll beat you?" Silas asks.
+
+"I'm worried you'll slow the entire race down with all this talking."
+
+Warren spurs his horse forward.
+
+Eli watches him go. After everything, he almost likes the man.
+
+Almost.
+
+[[Follow the other riders-&gt;A3C3P4 - The Long Grass]]</tw-passagedata><tw-passagedata name="A3C3P4 - The Long Grass" pid="281" position="5930,900" size="115,100" tags="chapter8">Beyond a shallow rise, the racecourse cuts across a broad sweep of grassland.
+
+The official markers look ordinary. The first has a fresh notch where someone hammered it into the ground.
+
+Eli studies the trail anyway. He knows better than to believe every road just because it looks familiar.
+
+A rider farther ahead stops and looks back toward the canyon.
+
+[[See what the rider has spotted-&gt;A3C3P5 - Smoke Behind the Ridge]]</tw-passagedata><tw-passagedata name="A3C3P5 - Smoke Behind the Ridge" pid="282" position="5930,1025" size="115,100" tags="chapter8">A faint column of smoke rises from a fold in the hills behind them.
+
+The marshal's rescue wagons should be well past that point by now.
+
+A woman rides up, shouting that a group of competitors never returned from the eastern path.
+
+"We found their horses near the old shelter," she says. "Some riders went back for them, but we need more people."
+
+Silas turns his horse toward Eli.
+
+Neither says anything at first.
+
+[[Ask who is still missing-&gt;A3C3P6 - The Names]]</tw-passagedata><tw-passagedata name="A3C3P6 - The Names" pid="283" position="5930,1150" size="115,100" tags="chapter8">The messenger reads the list. Eli recognizes some names from the checkpoint cards.
+
+(if: $thomasAlly)[Thomas is already helping the marshal organize supplies. He sees Eli and raises a hand.]
+(if: $a3WarrenAllied)[Warren slows nearby, listening despite himself.]
+
+Several riders are waiting for help along a route nobody can reliably describe. A rescue party has started, but the hills and changing paths are slowing them down.
+
+There's still a chance to turn back and help them. There is also a race to finish.
+
+[[Talk to Silas before deciding-&gt;A3C3P7 - The Promise We Made]]</tw-passagedata><tw-passagedata name="A3C3P7 - The Promise We Made" pid="284" position="5930,1275" size="115,100" tags="chapter8">Silas looks toward the finish line, then toward the smoke.
+
+"If we go back," he says, "we won't win."
+
+"I know."
+
+"We promised we'd race each other to the end."
+
+"I remember."
+
+Silas grips his reins.
+
+"This wasn't part of that promise."
+
+Eli studies the road. For months, he imagined the prize solving every problem waiting at home. Now people need help on a road he knows better than most.
+
+[[Look toward the finish line-&gt;A3C3P8 - A Real Choice]]</tw-passagedata><tw-passagedata name="A3C3P8 - A Real Choice" pid="285" position="5930,1400" size="115,100" tags="chapter8">A rescue team is already moving toward the hills. Eli could leave the work to them and keep racing. It would not mean abandoning the riders without help.
+
+Or he could join them, bringing everything he's learned about roads that don't behave normally.
+
+Silas waits beside him. He won't pretend the choice is easy.
+
+"It's your call, Mercer," he says. "Either way, I'm not pretending it doesn't cost something."
+
+[[Decide what matters now-&gt;A3C3P9 - The Last Fork]]</tw-passagedata><tw-passagedata name="A3C3P9 - The Last Fork" pid="286" position="5930,1525" size="115,100" tags="chapter8">&lt;div class="rw-chapter"&gt;THE FINAL DECISION&lt;/div&gt;
+One road goes west, toward the finish and everything Eli came to win.
+
+The other turns back, toward the riders who need help.
+
+June stands between them. The wind moves through the grass. There's no music, no announcement, and nobody to tell Eli what the right answer is.
+
+He takes the reins.
+
+(link: "TURN BACK. Join the rescue, even if it costs the race.")[(set: $a3Ending to "rescue")(go-to: "A3C3P10 - Back Toward the Canyon")]
+
+(link: "KEEP RACING. Trust the rescue crew and fight for the prize.")[(set: $a3Ending to "race")(go-to: "A3C3P24 - The Last Race")]</tw-passagedata><tw-passagedata name="A3C3P10 - Back Toward the Canyon" pid="287" position="5770,1750" size="115,100" tags="chapter8">&lt;div class="rw-route"&gt;THE ROAD BEYOND / THE RESCUE&lt;/div&gt;
+Eli turns June east. Silas follows.
+
+For a moment neither speaks. Then Silas lets out a breath.
+
+"Well, there goes my ranch."
+
+"Might still build it someday."
+
+"You planning to help?"
+
+"Depends. You any good at fences?"
+
+Silas laughs as they ride toward the smoke.
+
+[[Reach the rescue camp-&gt;A3C3P11 - A Camp of Strangers]]</tw-passagedata><tw-passagedata name="A3C3P11 - A Camp of Strangers" pid="288" position="5770,1875" size="115,100" tags="chapter8">The rescue group has gathered near an old watering hole. A wagon stands ready with blankets and water.
+
+(if: $thomasAlly or $c3HelpedRider)[Thomas greets Eli by name. "Knew you'd show up," he says.]
+(else:)[The rescue leader introduces herself as Mara. "You know the canyon?" she asks.]
+
+Eli shows them what he remembers from the road. The group is missing a reliable way to reach the eastern shelter without doubling back.
+
+[[Help organize the search-&gt;A3C3P12 - Three Ways In]]</tw-passagedata><tw-passagedata name="A3C3P12 - Three Ways In" pid="289" position="5770,2000" size="115,100" tags="chapter8">The missing riders were last seen near a shelter east of the verified course.
+
+Eli can take the high ridge and look for the signal markers, follow a narrow riverbed to the shelter, or split the rescuers into smaller groups.
+
+(if: $crowGraySketch or $scoutedOldRoad or $c3StationRecords)[His old maps give him a clearer sense of how the ridge connects to the camp.]
+
+Whatever he chooses, the search will take time they no longer have to spare.
+
+(link: "Use the high ridge and find the safe lookout")[(set: $a3RescueApproach to "ridge")(go-to: "A3C3P13 - The High Lookout")]
+
+(link: "Follow the riverbed to the shelter")[(set: $a3RescueApproach to "river")(go-to: "A3C3P14 - The Riverbed")]
+
+(link: "Split the search into pairs with signal calls")[(set: $a3RescueApproach to "teams")(go-to: "A3C3P15 - The Signal Calls")]</tw-passagedata><tw-passagedata name="A3C3P13 - The High Lookout" pid="290" position="5770,2125" size="115,100" tags="chapter8">The ridge gives a wide view of the valley. Eli spots a trail of broken grass leading toward an old stone shelter.
+
+(if: $crowGraySketch or $scoutedOldRoad)[He recognizes the turn from the sketch and guides the group around the worst rocks.]
+
+Silas waves to the riders below. They answer from a place Eli hadn't thought to check.
+
+"There," Silas says. "We found them."
+
+(link: "Guide the others down")[(set: $a3RescueSupport to $a3RescueSupport + 1)(go-to: "A3C3P16 - The Old Shelter")]</tw-passagedata><tw-passagedata name="A3C3P14 - The Riverbed" pid="291" position="5770,2250" size="115,100" tags="chapter8">The water is low enough to cross on foot, but the banks are uneven. Eli walks June carefully between the stones.
+
+He hears someone calling from the opposite side of the reeds.
+
+The stranded riders have been following the wrong stream, thinking it leads back to the official course.
+
+Eli calls for the search party to join him.
+
+[[Lead them toward higher ground-&gt;A3C3P16 - The Old Shelter]]</tw-passagedata><tw-passagedata name="A3C3P15 - The Signal Calls" pid="292" position="5770,2375" size="115,100" tags="chapter8">Eli divides the volunteers into pairs, each carrying a short length of red cloth.
+
+They agree on a simple signal: two calls when someone finds the shelter, three when they need the others.
+
+A few minutes later, three distant calls ring out.
+
+Eli heads toward them, Silas close behind.
+
+(link: "Gather the search party")[(set: $a3RescueSupport to $a3RescueSupport + 1)(go-to: "A3C3P16 - The Old Shelter")]</tw-passagedata><tw-passagedata name="A3C3P16 - The Old Shelter" pid="293" position="5770,2500" size="115,100" tags="chapter8">The shelter sits behind a rocky bend. Several riders are waiting inside, tired and uncertain which road leads out.
+
+None can agree on how long they've been there.
+
+"We followed the flag," one says. "Then it wasn't there when we turned back."
+
+Eli doesn't ask which flag.
+
+"We're taking you out now," he says. "Stay together."
+
+[[Make a plan to bring everyone out-&gt;A3C3P17 - Who Can Help]]</tw-passagedata><tw-passagedata name="A3C3P17 - Who Can Help" pid="294" position="5770,2625" size="115,100" tags="chapter8">The rescue group counts its supplies. There's enough water for the way back if nobody rushes.
+
+(if: $thomasAlly)[Thomas brings an extra canteen and insists June gets a proper rest first.]
+(if: $a3CrewHelp &gt; 1)[Two survey workers volunteer to carry route notes and mark the path.]
+(if: $a3WarrenAllied)[A rider arrives with a message from Warren: the southern pass is open and guarded.]
+
+Without those advantages, the group still has enough people to guide the riders home. They will just have to move more carefully.
+
+[[Lead the first group out-&gt;A3C3P18 - The Same Hill Twice]]</tw-passagedata><tw-passagedata name="A3C3P18 - The Same Hill Twice" pid="295" position="5770,2750" size="115,100" tags="chapter8">They pass an odd formation of rocks at the edge of the valley.
+
+Fifteen minutes later, they reach what looks like the same hill.
+
+Eli stops.
+
+"Nobody panic," he says. "We're going to check where the sun is before we keep moving."
+
+Silas checks the tracks. June turns toward the slope as though she recognizes the safe ground.
+
+Eli decides to trust what they can actually see.
+
+[[Choose a landmark and keep the group together-&gt;A3C3P19 - The White Cloth]]</tw-passagedata><tw-passagedata name="A3C3P19 - The White Cloth" pid="296" position="5770,2875" size="115,100" tags="chapter8">A white flag hangs from a wooden post beside the path.
+
+Silas freezes for half a second.
+
+Eli reaches for his reins.
+
+"We don't have to take that road," he says.
+
+"Good," Silas answers.
+
+They leave the flag behind and head toward the rocky ridge, taking the slower path that the rescue team can verify.
+
+Nobody looks back.
+
+[[Continue to the rescue wagon-&gt;A3C3P20 - The Last Crossing]]</tw-passagedata><tw-passagedata name="A3C3P20 - The Last Crossing" pid="297" position="5770,3000" size="115,100" tags="chapter8">The final stretch is a steep descent to the water wagons. A few people stumble on the loose stones, but the group moves slowly and supports each other.
+
+(if: $a3RescueSupport &gt; 1)[The extra volunteers keep the group moving without losing anyone.]
+(else:)[Eli and Silas take turns leading, stopping whenever somebody needs a rest.]
+
+At the bottom of the hill, the rescue leader begins counting names.
+
+[[Make sure everyone is accounted for-&gt;A3C3P21 - All Accounted For]]</tw-passagedata><tw-passagedata name="A3C3P21 - All Accounted For" pid="298" position="5770,3125" size="115,100" tags="chapter8">The rescue leader checks the list twice.
+
+Every rider they came looking for has reached the wagons.
+
+Eli sits down on a rock. For the first time all day, he lets himself feel tired.
+
+Silas drops beside him.
+
+"We did it," Eli says.
+
+"Yeah. We did."
+
+They sit a little longer before either has the energy to stand.
+
+[[Hear what happened to the race-&gt;A3C3P22 - Someone Else Won]]</tw-passagedata><tw-passagedata name="A3C3P22 - Someone Else Won" pid="299" position="5770,3250" size="115,100" tags="chapter8">By the time they reach the final checkpoint, the race is finished.
+
+Another rider has taken the prize. Eli hears the winner's name and finds he isn't even angry.
+
+He thinks of the stable. His father's debts haven't gone anywhere. Neither has Silas's dream of buying land.
+
+Silas looks at the final results, then folds the paper away.
+
+"Well," he says, "that was one hell of a way to lose."
+
+[[Talk about what comes next-&gt;A3C3P23 - Not Going Home Alone]]</tw-passagedata><tw-passagedata name="A3C3P23 - Not Going Home Alone" pid="300" position="5770,3375" size="115,100" tags="chapter8">"I can't show up empty-handed," Eli says.
+
+"Then don't show up alone," Silas replies.
+
+Eli looks over at him.
+
+"I know horses," Silas says. "I know fences. I can fix a roof if it isn't too complicated. Could earn my keep."
+
+"You sure?"
+
+"No. But I'm willing to try."
+
+Eli laughs. It sounds ridiculous. It sounds possible.
+
+[[The Road Beyond-&gt;A3C3P37 - The Road Beyond]]</tw-passagedata><tw-passagedata name="A3C3P24 - The Last Race" pid="301" position="6090,1750" size="115,100" tags="chapter8">&lt;div class="rw-route"&gt;THE FINAL RACE / ELI AND SILAS&lt;/div&gt;
+Eli watches the rescue riders head east, then takes the western road.
+
+He hasn't forgotten them. The marshal has people and supplies on the way, and he knows they won't be left without help.
+
+Silas pulls alongside.
+
+"This is it, Mercer."
+
+"Yeah."
+
+They turn their horses toward the finish. For a brief moment, the world feels like nothing but dust, sunlight, and the road in front of them.
+
+[[Find the final official markers-&gt;A3C3P25 - What June Has Left]]</tw-passagedata><tw-passagedata name="A3C3P25 - What June Has Left" pid="302" position="6090,1875" size="115,100" tags="chapter8">(set: $a3FinalScore to 0)
+(if: $juneCondition &gt;= 3)[(set: $a3FinalScore to $a3FinalScore + 1)June has strength left from the careful miles. Her stride is steady.]
+(else:)[June is tired. Eli knows he can't treat her like the younger racing horses around them.]
+(if: $raceEdge &gt; 1)[(set: $a3FinalScore to $a3FinalScore + 1)Eli gained enough time earlier to keep the best line as the field narrows.]
+
+Warren darts ahead, then angles toward the outer track.
+
+Silas remains close. If Eli wants to win, he'll have to make good decisions instead of hoping June suddenly becomes the fastest horse in the race.
+
+[[Enter the last open stretch-&gt;A3C3P26 - The First Bend]]</tw-passagedata><tw-passagedata name="A3C3P26 - The First Bend" pid="303" position="6090,2000" size="115,100" tags="chapter8">The course cuts around a shallow bend. A strip of firm earth hugs the inside. The outside is wider but covered in loose gravel.
+
+Silas takes a controlled line. He glances at Eli, waiting to see what he'll do.
+
+Eli can read June's rhythm and stay close, or ask her for a risky burst of speed.
+
+(link: "Trust June’s rhythm and take the firm inside line")[(set: $a3FinalScore to $a3FinalScore + 2)(go-to: "A3C3P27 - The Inside Line")]
+
+(link: "Push for a quick burst on the outside")[(set: $a3FinalScore to $a3FinalScore + 1)(go-to: "A3C3P28 - The Outside Burst")]</tw-passagedata><tw-passagedata name="A3C3P27 - The Inside Line" pid="304" position="6090,2125" size="115,100" tags="chapter8">Eli steadies June through the bend and holds the inside track.
+
+He doesn't force her. He gives her enough room to find the ground herself.
+
+When the road straightens, they've lost almost no speed.
+
+Silas laughs as they come level.
+
+"Where'd you learn that?"
+
+"At home," Eli calls back.
+
+[[Keep the lead if you can-&gt;A3C3P29 - A Breath Between Rivals]]</tw-passagedata><tw-passagedata name="A3C3P28 - The Outside Burst" pid="305" position="6090,2250" size="115,100" tags="chapter8">June surges forward, cutting through the gravel with a strong, uneven gallop.
+
+Eli feels the effort in her stride and eases back before the bend ends.
+
+The burst gained them ground, but Silas has held his pace well.
+
+"Not bad!" Silas shouts across the dust.
+
+"Still not finished!" Eli shouts back.
+
+[[Settle in for the final stretch-&gt;A3C3P29 - A Breath Between Rivals]]</tw-passagedata><tw-passagedata name="A3C3P29 - A Breath Between Rivals" pid="306" position="6090,2375" size="115,100" tags="chapter8">The two horses run close enough that Eli hears Silas laughing.
+
+"You know, I almost didn't enter this race."
+
+"Would've saved me a lot of trouble."
+
+"Yeah. Probably."
+
+They ride for a moment without speaking.
+
+"If I win," Silas says, "I'm not slowing down just because you're my friend."
+
+"Good. Neither am I."
+
+[[See the finish markers ahead-&gt;A3C3P30 - The Final Approach]]</tw-passagedata><tw-passagedata name="A3C3P30 - The Final Approach" pid="307" position="6090,2500" size="115,100" tags="chapter8">The finish sits beyond a low stone wall and a line of red banners. The crowd is louder than Eli expected.
+
+A gap opens on the inside. The center track is fast but narrow. The outside is safer, though longer.
+
+Silas makes his move.
+
+Eli has a split second to decide how to respond.
+
+(link: "Read the firm ground and cut through the center")[(set: $a3FinalScore to $a3FinalScore + 2)(go-to: "A3C3P31 - The Narrow Center")]
+
+(link: "Match Silas stride for stride")[(set: $a3FinalScore to $a3FinalScore + 1)(go-to: "A3C3P32 - Stride for Stride")]
+
+[[Take the wide line and protect June’s footing-&gt;A3C3P33 - The Wide Line]]</tw-passagedata><tw-passagedata name="A3C3P31 - The Narrow Center" pid="308" position="6090,2625" size="115,100" tags="chapter8">Eli sees a thin strip of packed dirt running between two rough patches. He guides June onto it and leans forward.
+
+June responds with the last strong run she has left.
+
+For a moment, the world shrinks to her breath, the ground, and the finish banners.
+
+[[Make the final dash-&gt;A3C3P34 - Red and White]]</tw-passagedata><tw-passagedata name="A3C3P32 - Stride for Stride" pid="309" position="6090,2750" size="115,100" tags="chapter8">Eli stays close to Silas, matching his rhythm as the crowd gets louder.
+
+Neither man can tell who is ahead. The horses are separated by little more than a shoulder.
+
+Silas grins at him, and Eli finds himself grinning back despite everything.
+
+[[Make the final dash-&gt;A3C3P34 - Red and White]]</tw-passagedata><tw-passagedata name="A3C3P33 - The Wide Line" pid="310" position="6090,2875" size="115,100" tags="chapter8">Eli takes the outside edge. It costs him distance, but June keeps solid footing the entire way.
+
+He doesn't ask her for more than she can safely give.
+
+Silas moves toward the center. The finish is coming fast.
+
+[[Make the final dash-&gt;A3C3P34 - Red and White]]</tw-passagedata><tw-passagedata name="A3C3P34 - Red and White" pid="311" position="6090,3000" size="115,100" tags="chapter8">The banners fill Eli's vision.
+
+He can hear Silas to his left, the crowd beyond the rails, and June's hooves beneath him.
+
+He's wanted this moment for months.
+
+He thought it would feel like certainty. It doesn't.
+
+It feels like a thousand small decisions, every one of them carrying him here.
+
+[[Cross the finish line-&gt;A3C3P35 - A Close Finish]]</tw-passagedata><tw-passagedata name="A3C3P35 - A Close Finish" pid="312" position="6090,3125" size="115,100" tags="chapter8">The two horses surge past the last marker.
+
+The crowd erupts. Eli doesn't look up until June begins to slow on her own.
+
+He turns to find Silas, who's already looking back at him.
+
+An official runs toward the finish ribbon with the results card.
+
+For a moment, neither rider knows who's won.
+
+[[Hear the result-&gt;A3C3P36 - The Result]]</tw-passagedata><tw-passagedata name="A3C3P36 - The Result" pid="313" position="6090,3250" size="115,100" tags="chapter8">(if: $a3FinalScore &gt;= 4)[
+(set: $a3Ending to "eli")
+The official raises Eli's number.
+
+Eli looks down at June, then back to the ribbon.
+
+Silas pulls up alongside him and tips his hat.
+
+"Well, I'll be damned," Silas says.
+
+"I won."
+
+"Don't sound so surprised. Makes me look bad."
+
+(link: "The Red Horizon")[(go-to: "A3C3P40 - The Red Horizon")]
+]
+(else:)[
+(set: $a3Ending to "silas")
+The official raises Silas's number.
+
+Eli stares at the card, then turns toward June. She has given him everything she had.
+
+Silas looks across, his grin fading when he sees Eli's face.
+
+"That was close," he says.
+
+"Not close enough."
+
+(link: "A Place to Stay")[(go-to: "A3C3P44 - A Place to Stay")]
+]</tw-passagedata><tw-passagedata name="A3C3P37 - The Road Beyond" pid="314" position="5700,3620" size="115,100" tags="chapter8">&lt;div class="rw-chapter"&gt;ENDING III / THE ROAD BEYOND&lt;/div&gt;
+The newspapers write about the riders who turned back. Eli doesn't keep the articles. Silas keeps one, though he pretends not to.
+
+Wren's operation faces an investigation, and Vale's notebooks become evidence. The White Trail stays out of the headlines. Even the people who witnessed it cannot agree on what happened.
+
+Eli writes to his father before going home.
+
+(if: $fatherHonesty is "truth")[He tells him he's still trying to figure out what he wants. This time he doesn't hide it.]
+(else:)[He admits that saving the stable wasn't the only reason he left, and that he should have said so sooner.]
+
+He doesn't promise money. He promises to show up.
+
+[[Return to Kansas-&gt;A3C3P38 - A Fence in Kansas]]</tw-passagedata><tw-passagedata name="A3C3P38 - A Fence in Kansas" pid="315" position="5700,3745" size="115,100" tags="chapter8">The stable is still standing. The bank's letters still arrive. Eli's father meets them at the gate, surprised to see a second rider.
+
+"Pa, this is Silas. He's staying a while."
+
+Silas tips his hat. "If that's all right with you, sir."
+
+"Can you fix a fence?" Eli's father asks.
+
+"Better than I can race, apparently."
+
+His father laughs, and Eli realizes how much he's missed that sound.
+
+[[One more evening at the stable-&gt;A3C3P39 - The Horizon Is Still There]]</tw-passagedata><tw-passagedata name="A3C3P39 - The Horizon Is Still There" pid="316" position="5700,3870" size="115,100" tags="chapter8">Silas is repairing the fence when Eli brings out two cups of coffee.
+
+"How long you staying?" Eli asks.
+
+"Don't know."
+
+"You sure that's enough?"
+
+Silas glances toward the horses resting in the evening light.
+
+"For now? Yeah."
+
+The debt is still real. The work will be hard. But neither of them has to figure out the next part alone.
+
+Far away, on an empty road, a white flag moves in the wind. A town stands beyond it for a moment.
+
+Then the town is gone.
+
+&lt;div class="rw-chapter"&gt;THE END / THE ROAD BEYOND&lt;/div&gt;
+[[Return to Main Menu-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="A3C3P40 - The Red Horizon" pid="317" position="5930,3620" size="115,100" tags="chapter8">&lt;div class="rw-chapter"&gt;ENDING I / THE RED HORIZON&lt;/div&gt;
+Eli doesn't understand the cheering until he sees his name on the winner's card.
+
+He slides down from June and leans against her neck for a long moment.
+
+"You did it, girl."
+
+Silas approaches, hat in hand.
+
+"You earned it, Mercer."
+
+"You don't have to say that."
+
+"I know. That's why I'm saying it."
+
+For once, Eli has nothing clever to say back.
+
+[[Collect the prize and face what comes next-&gt;A3C3P41 - A Letter With Money]]</tw-passagedata><tw-passagedata name="A3C3P41 - A Letter With Money" pid="318" position="5930,3745" size="115,100" tags="chapter8">The prize payment takes time to clear while Wren's operation is investigated. Eventually, the bank accepts enough to settle the family's urgent debt.
+
+Eli writes home with a money order and three pages of stories he can't quite explain.
+
+(if: $promiseHome is "return")[He remembers promising to return. He writes that he will, just not immediately.]
+(else:)[He doesn't make a new promise about when he'll return. He tells his father the truth about needing to see more of the world.]
+
+The stable will survive. That is real. So is the road still ahead of him.
+
+[[Read his father’s reply-&gt;A3C3P42 - A Father’s Reply]]</tw-passagedata><tw-passagedata name="A3C3P42 - A Father’s Reply" pid="319" position="5930,3870" size="115,100" tags="chapter8">His father's answer arrives at a boardinghouse several weeks later.
+
+"The stable is doing better. June's old stall is still hers. I hope you know you can come back whenever you want to. I also hope you see a few places worth telling us about."
+
+Eli reads the letter twice.
+
+The words don't solve every disagreement between them. But they leave room for another conversation, and that's enough.
+
+[[Ride toward the next horizon-&gt;A3C3P43 - The First Road of His Own]]</tw-passagedata><tw-passagedata name="A3C3P43 - The First Road of His Own" pid="320" position="5930,3995" size="115,100" tags="chapter8">Eli leads June out of town before sunrise. Nobody is paying him to race. There's no finish line and no red flags.
+
+He takes the road because he wants to see where it leads.
+
+Somewhere, Silas is looking for the place he'll call home. Eli hopes they race again someday.
+
+June steps into the morning light. Eli follows her down the hill.
+
+Far away, on an empty road, a white flag moves in the wind. A town stands beyond it for a moment.
+
+Then the town is gone.
+
+&lt;div class="rw-chapter"&gt;THE END / THE RED HORIZON&lt;/div&gt;
+[[Return to Main Menu-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="A3C3P44 - A Place to Stay" pid="321" position="6160,3620" size="115,100" tags="chapter8">&lt;div class="rw-chapter"&gt;ENDING II / A PLACE TO STAY&lt;/div&gt;
+Silas wins by a narrow margin.
+
+Eli stays mounted for a moment, staring past the finish line. June is tired. He rubs her neck and lets her breathe.
+
+Silas rides back toward him.
+
+"You rode well," Silas says.
+
+"Don't."
+
+Silas studies him, then nods.
+
+"All right."
+
+They sit there for a while without trying to make the moment easier.
+
+[[Leave the finish behind-&gt;A3C3P45 - No Prize for Second]]</tw-passagedata><tw-passagedata name="A3C3P45 - No Prize for Second" pid="322" position="6160,3745" size="115,100" tags="chapter8">Eli writes to Kansas with news he hates putting on paper.
+
+He didn't win. The bank is still waiting. He can't pretend it'll all be fine.
+
+But he also tells his father about the riders he met, the country he crossed, and the strange fact that he wants to keep traveling.
+
+(if: $fatherHonesty is "truth")[For once, telling the truth doesn't feel like letting anybody down.]
+
+His father's reply is short: "Come home when you can. We'll figure out the rest together."
+
+[[Read the unexpected letter-&gt;A3C3P46 - An Offer From Red]]</tw-passagedata><tw-passagedata name="A3C3P46 - An Offer From Red" pid="323" position="6160,3870" size="115,100" tags="chapter8">Months later, a letter arrives with Silas's familiar scrawl.
+
+He's bought a modest ranch out west. There's water, a small house, too much fencing, and more work than one man can do.
+
+"I need someone who knows horses. I'd pay you fairly. No favors, no debts. Think about it."
+
+Eli reads the letter twice, then laughs.
+
+It isn't the prize he wanted. It might be an opportunity he actually chooses.
+
+[[Visit the new ranch-&gt;A3C3P47 - The Race After the Race]]</tw-passagedata><tw-passagedata name="A3C3P47 - The Race After the Race" pid="324" position="6160,3995" size="115,100" tags="chapter8">Silas is leaning against a fence when Eli arrives with June.
+
+"You still think you're a better rider?" Eli asks.
+
+"I don't think it, Mercer. I've got a trophy proving it."
+
+"We should race again."
+
+"Tomorrow morning?"
+
+"You're on."
+
+They watch the horses graze as the evening settles over the ranch. Eli still has to help his family. Silas still has a home to build. Neither road is finished.
+
+Far away, on an empty road, a white flag moves in the wind. A town stands beyond it for a moment.
+
+Then the town is gone.
+
+&lt;div class="rw-chapter"&gt;THE END / A PLACE TO STAY&lt;/div&gt;
+[[Return to Main Menu-&gt;MainMenu]]</tw-passagedata></tw-storydata>
 <script data-main="harlowe" title="Twine engine code">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
