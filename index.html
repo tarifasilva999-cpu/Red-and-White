@@ -489,7 +489,6 @@ tw-story[tags~="chapter2"] {
    CINEMATIC ACT CARDS · RED & WHITE
    A dedicated intertitle with purpose between each act.
    Edit the text in the passages A1, A2, and A3.
-   Replace Audio/Act-Reveal.mp3 with your own sound if desired.
    ======================================================= */
 tw-story[tags~="actcard"] {
   position: relative;
@@ -759,8 +758,8 @@ tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage
  tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage{width:100%;font-size:19px;padding:55px 21px 100px 22px;}
  tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) {background-position:60% center;}
 }
-
-</style><script id="twine-user-script" role="script" type="text/twine-javascript">/* Red & White: Main-menu music. Created once and preserved across passages. */
+</style><script id="twine-user-script" role="script" type="text/twine-javascript">
+/* Red & White: Main-menu music. Created once and preserved across passages. */
 (function () {
   'use strict';
   // Place the MP3 in an audio folder next to the exported index.html file.
@@ -872,7 +871,7 @@ tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage
 
 /* Act intertitle interaction and optional short impact cue.
    If a browser blocks playback, the visuals still work.
-   Replace Audio/Act-Reveal.mp3 with your own SFX as desired. */
+   Audio/Act-Reveal.mp3 is played on act transitions. */
 (function(){
   'use strict';
   let mostRecent = null;
@@ -912,11 +911,16 @@ tw-story:is([tags~="chapter6"],[tags~="chapter7"],[tags~="chapter8"]) tw-passage
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initAct);
   else initAct();
-})();</script><tw-tag color="green" name="menu"></tw-tag><tw-tag color="yellow" name="prologue"></tw-tag><tw-tag color="orange" name="chapter1"></tw-tag><tw-tag color="blue" name="chapter2"></tw-tag><tw-tag color="purple" name="chapter3"></tw-tag><tw-passagedata name="Load" pid="1" position="125,75" size="115,100" tags="menu">&lt;h1&gt;Game Loaded.&lt;/h1&gt;
+})();
+</script><tw-tag color="green" name="menu"></tw-tag><tw-tag color="yellow" name="prologue"></tw-tag><tw-tag color="orange" name="chapter1"></tw-tag><tw-tag color="blue" name="chapter2"></tw-tag><tw-tag color="purple" name="chapter3"></tw-tag><tw-passagedata name="Load" pid="1" position="125,75" size="115,100" tags="menu">Welcome to Red &amp; White.
 
-This game's writing language is adapted to fit the game's time and era, Images are made in figma and canva. Hope you enjoy.
+It's 1889, and riders from all over the country are gathering for a race that could change their lives. What you say, where you go, and who you trust will shape the journey. Some choices matter right away. Others take a little longer.
 
-[[Continue|MainMenu]]</tw-passagedata><tw-passagedata name="MainMenu" pid="2" position="325,225" size="115,100" tags="">&lt;div class="menu-screen"&gt;
+You won't see every road in one playthrough, so take your time and see where yours leads.
+
+Good luck out there.
+
+[[Continue-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="MainMenu" pid="2" position="325,225" size="115,100" tags="">&lt;div class="menu-screen"&gt;
 
   &lt;img
     class="menu-bg"
@@ -934,7 +938,15 @@ This game's writing language is adapted to fit the game's time and era, Images a
     [[CREDITS-&gt;Credits]]
   &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata name="Credits" pid="3" position="125,225" size="115,100" tags=""></tw-passagedata><tw-passagedata name="Intro" pid="4" position="325,350" size="115,100" tags="prologue">(set: $fatherHonesty to "unknown")
+&lt;/div&gt;</tw-passagedata><tw-passagedata name="Credits" pid="3" position="125,225" size="115,100" tags="">RED &amp; WHITE
+
+A choice-driven Western adventure set in 1889.
+
+Artwork created using Figma and Canva.
+
+Thanks for playing.
+
+[[Back to Main Menu-&gt;MainMenu]]</tw-passagedata><tw-passagedata name="Intro" pid="4" position="325,350" size="115,100" tags="prologue">(set: $fatherHonesty to "unknown")
 (set: $promiseHome to "unknown")
 
 &lt;div class="rw-chapter"&gt;PROLOGUE / KANSAS, 1889&lt;/div&gt;
@@ -1173,7 +1185,7 @@ His father takes a second before answering.
 
 His father follows him, straightening a strap on the saddle even though Eli already checked it.
 
-(if: $fatherHonesty is "truth" and $promiseHome is "return")[
+(if: ($fatherHonesty is "truth") and ($promiseHome is "return"))[
 &lt;span class="rw-dialogue rw-pa"&gt;"I meant what I said earlier,"&lt;/span&gt; his father tells him.
 
 &lt;span class="rw-dialogue rw-eli"&gt;"About what?"&lt;/span&gt;
@@ -1784,7 +1796,7 @@ Silas has already crossed. He points with one hand.
 
 Eli steers June toward the shallower water.
 
-(if: $saddleFixed is false and $marketSupplies is false)[
+(if: ($saddleFixed is false) and ($marketSupplies is false))[
 Halfway across, the old saddle buckle starts to slide. Eli pulls June to a stop and fixes it before it slips any farther.
 
 (set: $raceEdge to $raceEdge - 1)
@@ -2010,7 +2022,7 @@ June still has a little energy after her feed break.
 Eli hasn't had to stop once to fix the saddle.
 (set: $raceEdge to $raceEdge + 1)
 ]
-(if: $raceEdge &gt;= 2 and $juneCondition &gt;= 2)[
+(if: ($raceEdge &gt;= 2) and ($juneCondition &gt;= 2))[
 He gives June a little rein. She picks up speed and draws alongside Silas.
 
 "Oh, come on!" Silas calls.
@@ -2032,7 +2044,7 @@ Eli slows down. A few riders pass, including Silas.
 
 "Mercer. One-four-seven. First checkpoint done."
 
-(if: $raceEdge &gt;= 2 and $juneCondition &gt;= 2)[
+(if: ($raceEdge &gt;= 2) and ($juneCondition &gt;= 2))[
 Silas arrives just after him.
 
 "All right," Silas says. "You got me this time."
@@ -2100,7 +2112,7 @@ Eli takes out his notebook and shows Silas the two distances he'd copied.
 
 "That's a pretty lousy map." He hands the notebook back. "Keep it. Might matter later."
 ]
-(if: $earlyTrailClue and $raceEvidence is false)[
+(if: $earlyTrailClue and ($raceEvidence is false))[
 Eli mentions the old survey marks he saw on the road.
 
 Silas listens, then shrugs.
@@ -2238,12 +2250,11 @@ June looks at Eli as if she'd rather stay and finish breakfast.
 
 &lt;span class="rw-dialogue rw-eli"&gt;"I know. Me too."&lt;/span&gt;
 
-[[See who's heading where-&gt;A2C1P1 - Three Ways West]]
-</tw-passagedata><tw-passagedata name="A2C1P1 - Three Ways West" pid="56" position="2690,350" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;COLDWATER / THREE ROADS&lt;/div&gt;
+[[See who's heading where-&gt;A2C1P1 - Three Ways West]]</tw-passagedata><tw-passagedata name="A2C1P1 - Three Ways West" pid="56" position="2690,350" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;COLDWATER / THREE ROADS&lt;/div&gt;
 
 The next official checkpoint is Hollow Ford. All three roads should reach it, at least according to the race map.
 
-(if: $saloonApproach is "silas" or $silasTrust &gt; 0)[
+(if: ($saloonApproach is "silas") or ($silasTrust &gt; 0))[
 Silas raises a hand when he sees Eli.
 
 "Mercer. River road's open if you want company. No promises I'll wait for you."
@@ -2275,8 +2286,7 @@ Eli can't travel all three roads today.
 
 (link: "Join Warren through the western canyon.")[(set: $c3Route to "warren")(go-to: "A2C1P10 - Blackwell's Crew")]
 
-(link: "Help the survey assistant and travel alone.")[(set: $c3Route to "survey")(go-to: "A2C1P18 - A Man With Two Maps")]
-</tw-passagedata><tw-passagedata name="A2C1P2 - The River Road" pid="57" position="2540,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE LONG WAY AROUND / SILAS&lt;/div&gt;
+(link: "Help the survey assistant and travel alone.")[(set: $c3Route to "survey")(go-to: "A2C1P18 - A Man With Two Maps")]</tw-passagedata><tw-passagedata name="A2C1P2 - The River Road" pid="57" position="2540,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE LONG WAY AROUND / SILAS&lt;/div&gt;
 
 The river road is cool beneath the trees. June seems glad to get out of the dust.
 
@@ -2300,8 +2310,7 @@ They round a bend and find water spilling over the marked crossing.
 
 "Ah," Silas says. "That's new."
 
-[[Look for a way across-&gt;A2C1P3 - The Flooded Ford]]
-</tw-passagedata><tw-passagedata name="A2C1P3 - The Flooded Ford" pid="58" position="2540,625" size="115,100" tags="chapter3">The official ford is deeper than either rider expected.
+[[Look for a way across-&gt;A2C1P3 - The Flooded Ford]]</tw-passagedata><tw-passagedata name="A2C1P3 - The Flooded Ford" pid="58" position="2540,625" size="115,100" tags="chapter3">The official ford is deeper than either rider expected.
 
 Downstream is a bridge. It looks sturdy, but the road to it bends far out of the way.
 
@@ -2324,8 +2333,7 @@ June shifts her weight. She worked hard yesterday, and Eli knows it.
 
 (link: "Take the bridge with Silas.")[(set: $c3RiverCrossing to "bridge")(set: $c3RaceCost to $c3RaceCost + 1)(set: $silasTrust to $silasTrust + 1)(go-to: "A2C1P4 - The Bridge")]
 
-(link: "Try the narrow gravel crossing.")[(set: $c3RiverCrossing to "gravel")(go-to: "A2C1P5 - Gravel Underfoot")]
-</tw-passagedata><tw-passagedata name="A2C1P4 - The Bridge" pid="59" position="2540,750" size="115,100" tags="chapter3">The bridge creaks under June's hooves, but the planks hold.
+(link: "Try the narrow gravel crossing.")[(set: $c3RiverCrossing to "gravel")(go-to: "A2C1P5 - Gravel Underfoot")]</tw-passagedata><tw-passagedata name="A2C1P4 - The Bridge" pid="59" position="2540,750" size="115,100" tags="chapter3">The bridge creaks under June's hooves, but the planks hold.
 
 The detour takes longer than Eli wanted. Two riders pass them on the opposite bank.
 
@@ -2341,14 +2349,13 @@ Eli glances at June. She's walking easily, without the nervous steps she took ne
 
 "It's most things, Mercer."
 
-[[Follow the river north-&gt;A2C1P6 - A Rider by the Water]]
-</tw-passagedata><tw-passagedata name="A2C1P5 - Gravel Underfoot" pid="60" position="2540,875" size="115,100" tags="chapter3">Eli guides June onto the gravel bar. Halfway across, the water presses hard against her legs.
+[[Follow the river north-&gt;A2C1P6 - A Rider by the Water]]</tw-passagedata><tw-passagedata name="A2C1P5 - Gravel Underfoot" pid="60" position="2540,875" size="115,100" tags="chapter3">Eli guides June onto the gravel bar. Halfway across, the water presses hard against her legs.
 
 Silas follows, keeping some distance.
 
 "Don't rush her!"
 
-(if: $saddleFixed and $juneCondition &gt;= 2)[
+(if: $saddleFixed and ($juneCondition &gt;= 2))[
 June finds the bottom, climbs the opposite bank, and gives herself a shake. Eli lets out a breath.
 
 "All right," Silas says as he catches up. "That was better than I expected."
@@ -2367,8 +2374,7 @@ Silas waits until she's settled.
 (set: $juneCondition to $juneCondition - 1)
 ]
 
-[[Keep riding-&gt;A2C1P6 - A Rider by the Water]]
-</tw-passagedata><tw-passagedata name="A2C1P6 - A Rider by the Water" pid="61" position="2540,1000" size="115,100" tags="chapter3">Past the ford, they find another horse tied to a low branch. Its rider is bent over a broken harness.
+[[Keep riding-&gt;A2C1P6 - A Rider by the Water]]</tw-passagedata><tw-passagedata name="A2C1P6 - A Rider by the Water" pid="61" position="2540,1000" size="115,100" tags="chapter3">Past the ford, they find another horse tied to a low branch. Its rider is bent over a broken harness.
 
 (if: $thomasAlly)[
 "Mercer?" Thomas Bell straightens up. "You again? I'm starting to think you're following me."
@@ -2399,8 +2405,7 @@ Silas checks the path ahead. More racers disappear around the next bend.
 
 (link: "Stop and help fix the harness.")[(set: $c3HelpedRider to true)(set: $c3RaceCost to $c3RaceCost + 1)(set: $silasTrust to $silasTrust + 1)(go-to: "A2C1P7 - The Split Oak")]
 
-(link: "Keep moving. The rider has others coming behind.")[(set: $c3HelpedRider to false)(go-to: "A2C1P7 - The Split Oak")]
-</tw-passagedata><tw-passagedata name="A2C1P7 - The Split Oak" pid="62" position="2540,1125" size="115,100" tags="chapter3">(if: $c3HelpedRider)[
+(link: "Keep moving. The rider has others coming behind.")[(set: $c3HelpedRider to false)(go-to: "A2C1P7 - The Split Oak")]</tw-passagedata><tw-passagedata name="A2C1P7 - The Split Oak" pid="62" position="2540,1125" size="115,100" tags="chapter3">(if: $c3HelpedRider)[
 They stay until the rider can tighten the final knot.
 
 (if: $c3RiderIdentity is "thomas")[
@@ -2436,8 +2441,7 @@ Same split. Same branches. Same bit of pale bark hanging loose.
 
 "I see it."
 
-[[Stop by the tree-&gt;A2C1P8 - A Mark in the Mud]]
-</tw-passagedata><tw-passagedata name="A2C1P8 - A Mark in the Mud" pid="63" position="2540,1250" size="115,100" tags="chapter3">Silas dismounts, looking irritated.
+[[Stop by the tree-&gt;A2C1P8 - A Mark in the Mud]]</tw-passagedata><tw-passagedata name="A2C1P8 - A Mark in the Mud" pid="63" position="2540,1250" size="115,100" tags="chapter3">Silas dismounts, looking irritated.
 
 "Road must double back."
 
@@ -2451,8 +2455,7 @@ He could compare it to her hoof, but that means getting down in the mud.
 
 (link: "Check the print and mark the trunk.")[(set: $c3TreeProof to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P9 - A Quiet Mile")]
 
-(link: "Leave it alone and keep riding.")[(go-to: "A2C1P9 - A Quiet Mile")]
-</tw-passagedata><tw-passagedata name="A2C1P9 - A Quiet Mile" pid="64" position="2540,1375" size="115,100" tags="chapter3">(if: $c3TreeProof)[
+(link: "Leave it alone and keep riding.")[(go-to: "A2C1P9 - A Quiet Mile")]</tw-passagedata><tw-passagedata name="A2C1P9 - A Quiet Mile" pid="64" position="2540,1375" size="115,100" tags="chapter3">(if: $c3TreeProof)[
 The print matches June's chipped shoe. Eli cuts a shallow line in the bark, then gets back into the saddle.
 
 A few minutes later, the road brings them beside the oak again.
@@ -2490,8 +2493,7 @@ Silas watches the road.
 
 Around the next bend, something white moves near a fence post.
 
-[[See what it is-&gt;A2C1P27 - A White Flag]]
-</tw-passagedata><tw-passagedata name="A2C1P10 - Blackwell's Crew" pid="65" position="2690,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE DEVIL YOU KNOW / WARREN&lt;/div&gt;
+[[See what it is-&gt;A2C1P27 - A White Flag]]</tw-passagedata><tw-passagedata name="A2C1P10 - Blackwell's Crew" pid="65" position="2690,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE DEVIL YOU KNOW / WARREN&lt;/div&gt;
 
 Warren has four riders with him, all on strong horses. One of them looks at June and makes a face.
 
@@ -2514,8 +2516,7 @@ Warren points to a stone arch far ahead.
 
 "Race you to that. No officials, no prizes. Just us."
 
-[[Answer his challenge-&gt;A2C1P11 - The Stone Arch]]
-</tw-passagedata><tw-passagedata name="A2C1P11 - The Stone Arch" pid="66" position="2690,625" size="115,100" tags="chapter3">The road ahead breaks into two lines. One goes straight through the gravel. The other climbs along firmer ground, though it takes a wider turn.
+[[Answer his challenge-&gt;A2C1P11 - The Stone Arch]]</tw-passagedata><tw-passagedata name="A2C1P11 - The Stone Arch" pid="66" position="2690,625" size="115,100" tags="chapter3">The road ahead breaks into two lines. One goes straight through the gravel. The other climbs along firmer ground, though it takes a wider turn.
 
 Warren gathers his reins.
 
@@ -2529,8 +2530,7 @@ He remembers how Warren keeps his weight low on turns. The man isn't just fast. 
 
 (link: "Take the high line and ride smart.")[(set: $c3WarrenRide to "high")(go-to: "A2C1P12 - The High Line")]
 
-(link: "Try to match Warren's speed.")[(set: $c3WarrenRide to "sprint")(go-to: "A2C1P13 - The Straight Run")]
-</tw-passagedata><tw-passagedata name="A2C1P12 - The High Line" pid="67" position="2690,750" size="115,100" tags="chapter3">Eli keeps June on the hard edge of the trail. Warren's horse flies past on the straight, kicking gravel into the air.
+(link: "Try to match Warren's speed.")[(set: $c3WarrenRide to "sprint")(go-to: "A2C1P13 - The Straight Run")]</tw-passagedata><tw-passagedata name="A2C1P12 - The High Line" pid="67" position="2690,750" size="115,100" tags="chapter3">Eli keeps June on the hard edge of the trail. Warren's horse flies past on the straight, kicking gravel into the air.
 
 But the ground turns loose near the arch.
 
@@ -2556,8 +2556,7 @@ Warren reaches the arch first. Eli comes in close behind.
 &lt;span class="rw-dialogue rw-eli"&gt;"Don't sound so surprised."&lt;/span&gt;
 ]
 
-[[Follow the others into the canyon-&gt;A2C1P14 - Mercy Junction]]
-</tw-passagedata><tw-passagedata name="A2C1P13 - The Straight Run" pid="68" position="2690,875" size="115,100" tags="chapter3">Eli gives June some rein. She stretches forward as far as she can, but Warren's horse pulls away.
+[[Follow the others into the canyon-&gt;A2C1P14 - Mercy Junction]]</tw-passagedata><tw-passagedata name="A2C1P13 - The Straight Run" pid="68" position="2690,875" size="115,100" tags="chapter3">Eli gives June some rein. She stretches forward as far as she can, but Warren's horse pulls away.
 
 For a few seconds, Eli almost catches him.
 
@@ -2571,7 +2570,7 @@ Warren waits at the arch, looking pleased with himself.
 
 &lt;span class="rw-dialogue rw-eli"&gt;"Fast enough to get me here."&lt;/span&gt;
 
-(if: $juneCondition &gt;= 3 and $marketSupplies)[
+(if: ($juneCondition &gt;= 3) and $marketSupplies)[
 June recovers after a short walk. Eli gives her water before moving on.
 ]
 (else:)[
@@ -2581,8 +2580,7 @@ June needs a longer rest. Warren's group starts without them.
 (set: $c3RaceCost to $c3RaceCost + 1)
 ]
 
-[[Ride after Warren-&gt;A2C1P14 - Mercy Junction]]
-</tw-passagedata><tw-passagedata name="A2C1P14 - Mercy Junction" pid="69" position="2690,1000" size="115,100" tags="chapter3">Beyond the arch, the canyon narrows. Abandoned rails run along the rocks, half buried under sand.
+[[Ride after Warren-&gt;A2C1P14 - Mercy Junction]]</tw-passagedata><tw-passagedata name="A2C1P14 - Mercy Junction" pid="69" position="2690,1000" size="115,100" tags="chapter3">Beyond the arch, the canyon narrows. Abandoned rails run along the rocks, half buried under sand.
 
 One of Warren's riders points to a wooden sign.
 
@@ -2602,8 +2600,7 @@ Eli gets out his official map. No railroad. No junction. Just a stretch of empty
 He's reminded of the two different distances in the race office. The numbers were wrong there too.
 ]
 
-[[Ride up to the marker-&gt;A2C1P15 - Where the Tracks Go]]
-</tw-passagedata><tw-passagedata name="A2C1P15 - Where the Tracks Go" pid="70" position="2690,1125" size="115,100" tags="chapter3">One of the riders, Amos, is already climbing down from his horse.
+[[Ride up to the marker-&gt;A2C1P15 - Where the Tracks Go]]</tw-passagedata><tw-passagedata name="A2C1P15 - Where the Tracks Go" pid="70" position="2690,1125" size="115,100" tags="chapter3">One of the riders, Amos, is already climbing down from his horse.
 
 "Tracks don't end just because a man says they do," he mutters.
 
@@ -2615,8 +2612,7 @@ The rails disappear around a bend. A few minutes spent checking could tell Eli w
 
 (link: "Follow Amos to the old tracks.")[(set: $c3RailInvestigated to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P16 - The Empty Platform")]
 
-(link: "Stay with Warren's group.")[(go-to: "A2C1P17 - Blackwell's Terms")]
-</tw-passagedata><tw-passagedata name="A2C1P16 - The Empty Platform" pid="71" position="2690,1250" size="115,100" tags="chapter3">The rails run into a shallow cutting, where a low wooden platform stands beside a fence.
+(link: "Stay with Warren's group.")[(go-to: "A2C1P17 - Blackwell's Terms")]</tw-passagedata><tw-passagedata name="A2C1P16 - The Empty Platform" pid="71" position="2690,1250" size="115,100" tags="chapter3">The rails run into a shallow cutting, where a low wooden platform stands beside a fence.
 
 No buildings. No water tower. No town.
 
@@ -2642,8 +2638,7 @@ Amos hears horses approaching from the canyon and turns back.
 
 "Best catch up. Blackwell doesn't like waiting."
 
-[[Return to the race-&gt;A2C1P17 - Blackwell's Terms]]
-</tw-passagedata><tw-passagedata name="A2C1P17 - Blackwell's Terms" pid="72" position="2690,1375" size="115,100" tags="chapter3">Warren is waiting near the canyon exit, his expression hard to read.
+[[Return to the race-&gt;A2C1P17 - Blackwell's Terms]]</tw-passagedata><tw-passagedata name="A2C1P17 - Blackwell's Terms" pid="72" position="2690,1375" size="115,100" tags="chapter3">Warren is waiting near the canyon exit, his expression hard to read.
 
 (if: $c3RailInvestigated)[
 "Find your station?"
@@ -2673,8 +2668,7 @@ He pulls up beside Eli when the group starts moving again.
 
 Ahead, a scrap of white cloth catches on a post beyond the rocks.
 
-[[Ride toward the flag-&gt;A2C1P27 - A White Flag]]
-</tw-passagedata><tw-passagedata name="A2C1P18 - A Man With Two Maps" pid="73" position="2840,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE SURVEY LINE / INDEPENDENT&lt;/div&gt;
+[[Ride toward the flag-&gt;A2C1P27 - A White Flag]]</tw-passagedata><tw-passagedata name="A2C1P18 - A Man With Two Maps" pid="73" position="2840,500" size="115,100" tags="chapter3">&lt;div class="rw-chapter rw-route"&gt;THE SURVEY LINE / INDEPENDENT&lt;/div&gt;
 
 The survey assistant is about Eli's age, with an ink stain on one sleeve and two maps folded under his arm.
 
@@ -2690,8 +2684,7 @@ Jonah offers a few coins for the work. It's not enough to change Eli's life, but
 
 "Fine," Eli says. "But we don't spend all day on it."
 
-[[Follow Jonah west-&gt;A2C1P19 - The Station]]
-</tw-passagedata><tw-passagedata name="A2C1P19 - The Station" pid="74" position="2840,625" size="115,100" tags="chapter3">The survey station sits alone in a dry basin.
+[[Follow Jonah west-&gt;A2C1P19 - The Station]]</tw-passagedata><tw-passagedata name="A2C1P19 - The Station" pid="74" position="2840,625" size="115,100" tags="chapter3">The survey station sits alone in a dry basin.
 
 It has a crooked porch, a rain barrel, and a door that sticks when Jonah pushes it open.
 
@@ -2705,8 +2698,7 @@ Eli checks on June through the window. She's eating the grass beside the porch.
 
 "The distance between the north and west markers. Somebody wrote down three different answers."
 
-[[Look at the maps-&gt;A2C1P20 - Three Distances]]
-</tw-passagedata><tw-passagedata name="A2C1P20 - Three Distances" pid="75" position="2840,750" size="115,100" tags="chapter3">One map puts the river three miles east of the station.
+[[Look at the maps-&gt;A2C1P20 - Three Distances]]</tw-passagedata><tw-passagedata name="A2C1P20 - Three Distances" pid="75" position="2840,750" size="115,100" tags="chapter3">One map puts the river three miles east of the station.
 
 Another puts it eleven miles away.
 
@@ -2731,8 +2723,7 @@ He also remembers the mile marker on the old windmill road, where the numbers se
 
 A locked cabinet stands beneath the maps. Its label reads SURVEY LOGS.
 
-[[Check the cabinet-&gt;A2C1P21 - The Locked Cabinet]]
-</tw-passagedata><tw-passagedata name="A2C1P21 - The Locked Cabinet" pid="76" position="2840,875" size="115,100" tags="chapter3">The cabinet key is missing.
+[[Check the cabinet-&gt;A2C1P21 - The Locked Cabinet]]</tw-passagedata><tw-passagedata name="A2C1P21 - The Locked Cabinet" pid="76" position="2840,875" size="115,100" tags="chapter3">The cabinet key is missing.
 
 Jonah tries the handle again, as if it might change its mind.
 
@@ -2750,8 +2741,7 @@ The chart uses the same numbering system as the race records Eli saw in Dry Cree
 (link: "Use your Race Office notes to find the right log.")[(set: $c3OfficeConnection to true)(go-to: "A2C1P23 - The Matching Number")]
 ]
 
-(link: "Forget the cabinet. Check the survey markers instead.")[(go-to: "A2C1P24 - A Name on the Wall")]
-</tw-passagedata><tw-passagedata name="A2C1P22 - Under the Drawer" pid="77" position="2840,1000" size="115,100" tags="chapter3">Eli empties the drawer: old pencils, a broken ruler, and a little tin of nails.
+(link: "Forget the cabinet. Check the survey markers instead.")[(go-to: "A2C1P24 - A Name on the Wall")]</tw-passagedata><tw-passagedata name="A2C1P22 - Under the Drawer" pid="77" position="2840,1000" size="115,100" tags="chapter3">Eli empties the drawer: old pencils, a broken ruler, and a little tin of nails.
 
 Nothing.
 
@@ -2767,8 +2757,7 @@ One page lists a route that appears to cross the same ridge twice without turnin
 
 (set: $c3StationRecords to true)
 
-[[Read what you can-&gt;A2C1P24 - A Name on the Wall]]
-</tw-passagedata><tw-passagedata name="A2C1P23 - The Matching Number" pid="78" position="2840,1125" size="115,100" tags="chapter3">Eli reads the code on his Race Office notes and looks along the cabinet labels.
+[[Read what you can-&gt;A2C1P24 - A Name on the Wall]]</tw-passagedata><tw-passagedata name="A2C1P23 - The Matching Number" pid="78" position="2840,1125" size="115,100" tags="chapter3">Eli reads the code on his Race Office notes and looks along the cabinet labels.
 
 "Jonah. There's a log with the same station number as the race map."
 
@@ -2785,8 +2774,7 @@ The right folder is missing from the cabinet, but Eli finds its entry on the wal
 (set: $c3ValeName to true)
 (set: $c3StationRecords to true)
 
-[[Look around the rest of the station-&gt;A2C1P24 - A Name on the Wall]]
-</tw-passagedata><tw-passagedata name="A2C1P24 - A Name on the Wall" pid="79" position="2840,1250" size="115,100" tags="chapter3">(if: $c3StationRecords)[
+[[Look around the rest of the station-&gt;A2C1P24 - A Name on the Wall]]</tw-passagedata><tw-passagedata name="A2C1P24 - A Name on the Wall" pid="79" position="2840,1250" size="115,100" tags="chapter3">(if: $c3StationRecords)[
 The logs don't solve much. One page puts the west marker seven miles away, another puts it fourteen.
 
 "You sure whoever wrote these wasn't drunk?" Eli asks.
@@ -2816,8 +2804,7 @@ Jonah taps the paper.
 
 "Not unless you like bad maps."
 
-[[Test the markers outside-&gt;A2C1P25 - Count the Miles]]
-</tw-passagedata><tw-passagedata name="A2C1P25 - Count the Miles" pid="80" position="2840,1375" size="115,100" tags="chapter3">Jonah points to a white-painted rock visible through the window.
+[[Test the markers outside-&gt;A2C1P25 - Count the Miles]]</tw-passagedata><tw-passagedata name="A2C1P25 - Count the Miles" pid="80" position="2840,1375" size="115,100" tags="chapter3">Jonah points to a white-painted rock visible through the window.
 
 "That one's a quarter mile from here. At least, it's supposed to be."
 
@@ -2827,8 +2814,7 @@ The sun is getting higher. Every minute at the station is a minute not spent rac
 
 (link: "Measure the distance yourself.")[(set: $c3SurveyMeasured to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P26 - The Return Line")]
 
-(link: "Leave the measurements to Jonah and get moving.")[(go-to: "A2C1P26 - The Return Line")]
-</tw-passagedata><tw-passagedata name="A2C1P26 - The Return Line" pid="81" position="2840,1500" size="115,100" tags="chapter3">(if: $c3SurveyMeasured)[
+(link: "Leave the measurements to Jonah and get moving.")[(go-to: "A2C1P26 - The Return Line")]</tw-passagedata><tw-passagedata name="A2C1P26 - The Return Line" pid="81" position="2840,1500" size="115,100" tags="chapter3">(if: $c3SurveyMeasured)[
 Eli and Jonah pace the distance twice.
 
 The first time, it takes twenty minutes.
@@ -2857,8 +2843,7 @@ A breeze comes over the basin. Something pale is tied to a fence post near the r
 
 Eli can't remember seeing it when they arrived.
 
-[[See the white cloth-&gt;A2C1P27 - A White Flag]]
-</tw-passagedata><tw-passagedata name="A2C1P27 - A White Flag" pid="82" position="2690,1690" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;CHAPTER 3 / THE FIRST WHITE FLAG&lt;/div&gt;
+[[See the white cloth-&gt;A2C1P27 - A White Flag]]</tw-passagedata><tw-passagedata name="A2C1P27 - A White Flag" pid="82" position="2690,1690" size="115,100" tags="chapter3">&lt;div class="rw-chapter"&gt;CHAPTER 3 / THE FIRST WHITE FLAG&lt;/div&gt;
 
 It's a strip of white cloth, tied around a weathered wooden post.
 
@@ -2888,8 +2873,7 @@ He can investigate, or let it go and protect what remains of his position in the
 
 (link: "Get off the horse and examine the flag.")[(set: $c3FlagInvestigated to true)(set: $c3RaceCost to $c3RaceCost + 1)(go-to: "A2C1P28 - Closer Look")]
 
-(link: "Stay on the race route.")[(set: $c3FlagInvestigated to false)(set: $raceEdge to $raceEdge + 1)(go-to: "A2C1P29 - Keep the Red Markers")]
-</tw-passagedata><tw-passagedata name="A2C1P28 - Closer Look" pid="83" position="2540,1815" size="115,100" tags="chapter3">Eli dismounts. The cloth feels dry, even though the ground beneath it is damp.
+(link: "Stay on the race route.")[(set: $c3FlagInvestigated to false)(set: $raceEdge to $raceEdge + 1)(go-to: "A2C1P29 - Keep the Red Markers")]</tw-passagedata><tw-passagedata name="A2C1P28 - Closer Look" pid="83" position="2540,1815" size="115,100" tags="chapter3">Eli dismounts. The cloth feels dry, even though the ground beneath it is damp.
 
 (if: $c3Route is "silas")[
 Silas keeps his distance.
@@ -2921,8 +2905,7 @@ The post looks old enough to have been here for years. The rope is much newer.
 
 A smaller path branches away behind the post, half hidden in grass.
 
-[[Decide what to record-&gt;A2C1P30 - Three Knots]]
-</tw-passagedata><tw-passagedata name="A2C1P29 - Keep the Red Markers" pid="84" position="2840,1815" size="115,100" tags="chapter3">Eli turns June back toward the official route.
+[[Decide what to record-&gt;A2C1P30 - Three Knots]]</tw-passagedata><tw-passagedata name="A2C1P29 - Keep the Red Markers" pid="84" position="2840,1815" size="115,100" tags="chapter3">Eli turns June back toward the official route.
 
 (if: $c3Route is "silas")[
 Silas lets out a breath he was trying not to show.
@@ -2946,8 +2929,7 @@ He tells himself there are plenty of old roads nobody bothered to draw.
 
 The next official red marker appears near a low hill.
 
-[[Ride to Hollow Ford-&gt;A2C1P31 - Back to the Red Road]]
-</tw-passagedata><tw-passagedata name="A2C1P30 - Three Knots" pid="85" position="2540,1940" size="115,100" tags="chapter3">Eli could study the way the cloth is tied, or sketch the road and its landmarks.
+[[Ride to Hollow Ford-&gt;A2C1P31 - Back to the Red Road]]</tw-passagedata><tw-passagedata name="A2C1P30 - Three Knots" pid="85" position="2540,1940" size="115,100" tags="chapter3">Eli could study the way the cloth is tied, or sketch the road and its landmarks.
 
 There's not time to do both properly. The other riders are moving on.
 
@@ -2957,8 +2939,7 @@ Something about this feels familiar, though he can't quite place it.
 
 (link: "Copy the three knots into your notebook.")[(set: $c3FlagKnots to true)(go-to: "A2C1P31 - Back to the Red Road")]
 
-(link: "Sketch the road and the shape of the hills.")[(set: $c3FlagSketch to true)(go-to: "A2C1P31 - Back to the Red Road")]
-</tw-passagedata><tw-passagedata name="A2C1P31 - Back to the Red Road" pid="86" position="2690,2065" size="115,100" tags="chapter3">(if: $c3FlagInvestigated)[
+(link: "Sketch the road and the shape of the hills.")[(set: $c3FlagSketch to true)(go-to: "A2C1P31 - Back to the Red Road")]</tw-passagedata><tw-passagedata name="A2C1P31 - Back to the Red Road" pid="86" position="2690,2065" size="115,100" tags="chapter3">(if: $c3FlagInvestigated)[
 (if: $c3FlagKnots)[
 Eli copies the knots carefully. It would be easy to recognize that pattern again.
 ]
@@ -2981,8 +2962,7 @@ The red markers return. They look exactly how a racecourse ought to look.
 
 Eli is grateful for that.
 
-[[Continue toward Hollow Ford-&gt;A2C1P32 - Smoke in the Valley]]
-</tw-passagedata><tw-passagedata name="A2C1P32 - Smoke in the Valley" pid="87" position="2690,2190" size="115,100" tags="chapter3">By late afternoon, the land opens into a valley. A thin line of campfire smoke rises near a bridge.
+[[Continue toward Hollow Ford-&gt;A2C1P32 - Smoke in the Valley]]</tw-passagedata><tw-passagedata name="A2C1P32 - Smoke in the Valley" pid="87" position="2690,2190" size="115,100" tags="chapter3">By late afternoon, the land opens into a valley. A thin line of campfire smoke rises near a bridge.
 
 Hollow Ford.
 
@@ -3003,8 +2983,7 @@ Warren's crew is already talking about where they'll camp. Warren looks once tow
 Eli has barely spoken to another racer all day. He spots Silas's red scarf near the water trough and feels unexpectedly relieved.
 ]
 
-[[Get your checkpoint card stamped-&gt;A2C1P33 - Another Stamp]]
-</tw-passagedata><tw-passagedata name="A2C1P33 - Another Stamp" pid="88" position="2690,2315" size="115,100" tags="chapter3">The clerk at Hollow Ford barely looks up when Eli hands over his card.
+[[Get your checkpoint card stamped-&gt;A2C1P33 - Another Stamp]]</tw-passagedata><tw-passagedata name="A2C1P33 - Another Stamp" pid="88" position="2690,2315" size="115,100" tags="chapter3">The clerk at Hollow Ford barely looks up when Eli hands over his card.
 
 "Mercer. One-four-seven. Route?"
 
@@ -3040,12 +3019,11 @@ Another checkpoint done.
 Eli remembers the strange papers at registration. He looks at the notebook, but the clerk shuts it.
 ]
 
-[[Go find somewhere to sit-&gt;A2C1P34 - Stories at Supper]]
-</tw-passagedata><tw-passagedata name="A2C1P34 - Stories at Supper" pid="89" position="2840,2315" size="115,100" tags="chapter3">Hollow Ford is crowded by nightfall. Horses drink near the bridge, and tired riders fight over the last bowls of stew.
+[[Go find somewhere to sit-&gt;A2C1P34 - Stories at Supper]]</tw-passagedata><tw-passagedata name="A2C1P34 - Stories at Supper" pid="89" position="2840,2315" size="115,100" tags="chapter3">Hollow Ford is crowded by nightfall. Horses drink near the bridge, and tired riders fight over the last bowls of stew.
 
 Thomas Bell is talking by a campfire.
 
-(if: $c3RiderIdentity is "thomas" and $c3HelpedRider)[
+(if: ($c3RiderIdentity is "thomas") and $c3HelpedRider)[
 "There he is!" Thomas calls. "Mercer saved my harness. Again."
 
 Eli waves him down before he gets louder.
@@ -3068,8 +3046,7 @@ A fourth rider claims the clerk logged his arrival before he'd left Coldwater th
 
 Nobody knows whether he's joking.
 
-[[Listen a little longer-&gt;A2C1P35 - What They Remember]]
-</tw-passagedata><tw-passagedata name="A2C1P35 - What They Remember" pid="90" position="2840,2440" size="115,100" tags="chapter3">(if: $c3FlagKnots)[
+[[Listen a little longer-&gt;A2C1P35 - What They Remember]]</tw-passagedata><tw-passagedata name="A2C1P35 - What They Remember" pid="90" position="2840,2440" size="115,100" tags="chapter3">(if: $c3FlagKnots)[
 Eli takes out his notebook.
 
 &lt;span class="rw-dialogue rw-eli"&gt;"Was the flag tied like this? Three knots?"&lt;/span&gt;
@@ -3100,8 +3077,7 @@ Silas appears at the edge of the firelight.
 
 "Mercer. Can we talk?"
 
-[[Step away with Silas-&gt;A2C1P36 - Tomorrow Is Crow's Gap]]
-</tw-passagedata><tw-passagedata name="A2C1P36 - Tomorrow Is Crow's Gap" pid="91" position="2690,2565" size="115,100" tags="chapter3">They walk toward the stables, away from the fire.
+[[Step away with Silas-&gt;A2C1P36 - Tomorrow Is Crow's Gap]]</tw-passagedata><tw-passagedata name="A2C1P36 - Tomorrow Is Crow's Gap" pid="91" position="2690,2565" size="115,100" tags="chapter3">They walk toward the stables, away from the fire.
 
 (if: $c3Route is "silas")[
 "About that tree," Eli starts.
@@ -3146,8 +3122,7 @@ Eli watches him leave.
 
 Across the valley, a narrow road disappears between the hills. At this distance, he can't tell whether the marker beside it is red or white.
 
-[[Chapter 4: Crow's Gap-&gt;A2C2 - Crow's Gap]]
-</tw-passagedata><tw-passagedata name="A2C2 - Crow's Gap" pid="92" position="3340,220" size="115,100" tags="chapter4">(set: $crowRoad to "none")
+[[Chapter 4: Crow's Gap-&gt;A2C2 - Crow's Gap]]</tw-passagedata><tw-passagedata name="A2C2 - Crow's Gap" pid="92" position="3340,220" size="115,100" tags="chapter4">(set: $crowRoad to "none")
 (set: $crowGrayUnlocked to ($scoutedOldRoad or $routeChoice is "oldroad" or $c3StationRecords or $c3SurveyMeasured))
 (set: $crowHelpedDrivers to false)
 (set: $crowWagonRecords to false)
@@ -3225,7 +3200,7 @@ Silas tightens the reins. "I found his horse."
 
 For a moment, Eli can hear nothing but the wind moving past the stones.
 
-(if: $c3Route is "silas" or $silasTrust &gt; 1)[
+(if: ($c3Route is "silas") or ($silasTrust &gt; 1))[
 "I believe you," Eli says. "But you keep asking me to trust you without telling me the whole thing."
 
 "I know."
@@ -3545,7 +3520,7 @@ The official rides away before Eli can answer. Warren waits until the hoofbeats 
 
 One of his riders laughs. Warren doesn't.
 
-(if: $c3WarrenRespect or $warrenStanding &gt; 0)[
+(if: $c3WarrenRespect or ($warrenStanding &gt; 0))[
 "You've kept up this far," Warren says. "I'll give you that. Doesn't mean we're partners."
 ]
 (else:)[
@@ -4026,7 +4001,7 @@ You said you would come through Mercy Junction before the month was over. The st
 
 Eli reads it twice.
 
-(if: $thomasHelped or $thomasAlly or $c3RiderIdentity is "thomas")[
+(if: $thomasHelped or $thomasAlly or ($c3RiderIdentity is "thomas"))[
 Thomas Bell. The same rider he met earlier. Eli checks the signature, hoping it's only a coincidence.
 ]
 
@@ -4581,7 +4556,7 @@ The records office has a rear loading door. Warren is still arguing with an offi
 Eli can't follow every lead before morning.
 
 (if: $crowWagonRecords or $mercyWrenEvidence or $raceEvidence)[He has enough scraps of evidence to know where the office keeps its important files.]
-(if: $warrenStanding &gt; 0 or $crowWarrenDeal)[Warren has reasons to remember Eli, though that doesn't mean he likes him.]
+(if: ($warrenStanding &gt; 0) or (($crowWarrenDeal is "trade")))[Warren has reasons to remember Eli, though that doesn't mean he likes him.]
 (if: $silasTrust &gt; 0)[Silas looks up as Eli passes. He seems like he's expecting a conversation.]
 
 Where does Eli go?
@@ -4777,7 +4752,7 @@ Some groups were sent farther from the finish than others.
 
 "Like cattle," Warren replies.
 
-(if: $crowWarrenLetter or $crowWarrenDeal)[Eli recognizes the officer's signature from Crow's Gap. This isn't the first time Warren was handed a private instruction.]
+(if: $crowWarrenLetter or (($crowWarrenDeal is "trade")))[Eli recognizes the officer's signature from Crow's Gap. This isn't the first time Warren was handed a private instruction.]
 
 [[Ask why Warren agreed to the arrangement-&gt;A3C1P23 - Warren's Answer]]</tw-passagedata><tw-passagedata name="A3C1P23 - Warren's Answer" pid="198" position="4690,1925" size="115,100" tags="chapter6">"Because I wanted to win," Warren says. "Is that so hard to understand?"
 
@@ -4799,7 +4774,7 @@ Eli can see what hurts him most. It's not the lost advantage. It's being made a 
 
 Warren studies him for a long moment.
 
-(if: $warrenStanding &gt; 0 or $c3WarrenRespect or $helpedWarren)["You're annoying, Mercer. But you're not wrong."]
+(if: ($warrenStanding &gt; 0) or $c3WarrenRespect or $helpedWarren)["You're annoying, Mercer. But you're not wrong."]
 (else:)["Don't start thinking we're friends just because I'm listening."]
 
 He takes the letters back.
@@ -5068,7 +5043,7 @@ Officials have gathered around a temporary signal tower. Surveyors are laying ou
 Eli has to choose what he can do best.
 
 (if: $a3Proof &gt;= 2)[He has evidence that might turn the officials against the orders.]
-(if: $a3WarrenAllied or $a3Witnesses &gt; 0 or $thomasAlly)[He knows people who might help him cut the operation apart.]
+(if: $a3WarrenAllied or ($a3Witnesses &gt; 0) or $thomasAlly)[He knows people who might help him cut the operation apart.]
 (if: $scoutedOldRoad or $crowGraySketch or $c3StationRecords)[And he knows there may be other ways through the canyon.]
 
 Whatever he tries, Wren will be watching the checkpoint.
@@ -5254,7 +5229,7 @@ Ellis asks for a minute to decide.
 
 [[Ask the other workers to speak for themselves-&gt;A3C2P22 - The Crew Votes]]</tw-passagedata><tw-passagedata name="A3C2P21 - The Copy He Keeps" pid="242" position="5300,1775" size="115,100" tags="chapter7">Eli unfolds his notes. The reports are imperfect, but the repeated instructions are clear enough.
 
-(if: $a3Proof &gt;= 1 or $mercyWrenEvidence or $crowWagonRecords)[Ellis recognizes the authorization marks immediately. "Those aren't for race marshals," he says. "They're for field trials."]
+(if: ($a3Proof &gt;= 1) or $mercyWrenEvidence or $crowWagonRecords)[Ellis recognizes the authorization marks immediately. "Those aren't for race marshals," he says. "They're for field trials."]
 (else:)[Ellis compares the numbers with his own records. "Some of these distances don't match," he admits.]
 
 He folds the paper and puts it in his pocket.
@@ -5277,7 +5252,7 @@ Ellis sets down his measuring rod.
 
 (link: "Head to the signal wagon")[(set: $a3CrewHelp to $a3CrewHelp + 1)(go-to: "A3C2P23 - Warren at the Rope")]</tw-passagedata><tw-passagedata name="A3C2P23 - Warren at the Rope" pid="244" position="5300,2025" size="115,100" tags="chapter7">Warren is already standing by the signal rope, arguing with the guards.
 
-(if: $a3WarrenAllied or $warrenStanding &gt; 1)["Thought you might need a hand, Mercer," he calls.]
+(if: $a3WarrenAllied or ($warrenStanding &gt; 1))["Thought you might need a hand, Mercer," he calls.]
 (else:)["I'm here for my race," he snaps. "And your idiot organizer is ruining it."]
 
 The two guards look between the riders and the workers gathering behind them.
@@ -5490,7 +5465,7 @@ One of the clerks drops his pencil.
 
 [[Present evidence and demand the recall-&gt;A3C2P43 - The Proof]]
 
-[[Point to the riders and appeal to the crew-&gt;A3C2P44 - Who Is Listening]]</tw-passagedata><tw-passagedata name="A3C2P43 - The Proof" pid="264" position="5300,3335" size="115,100" tags="chapter7">(if: $a3Proof &gt;= 1 or $a3WarrenAllied)[Eli spreads out what he has: letters, notes, copied orders, and the private route diagrams.]
+[[Point to the riders and appeal to the crew-&gt;A3C2P44 - Who Is Listening]]</tw-passagedata><tw-passagedata name="A3C2P43 - The Proof" pid="264" position="5300,3335" size="115,100" tags="chapter7">(if: ($a3Proof &gt;= 1) or $a3WarrenAllied)[Eli spreads out what he has: letters, notes, copied orders, and the private route diagrams.]
 (else:)[Eli holds up the cards from the checkpoints, each stamped with a time he knows cannot be right.]
 
 "You changed the route on purpose," he says. "Then you kept changing the records to pretend the riders were the problem."
@@ -5552,7 +5527,7 @@ Wren stares at the empty road, as if he expects the ground itself to explain.
 
 "I've got five riders heading for the northern ridge," he says. "The rest are scattered."
 
-(if: $a3WarrenAllied or $warrenStanding &gt; 0)[He gives Eli a quick nod, then turns to help the marshal.]
+(if: $a3WarrenAllied or ($warrenStanding &gt; 0))[He gives Eli a quick nod, then turns to help the marshal.]
 (else:)[He looks away as he passes Eli. They still aren't friends, but he's doing the right thing.]
 
 A clerk asks whether the race is canceled. Nobody answers.
